@@ -1,15 +1,4 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import { createHead } from '@vueuse/head'
-import { store } from './store'
-import './assets/index.postcss'
+import './apps/fashion/main'
+import './assets/index.css'
+// import 'ant-design-vue/dist/antd.less'
 
-const head = createHead()
-const app = createApp(App)
-
-app.use(store)
-app.use(router)
-app.use(head)
-
-app.mount('#app')
