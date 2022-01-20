@@ -1,8 +1,21 @@
 /* eslint-disable */
+// @ts-nocheck
 import axios from 'axios'
 import { ERR_CODE_OK } from './_constant'
 
-const baseURL = process.env.API_BASE_URL || '/api'
+let baseURL
+if (import.meta.env.DEV) {
+  baseURL = import.meta.env.SH_API_DEV_BASE_URL
+} else if (import.meta.env.PROD) {
+  baseURL = import.meta.env.SH_API_PROD_BASE_URL
+}
+
+console.log('meta: ', import.meta)
+const timeout = import.meta.env.SH_API_TIMEOUT
+  ? Number(import.meta.env.SH_API_TIMEOUT)
+  : 30 * 1000
+
+console.log('timeout: ', timeout)
 
 export const http = axios.create({
   baseURL,
@@ -11,9 +24,7 @@ export const http = axios.create({
   },
   transformRequest: [(data) => JSON.stringify(data)],
   // withCredentials: true,
-  timeout: process.env.API_TIMEOUT
-    ? Number(process.env.API_TIMEOUT)
-    : 30 * 1000,
+  timeout,
 })
 
 http.interceptors.response.use((res) => {

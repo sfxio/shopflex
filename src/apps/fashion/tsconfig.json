@@ -2,6 +2,10 @@
   "compilerOptions": {
     "strict": false,
     "baseUrl": ".",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "paths": {
       "~/*": [
         "./*"

@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "strict": false,
     "jsx": "preserve",
     "sourceMap": false,
     "lib": [
-      "esnext",
-      "dom"
+      "ESNext",
+      "DOM"
     ],
     "types": [
       "vite/client",

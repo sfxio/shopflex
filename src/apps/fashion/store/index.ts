@@ -5,7 +5,6 @@ import { appConfig } from '~/config'
 const debug = process.env.NODE_ENV !== 'production'
 
 const init = (store: Store<any>) => {
-  console.log('store: ', store)
   store.commit(config.CONFIG_M_SET_APP_CONFIG, appConfig)
 }
 
