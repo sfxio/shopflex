@@ -1,5 +1,5 @@
-import type { UserState } from '../../types'
-import { Module } from 'vuex'
+import type { UserState } from '@/types'
+import type { Module } from 'vuex'
 
 export const USER_MODULE_NAME = 'user'
 

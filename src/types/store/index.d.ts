@@ -1,6 +1,2 @@
-import { User } from '..'
-
-export interface UserState {
-  user: User | null
-  token: string | undefined
-}
+export * from './user'
+export * from './config'

@@ -12,9 +12,11 @@
     "test:ci-components": "cypress run-ct"
   },
   "dependencies": {
+    "@vueuse/core": "^7.5.3",
     "@vueuse/head": "~0.7",
     "ant-design-vue": "^2.2.8",
     "await-to-js": "^3.0.0",
+    "axios": "^0.25.0",
     "vue": "~3.2",
     "vue-router": "~4.0",
     "vuex": "~4.0"

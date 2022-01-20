@@ -98,7 +98,7 @@ export function ignore(obj = {}, keys) {
     keys = [keys]
   }
   const res = { ...obj }
-  keys.forEach(key => {
+  keys.forEach((key) => {
     if (_hasOwnProperty.call(obj, key)) {
       delete res[key]
     }
@@ -156,7 +156,12 @@ export function shallowEqual(objA, objB) {
     return true
   }
 
-  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+  if (
+    typeof objA !== 'object' ||
+    objA === null ||
+    typeof objB !== 'object' ||
+    objB === null
+  ) {
     return false
   }
 
@@ -169,7 +174,10 @@ export function shallowEqual(objA, objB) {
 
   // Test for A's keys different from B.
   for (let i = 0; i < keysA.length; i++) {
-    if (!_hasOwnProperty.call(objB, keysA[i]) || !Object.is(objA[keysA[i]], objB[keysA[i]])) {
+    if (
+      !_hasOwnProperty.call(objB, keysA[i]) ||
+      !Object.is(objA[keysA[i]], objB[keysA[i]])
+    ) {
       return false
     }
   }
@@ -199,7 +207,7 @@ export function looseEqual(a, b) {
         const keysB = Object.keys(b)
         return (
           keysA.length === keysB.length &&
-          keysA.every(key => {
+          keysA.every((key) => {
             return looseEqual(a[key], b[key])
           })
         )
@@ -223,7 +231,9 @@ export function looseEqual(a, b) {
  */
 const camelizeRE = /-(\w)/g
 export function upperCaseWord(str) {
-  const res = str.replace(camelizeRE, (_, c) => (c ? ' ' + c.toUpperCase() : ''))
+  const res = str.replace(camelizeRE, (_, c) =>
+    c ? ' ' + c.toUpperCase() : '',
+  )
   return res.charAt(0).toUpperCase() + res.slice(1)
 }
 
@@ -231,73 +241,7 @@ export function formatDate(date, pattern = 'YYYY-MM-DD HH:MM') {
   return dayjs(date).format(pattern) // display
 }
 
-export function debounce(func, wait = 500, immediate = true) {
-  let timeout, result
-
-  const debounced = function () {
-    const context = this
-    const args = arguments
-
-    if (timeout) clearTimeout(timeout)
-    if (immediate) {
-      // 如果已经执行过，不再执行
-      const callNow = !timeout
-      timeout = setTimeout(function () {
-        timeout = null
-      }, wait)
-      if (callNow) result = func.apply(context, args)
-    } else {
-      timeout = setTimeout(function () {
-        func.apply(context, args)
-      }, wait)
-    }
-    return result
-  }
-
-  debounced.cancel = function () {
-    clearTimeout(timeout)
-    timeout = null
-  }
-
-  return debounced
-}
-
-export function throttle(func, wait = 300, options = { leading: true, trailing: false }) {
-  let timeout, context, args, result
-  let previous = 0
-  if (!options) options = {}
-
-  const later = function () {
-    previous = options.leading === false ? 0 : new Date().getTime()
-    timeout = null
-    result = func.apply(context, args)
-    if (!timeout) context = args = null
-    return result
-  }
-
-  const throttled = function () {
-    const now = new Date().getTime()
-    if (!previous && options.leading === false) previous = now
-    const remaining = wait - (now - previous)
-    context = this
-    args = arguments
-    if (remaining <= 0 || remaining > wait) {
-      if (timeout) {
-        clearTimeout(timeout)
-        timeout = null
-      }
-      previous = now
-      func.apply(context, args)
-      if (!timeout) context = args = null
-    } else if (!timeout && options.trailing !== false) {
-      timeout = setTimeout(later, remaining)
-    }
-  }
-  return throttled
-}
-
 /**
- *
  * @param {*} obj
  * @example {a: 'A', b: 'B' } => { A: 'a', B: 'b' }
  */
