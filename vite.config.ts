@@ -9,7 +9,9 @@ if (process.env.NODE_ENV === 'production') {
   process.env.SH_APP_BUILD_EPOCH = new Date().getTime().toString()
 }
 
-const proxyApiTarget = process.env.SH_API_PROD_BASE_URL
+const proxyApiTarget =
+  process.env.SH_API_PROD_BASE_URL || 'https://api.shopflex.io'
+console.log('proxy api target - ', proxyApiTarget)
 const APP_NAME = process.env.SH_APP_NAME
 const theme = require(`./theme/${APP_NAME}`)
 console.log('vite config ', 'starting ', APP_NAME)
@@ -58,10 +60,7 @@ export default defineConfig({
       '/api': {
         target: proxyApiTarget,
         changeOrigin: true,
-        rewrite: (path) => {
-          const res = path.replace(/^\/api/, '')
-          return res
-        },
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },

@@ -7,15 +7,15 @@ export const LOG_LEVEL_HTTP = 3
 export const LOG_LEVEL_WARN = 4
 export const LOG_LEVEL_ERROR = 5
 
-if (!process.env.LOG_LEVEL) {
-  process.env.LOG_LEVEL =
-    process.env.NODE_ENV === 'production' ? LOG_LEVEL_HTTP : LOG_LEVEL_VERBOSE
+let logLevel  = LOG_LEVEL_VERBOSE
+if (import.meta.env.SH_LOG_LEVEL) {
+  logLevel = import.meta.env.SH_LOG_LEVEL
 }
 
 // eslint-disable-next-line line-comment-position
 let color = '' // info by default
 function _log(level, logger, prefix = '', message = '', ...args) {
-  if (process && process.browser) {
+  if (!import.meta.SSR) {
     if (level >= LOG_LEVEL_ERROR) {
       color = `\x1B[31m%s\x1B[0m`
     } else if (level >= LOG_LEVEL_WARN) {
@@ -25,7 +25,7 @@ function _log(level, logger, prefix = '', message = '', ...args) {
     }
   }
 
-  if (level >= Number(process.env.LOG_LEVEL)) {
+  if (level >= Number(logLevel)) {
     logger(color, `${prefix}`, message, ...args)
   }
 }

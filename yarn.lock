@@ -311,6 +311,11 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@types/promise-memoize@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmmirror.com/@types/promise-memoize/download/@types/promise-memoize-1.2.1.tgz#dccd0ae4cec10483515f1f04e7e40b7342c740d8"
+  integrity sha1-3M0K5M7BBINRXx8E5+QLc0LHQNg=
+
 "@types/sinonjs__fake-timers@^6.0.2":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@types/sinonjs__fake-timers/-/sinonjs__fake-timers-6.0.4.tgz#0ecc1b9259b76598ef01942f547904ce61a6a77d"
@@ -3317,6 +3322,11 @@ progress@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
+
+promise-memoize@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmmirror.com/promise-memoize/download/promise-memoize-1.2.1.tgz#71f9554a989cf6bf8987b43a52132d5c79312657"
+  integrity sha1-cflVSpic9r+Jh7Q6UhMtXHkxJlc=
 
 proxy-from-env@1.0.0:
   version "1.0.0"

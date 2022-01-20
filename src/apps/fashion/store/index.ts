@@ -1,14 +1,16 @@
-import { modules, config } from '@/store'
+import { modules, config, init } from '@/store'
 import { createStore, createLogger, Store } from 'vuex'
 import { appConfig } from '~/config'
 
-const debug = process.env.NODE_ENV !== 'production'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const debug = import.meta.env.DEV
 
-const init = (store: Store<any>) => {
+const initApp = (store: Store<any>) => {
   store.commit(config.CONFIG_M_SET_APP_CONFIG, appConfig)
 }
 
-const plugins = [init]
+const plugins = [initApp, init()]
 
 export default createStore({
   modules: {

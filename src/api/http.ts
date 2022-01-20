@@ -1,6 +1,7 @@
 /* eslint-disable */
 // @ts-nocheck
-import axios from 'axios'
+import axios, { AxiosInstance } from 'axios'
+import { asyncTo } from '../utils'
 import { ERR_CODE_OK } from './_constant'
 
 let baseURL
@@ -10,12 +11,9 @@ if (import.meta.env.DEV) {
   baseURL = import.meta.env.SH_API_PROD_BASE_URL
 }
 
-console.log('meta: ', import.meta)
 const timeout = import.meta.env.SH_API_TIMEOUT
   ? Number(import.meta.env.SH_API_TIMEOUT)
   : 30 * 1000
-
-console.log('timeout: ', timeout)
 
 export const http = axios.create({
   baseURL,
@@ -36,4 +34,10 @@ http.interceptors.response.use((res) => {
         message: data.message,
         code,
       })
+})
+
+const httpMethods = ['get', 'post', 'put', 'delete', 'patch']
+httpMethods.forEach((method) => {
+  const origin = http[method]
+  http[method] = (...args) => asyncTo(origin(...args))
 })

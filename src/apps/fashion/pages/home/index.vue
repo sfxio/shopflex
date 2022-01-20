@@ -18,8 +18,8 @@ export default defineComponent({
   },
   setup() {
     const handleClick = async () => {
-      const res = await ProductModel.fetchProductList()
-      console.log('res: ', res)
+      const [_, res] = await ProductModel.fetchProductList()
+      console.log('res - ', res)
     }
     return {
       handleClick,

@@ -17,6 +17,7 @@
     "ant-design-vue": "^2.2.8",
     "await-to-js": "^3.0.0",
     "axios": "^0.25.0",
+    "promise-memoize": "^1.2.1",
     "vue": "~3.2",
     "vue-router": "~4.0",
     "vuex": "~4.0"
@@ -28,6 +29,7 @@
     "@tailwindcss/forms": "~0.4",
     "@tailwindcss/line-clamp": "~0.3",
     "@tailwindcss/typography": "~0.5",
+    "@types/promise-memoize": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "~5",
     "@typescript-eslint/parser": "~5",
     "@vitejs/plugin-vue": "~2",
