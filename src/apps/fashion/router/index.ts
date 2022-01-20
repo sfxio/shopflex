@@ -1,15 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Index from '../pages/home/index.vue'
+const Home = () => import('../pages/home/index.vue')
+const NotFound = () => import('../pages/404/index.vue')
 
 const routes = [
   {
     path: '/',
-    component: Index,
+    component: Home,
+    name: 'home',
     meta: {
-      title: 'Vite + Vue + TypeScript + Tailwind Starter Template',
+      title: 'Home',
     },
   },
+  { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },
 ]
 
 const router = createRouter({

@@ -1,18 +1,12 @@
 <template>
-  <DefaultLayout>
-    aaaaaa
-  </DefaultLayout>
+  sider
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import DefaultLayout from '~/layouts/default.vue'
 
 export default defineComponent({
-  name: 'PHome',
-  components: {
-    DefaultLayout,
-  },
+  name: 'CSider',
   setup() {
     return {}
   },
