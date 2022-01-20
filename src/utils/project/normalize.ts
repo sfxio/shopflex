@@ -1,21 +1,4 @@
-import { clearVoidKey, pick } from '../common'
-
-export function normalizeProduct(product) {
-  return {
-    id: product.id,
-    cover: product.cover || product.pic,
-    name: product.name,
-    description: product.description,
-    mpn: product.mpn,
-    cost: product.cost,
-    price: product.price,
-    categoryId: product.categoryId || product.productCategoryId,
-    region: product.region || product.regionCode,
-    stock: product.stock,
-    currencyCode: product.currencyCode,
-    skuList: product.skuList,
-  }
-}
+import { clearVoidKey, pick, isArray } from '../common'
 
 /**
  * @param { {name: string | null, nameEn: string | null} } item
@@ -34,7 +17,7 @@ export function normalizeCategories(cList = []) {
       children: item.children ? normalizeCategories(item.children) : null,
     }
   }
-  return cList.map(item => {
+  return cList.map((item) => {
     const children = item.children ? normalizeCategories(item.children) : null
     return clearVoidKey({
       id: item.id,
@@ -50,7 +33,7 @@ export function normalizeCategories(cList = []) {
 
 // 为了统一，然后进行路由跳转
 export function normalizeCategoriesAsMenu(categories = []) {
-  return categories.map(c => {
+  return categories.map((c) => {
     const children = c.children
     if (children) {
       // children = normalizeCategories(children)
@@ -63,7 +46,9 @@ export function normalizeCategoriesAsMenu(categories = []) {
   })
 }
 
-export function normalizeUser(user): {
+export function normalizeUser(
+  user,
+): {
   id: any
   username: any
   channel: any
@@ -78,5 +63,16 @@ export function normalizeUser(user): {
   if (!user) {
     return
   }
-  return pick(user, ['id', 'username', 'channel', 'platform', 'platformStatus', 'email', 'regionCode', 'shopName', 'shopDomain', 'phone'])
+  return pick(user, [
+    'id',
+    'username',
+    'channel',
+    'platform',
+    'platformStatus',
+    'email',
+    'regionCode',
+    'shopName',
+    'shopDomain',
+    'phone',
+  ])
 }

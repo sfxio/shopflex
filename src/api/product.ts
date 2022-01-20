@@ -1,24 +1,34 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import type { ProductListParams, ProductListRes } from '@/types'
+import type {
+  ProductListParams,
+  ProductListRes,
+  BaseParams,
+  AsyncToRes,
+} from '@/types'
+
 import { http } from './http'
-import { log, normalizer } from '@/utils'
-import { ERR_CODE_OK } from './_constant'
-import { AsyncToRes } from '@/types/utils'
+import { normalizer } from '@/utils'
+import { transformRes } from './_helper'
 
 export async function fetchProductList(
   params?: ProductListParams,
 ): AsyncToRes<ProductListRes> {
   params = normalizer.normalizeProductListParams(params)
-  const [err, res] = await http.get('/distributor/product/list', { params })
-  if (err) {
-    log.http('product', 'fetch product list err with - ', err)
-    return Promise.resolve([err, null])
-  }
+  const res = await http.get('/distributor/product/list', { params })
+  return transformRes(res, (res) => {
+    const { list, ...rest } = res.data || {}
+    rest.list = normalizer.normalizeProductList(list)
 
-  if (res.code !== ERR_CODE_OK) {
-    return [new Error(res.message), null]
-  }
+    return rest
+  })
+}
 
-  return [null, res.data]
+export const fetchCategories = async (params?: BaseParams) => {
+  const res = await http.get('/productCategory/aws/list/product/withChildren', {
+    params,
+  })
+  return transformRes(res, (res) => {
+    return normalizer.normalizeCategoryList(res.data)
+  })
 }

@@ -26,7 +26,7 @@ export function isVoid(v) {
   return v === null || v === undefined || v === ''
 }
 
-export function isString(v) {
+export function isString(v): v is string {
   return typeof v === 'string'
 }
 
