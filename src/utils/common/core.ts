@@ -50,7 +50,7 @@ export function isObject(v) {
   return typeof v === 'object' && v !== null
 }
 
-export function isFunction(v) {
+export function isFunction(v): v is Function {
   return typeof v === 'function'
 }
 

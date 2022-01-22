@@ -29,7 +29,7 @@ export function normalizeProductItem(item): ProductItem {
   }
   const res: ProductItem = {
     id: item.id,
-    cover: item.cover || item.pic,
+    cover: item.cover ?? item.pic,
     attrList: item.attrList,
     imgList,
     name: item.name,
@@ -38,8 +38,9 @@ export function normalizeProductItem(item): ProductItem {
     cost: item.cost,
     price: item.price,
     stock: item.stock,
-    region: item.region || item.regionCode,
-    categoryId: item.categoryId,
+    region: item.region ?? item.regionCode,
+    categoryId: item.categoryId ?? item.productCategoryId,
+    categoryName: item.categoryName ?? item.productCategoryName,
     currencyCode: item.currencyCode,
     skuList: normalizeSkuList(item.skuList),
   }

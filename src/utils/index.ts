@@ -1,4 +1,5 @@
 export * from './common'
 export * from './logger'
+export * from './re'
 export * as normalizer from './normalizer'
 // export * from './project'

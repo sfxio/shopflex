@@ -13,6 +13,7 @@ export interface ProductItem {
   cost: number
   price: number
   categoryId: any
+  categoryName: string
   region: string
   stock: number
   currencyCode: string

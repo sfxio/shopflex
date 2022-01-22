@@ -64,7 +64,7 @@ module.exports = {
     camelcase: 0,
     'computed-property-spacing': 2,
     'consistent-this': 2,
-    'func-call-spacing': 2,
+    'func-call-spacing': 0,
     'func-names': 0,
     'func-name-matching': 2,
     'func-style': [
