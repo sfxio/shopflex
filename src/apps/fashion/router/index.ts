@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const Home = () => import('../pages/home/index.vue')
+const Auth = () => import('../pages/auth/index.vue')
 const NotFound = () => import('../pages/404/index.vue')
 
 const routes = [
@@ -10,6 +11,14 @@ const routes = [
     name: 'home',
     meta: {
       title: 'Home',
+    },
+  },
+  {
+    path: '/auth',
+    component: Auth,
+    name: 'auth',
+    meta: {
+      title: 'Auth',
     },
   },
   { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },

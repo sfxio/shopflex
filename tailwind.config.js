@@ -5,7 +5,7 @@ const colors = require('tailwindcss/colors')
 const theme = require('./theme/fashion')
 module.exports = {
   mode: 'jit',
-  prefix: 'sht-',
+  prefix: 'sh-',
   content: {
     enabled: process.env.NODE_ENV === 'production',
     content: ['./index.html', './src/**/*.{vue,ts}'],
@@ -836,7 +836,9 @@ module.exports = {
     }),
     zIndex: {
       auto: 'auto',
-      0: '0',
+      0: 0,
+      1: 1,
+      '-1': -1,
       dropdown: 1000,
       sticky: 1020,
       fixed: 1030,

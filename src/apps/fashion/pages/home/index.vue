@@ -1,7 +1,6 @@
 <template>
   <DefaultLayout>
-    aaaaaa
-    <AButton @click="handleClick">click</AButton>
+    <p v-for="i in 100" :key="i">{{ i }}</p>
   </DefaultLayout>
 </template>
 

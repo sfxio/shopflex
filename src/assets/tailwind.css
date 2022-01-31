@@ -3,65 +3,65 @@
 @tailwind utilities;
 
 @layer components {
-  .sht-flex-center-col {
-    @apply sht-flex sht-justify-center sht-items-center sht-flex-col;
+  .sh-flex-center-col {
+    @apply sh-flex sh-justify-center sh-items-center sh-flex-col;
   }
 
-  .sht-flex-center-row {
-    @apply sht-flex sht-justify-center sht-items-center;
+  .sh-flex-center-row {
+    @apply sh-flex sh-justify-center sh-items-center;
   }
 
-  .sht-flex-between-center {
-    @apply sht-flex sht-justify-between sht-items-center;
+  .sh-flex-between-center {
+    @apply sh-flex sh-justify-between sh-items-center;
   }
 
-  .sht-border-1-primary {
-    @apply sht-border sht-border-solid sht-border-color-primary;
+  .sh-border-1-primary {
+    @apply sh-border sh-border-solid sh-border-color-primary;
   }
 
-  .sht-border-1-secondary {
-    @apply sht-border sht-border-solid  sht-border-color-secondary;
+  .sh-border-1-secondary {
+    @apply sh-border sh-border-solid  sh-border-color-secondary;
   }
 
-  .sht-border-1-lightgray {
-    @apply sht-border sht-border-solid  sht-border-color-lightgray;
+  .sh-border-1-lightgray {
+    @apply sh-border sh-border-solid  sh-border-color-lightgray;
   }
 
-  .sht-border-t-1-lightgray {
-    @apply sht-border-t-1 sht-border-solid  sht-border-color-lightgray;
+  .sh-border-t-1-lightgray {
+    @apply sh-border-t-1 sh-border-solid  sh-border-color-lightgray;
   }
 
-  .sht-border-b-1-lightgray {
-    @apply sht-border-b-1 sht-border-solid  sht-border-color-lightgray;
+  .sh-border-b-1-lightgray {
+    @apply sh-border-b-1 sh-border-solid  sh-border-color-lightgray;
   }
 
-  .sht-border-1-tertiary {
-    @apply sht-border sht-border-solid sht-border-color-tertiary;
+  .sh-border-1-tertiary {
+    @apply sh-border sh-border-solid sh-border-color-tertiary;
   }
 
-  .sht-h1 {
-    @apply sht-text-5xl sht-font-bold  sht-my-3;
+  .sh-h1 {
+    @apply sh-text-5xl sh-font-bold  sh-my-3;
   }
 
-  .sht-h2 {
-    @apply sht-text-3xl sht-font-bold  sht-my-3;
+  .sh-h2 {
+    @apply sh-text-3xl sh-font-bold  sh-my-3;
   }
 
-  .sht-h3 {
-    @apply sht-text-xl sht-font-semibold  sht-my-3;
+  .sh-h3 {
+    @apply sh-text-xl sh-font-semibold  sh-my-3;
   }
-  .sht-h4 {
-    @apply sht-text-base sht-font-semibold  sht-my-3;
+  .sh-h4 {
+    @apply sh-text-base sh-font-semibold  sh-my-3;
   }
-  .sht-h5 {
-    @apply sht-text-sm sht-font-semibold  sht-my-3;
-  }
-
-  .sht-p {
-    @apply sht-h-5 sht-text-color-lightgray;
+  .sh-h5 {
+    @apply sh-text-sm sh-font-semibold  sh-my-3;
   }
 
-  .sht-mask {
-    @apply sht-absolute sht-top-0 sht-bottom-0 sht-left-0 sht-right-0 sht-z-10;
+  .sh-p {
+    @apply sh-h-5 sh-text-color-lightgray;
+  }
+
+  .sh-mask {
+    @apply sh-absolute sh-top-0 sh-bottom-0 sh-left-0 sh-right-0 sh-z-10;
   }
 }
