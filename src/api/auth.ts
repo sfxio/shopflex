@@ -1,10 +1,10 @@
 import type { LoginForm, RegisterForm } from '@/types'
 import { authErrorRE, log } from '@/utils'
-import { http } from './http'
+import { defaultHttp } from './http'
 import { ERR_CODE_OK } from './_constant'
 
 function fetchAuth(form: any) {
-  const res = http
+  const res = defaultHttp
     .post('/admin/merchant/login', form)
     .then((res: any) => {
       // eslint-disable-next-line prefer-const

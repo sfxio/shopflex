@@ -3,7 +3,7 @@
     <CHeader style="flex-shrink: 0;" />
     <a-layout style="overflow: hidden;">
       <a-layout-sider theme="light" :width="256"><CSider /></a-layout-sider>
-      <a-layout-content><slot /></a-layout-content>
+      <a-layout-content style="overflow: auto;"><slot /></a-layout-content>
     </a-layout>
     <CFooter style="flex-shrink: 0;" />
   </a-layout>

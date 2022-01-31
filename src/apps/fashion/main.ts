@@ -2,18 +2,27 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { createHead } from '@vueuse/head'
-import { enhanceHttp } from '@/plugins'
-import { http } from '@/api'
-import store from './store'
+import { createPinia } from 'pinia'
+import { useInitConfig } from './store/plugins/init'
+import { useEnhanceHttp } from './store/plugins/enhance-http'
+import { defaultHttp as http } from '@/api'
+import { appConfig } from './config'
 
 // import { store } from './store'
 
 const head = createHead()
-export const app = createApp(App)
+const pinia = createPinia()
+const app = createApp(App)
+pinia.use(
+  useInitConfig({
+    appConfig,
+  }),
+)
+pinia.use(useEnhanceHttp(http))
 
-enhanceHttp(http, store)
-app.use(store)
 app.use(router)
 app.use(head)
+app.use(pinia)
 
 app.mount('#app')
+export default app

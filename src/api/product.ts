@@ -7,7 +7,7 @@ import type {
   AsyncToRes,
 } from '@/types'
 
-import { http } from './http'
+import { defaultHttp } from './http'
 import { normalizer } from '@/utils'
 import { transformRes } from './_helper'
 
@@ -15,7 +15,7 @@ export async function fetchProductList(
   params?: ProductListParams,
 ): AsyncToRes<ProductListRes> {
   params = normalizer.normalizeProductListParams(params)
-  const res = await http.get('/distributor/product/list', { params })
+  const res = await defaultHttp.get('/distributor/product/list', { params })
   return transformRes(res, (res) => {
     const { list, ...rest } = res.data || {}
     rest.list = normalizer.normalizeProductList(list)
@@ -25,7 +25,7 @@ export async function fetchProductList(
 }
 
 export const fetchCategories = async (params?: BaseParams) => {
-  const res = await http.get('/productCategory/aws/list/product/withChildren', {
+  const res = await defaultHttp.get('/productCategory/aws/list/product/withChildren', {
     params,
   })
   return transformRes(res, (res) => {

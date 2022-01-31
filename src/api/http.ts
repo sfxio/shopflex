@@ -1,6 +1,6 @@
 /* eslint-disable */
 // @ts-nocheck
-import axios, { AxiosInstance } from 'axios'
+import axios from 'axios'
 import { asyncTo } from '../utils'
 import { ERR_CODE_OK } from './_constant'
 
@@ -15,7 +15,7 @@ const timeout = import.meta.env.SH_API_TIMEOUT
   ? Number(import.meta.env.SH_API_TIMEOUT)
   : 30 * 1000
 
-export const http = axios.create({
+export const defaultHttp = axios.create({
   baseURL,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
@@ -25,7 +25,7 @@ export const http = axios.create({
   timeout,
 })
 
-http.interceptors.response.use((res) => {
+defaultHttp.interceptors.response.use((res) => {
   const data = res.data
   const code = data.code || ERR_CODE_OK
   return code === ERR_CODE_OK
@@ -38,6 +38,6 @@ http.interceptors.response.use((res) => {
 
 const httpMethods = ['get', 'post', 'put', 'delete', 'patch']
 httpMethods.forEach((method) => {
-  const origin = http[method]
-  http[method] = (...args) => asyncTo(origin(...args))
+  const origin = defaultHttp[method]
+  defaultHttp[method] = (...args) => asyncTo(origin(...args))
 })
