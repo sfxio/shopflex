@@ -1,45 +1,75 @@
 <template>
-  <a-menu mode="inline" :inlineIndent="12">
-    <a-sub-menu key="sub1">
-      <template #title>
-        <SHItem :item="item" />
-      </template>
-    </a-sub-menu>
-  </a-menu>
+  <SHMenu
+    :data="menuData"
+    mode="inline"
+    @sh-select="handleSelect"
+    class="sh-font-medium"
+  />
 </template>
 
 <script lang="ts">
-import { Home } from '@icon-park/vue-next'
-import { defineComponent, h, onMounted } from 'vue'
-import { ConfigModel } from '@/api'
-import { useConfigStore } from '~/store'
-import { useUserStore } from '~/store/user'
-import SHItem from './item.vue'
+import { defineComponent } from 'vue'
+import SHMenu from '@/components/menu/sh-menu.vue'
+import { log } from '@/utils'
 
 export default defineComponent({
   name: 'CSider',
   components: {
-    SHItem,
+    SHMenu,
   },
   setup() {
-    const configStore = useConfigStore()
-    const userStore = useUserStore()
-    onMounted(async () => {
-      try {
-        const res = await ConfigModel.getCategory()
-        console.log('res: ', res)
-      } catch (err) {
-        console.log('err: ', err)
-      }
-    })
-    console.log('store: ', configStore.appConfig)
-    console.log('store2: ', userStore)
+    const handleSelect = ({ item }) => {
+      log.verbose('sider', 'current selected item: ', item)
+    }
     return {
-      item: {
-        prepend: Home,
-        content: 'Middle',
-        append: 'aa',
-      },
+      handleSelect,
+      menuData: [
+        {
+          id: 1,
+          icon: 'policy',
+          title: 'Policy',
+          location: {},
+        },
+        {
+          id: 2,
+          icon: 'info',
+          title: 'About use',
+          badge: {
+            count: 22,
+          },
+          location: {},
+        },
+        {
+          id: 3,
+          icon: 'label',
+          title: 'categories',
+          location: {},
+          children: [
+            {
+              id: 4,
+              title: 'bottoms',
+              location: {},
+            },
+            {
+              id: 5,
+              title: 'denim',
+              location: {},
+              children: [
+                {
+                  id: 6,
+                  title: 'bottoms',
+                  location: {},
+                },
+                {
+                  id: 7,
+                  title: 'denim',
+                  location: {},
+                },
+              ],
+            },
+          ],
+        },
+      ],
     }
   },
 })
