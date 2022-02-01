@@ -6,6 +6,7 @@ import { CONFIG_MODULE_NAME, useConfigStore } from '..'
 export function useEnhanceHttp(http: AxiosInstance) {
   return function (ctx: PiniaPluginContext) {
     const store = ctx.store as ReturnType<typeof useConfigStore>
+    console.log('ctx: ', ctx.pinia.state.value[CONFIG_MODULE_NAME])
     if (store.$id !== CONFIG_MODULE_NAME) {
       return
     }
@@ -24,6 +25,7 @@ export function useEnhanceHttp(http: AxiosInstance) {
       params.regionCode = params.region || params.regionCode || store.region
 
       config.params = clearVoidKey(params)
+      console.log('config.params: ', config.params)
       return config
     })
   }

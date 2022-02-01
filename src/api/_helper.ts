@@ -1,6 +1,6 @@
-import type { Category, MenuItem } from '@/types'
+import type { Category, MenuItem, ProductItem } from '@/types'
 
-import { log } from '@/utils'
+import { isNotVoid, isString, log } from '@/utils'
 import { isArray } from '@vue/shared'
 
 import { ERR_CODE_OK } from './_constant'
@@ -67,4 +67,39 @@ export function normalizeCategoriesWithLocation(cate: Category[]): MenuItem[] {
       children,
     } as any
   })
+}
+
+export function normalizeProductItem(item): ProductItem {
+  let imgList = item.imgList
+  if (!imgList) {
+    imgList = isString(item.albumPics) ? item.albumPics.split(',') : []
+    imgList = imgList.filter((img) => isNotVoid(img))
+  }
+  const res: ProductItem = {
+    id: item.id,
+    cover: item.cover ?? item.pic,
+    attrList: item.attrList,
+    imgList,
+    name: item.name,
+    description: item.description,
+    mpn: item.mpn,
+    cost: item.cost,
+    price: item.price,
+    stock: item.stock,
+    region: item.region ?? item.regionCode,
+    categoryId: item.categoryId ?? item.productCategoryId,
+    categoryName: item.categoryName ?? item.productCategoryName,
+    currencyCode: item.currencyCode,
+    skuList: normalizeSkuList(item.skuList),
+  }
+
+  return res
+}
+
+export function normalizeSkuList(list) {
+  return list
+}
+
+export function normalizeProductList(list) {
+  return isArray(list) ? list.map((item) => normalizeProductItem(item)) : []
 }

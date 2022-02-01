@@ -8,10 +8,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent, computed } from 'vue'
 import SHMenu from '@/components/menu/sh-menu.vue'
-import { ConfigModel } from '@/api'
 import { log } from '@/utils'
+import { useRouter } from 'vue-router'
+import { useConfigStore } from '~/store'
 
 export default defineComponent({
   name: 'CSider',
@@ -19,17 +20,17 @@ export default defineComponent({
     SHMenu,
   },
   setup() {
+    const router = useRouter()
+    const configStore = useConfigStore()
+    const menuData = computed(() => configStore.$state.menu)
+    configStore.initMenuAsync()
+
     const handleSelect = ({ item }) => {
       log.verbose('sider', 'current selected item: ', item)
-    }
-    const menuData = ref([])
-
-    onMounted(async () => {
-      const [err, res] = await ConfigModel.getMenu()
-      if (!err) {
-        menuData.value = res
+      if (item.location) {
+        router.push(item.location)
       }
-    })
+    }
 
     return {
       handleSelect,

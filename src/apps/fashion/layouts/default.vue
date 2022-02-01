@@ -2,7 +2,11 @@
   <a-layout style="height: 100vh;">
     <CHeader style="flex-shrink: 0;" />
     <a-layout style="overflow: hidden;">
-      <a-layout-sider theme="light" :width="300"><CSider /></a-layout-sider>
+      <a-layout-sider theme="light" :width="300">
+        <KeepAlive>
+          <CSider />
+        </KeepAlive>
+      </a-layout-sider>
       <a-layout-content style="overflow: auto;"><slot /></a-layout-content>
     </a-layout>
     <CFooter style="flex-shrink: 0;" />
