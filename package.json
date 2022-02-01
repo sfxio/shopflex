@@ -18,11 +18,13 @@
     "ant-design-vue": "^2.2.8",
     "await-to-js": "^3.0.0",
     "axios": "^0.25.0",
+    "daisyui": "^1.25.4",
     "nanoid": "^3.2.0",
     "pinia": "^2.0.11",
     "promise-memoize": "^1.2.1",
     "vue": "~3.2",
     "vue-router": "~4.0",
+    "vue3-lazyload": "^0.2.5-beta",
     "vuex": "~4.0"
   },
   "devDependencies": {

@@ -61,7 +61,10 @@
     @apply sh-h-5 sh-text-color-lightgray;
   }
 
-  .sh-mask {
-    @apply sh-absolute sh-top-0 sh-bottom-0 sh-left-0 sh-right-0 sh-z-10;
+  .sh-mask-1 {
+    @apply sh-absolute sh-top-0 sh-bottom-0 sh-left-0 sh-right-0 sh-z-1;
+  }
+  .sh-mask-2 {
+    @apply sh-absolute sh-top-0 sh-bottom-0 sh-left-0 sh-right-0 sh-z-2;
   }
 }

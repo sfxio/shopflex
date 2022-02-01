@@ -1299,6 +1299,11 @@ cypress@~9.1:
     url "^0.11.0"
     yauzl "^2.10.0"
 
+daisyui@^1.25.4:
+  version "1.25.4"
+  resolved "https://registry.npmmirror.com/daisyui/-/daisyui-1.25.4.tgz#d143f5eca073336b20e21a7d9ba12dbe0b30e3c6"
+  integrity sha512-Y9DrFYjjfwK09Fc8/05DhpWgwqhqRuhuH4gMdQxCeZ9dLJ82y5xb6kvwLuK1cWLfCckDOWk3reEKXsciaMHyAw==
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -4175,6 +4180,11 @@ vue-types@^3.0.0:
   integrity sha1-7BbgXUEsA4Ji/B76TOuWR+f7YB0=
   dependencies:
     is-plain-object "3.0.1"
+
+vue3-lazyload@^0.2.5-beta:
+  version "0.2.5-beta"
+  resolved "https://registry.npmmirror.com/vue3-lazyload/-/vue3-lazyload-0.2.5-beta.tgz#cf81237cd487ce14aa7c21af8bfd8b83fc1f5360"
+  integrity sha512-GVhJfL9Hcu+AvWsYmUwODivvt+gzpT0ztgAzZaUduoiTaGCv/qzhr0VwAQXfjGF3XFYFyOJsHlAi3/WE0P8XTQ==
 
 vue@~3.2:
   version "3.2.26"

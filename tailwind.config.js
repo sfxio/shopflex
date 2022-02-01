@@ -82,6 +82,8 @@ module.exports = {
       80: '20rem',
       90: '22.5rem',
       96: '24rem',
+      102: '25.5rem',
+      108: '27rem',
     },
     animation: {
       none: 'none',
@@ -838,6 +840,7 @@ module.exports = {
       auto: 'auto',
       0: 0,
       1: 1,
+      2: 2,
       '-1': -1,
       dropdown: 1000,
       sticky: 1020,
@@ -855,6 +858,7 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
+    require('daisyui'),
     plugin(function ({ addVariant, e, postcss }) {
       addVariant('firefox', ({ container, separator }) => {
         const isFirefoxRule = postcss.atRule({
@@ -871,4 +875,23 @@ module.exports = {
       })
     }),
   ],
+
+  daisyui: {
+    styled: true,
+    themes: [
+      {
+        orange: {
+          // custom theme
+          primary: theme.primary,
+          'primary-focus': theme.secondary,
+          'primary-content': '#ffffff',
+          // other colors
+        },
+      },
+    ],
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+  },
 }
