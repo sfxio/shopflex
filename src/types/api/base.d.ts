@@ -1,3 +1,7 @@
+interface Err {
+  message: string
+}
+
 export interface BaseParams {
   regionCode?: string
   channel?: string
@@ -11,3 +15,5 @@ export interface BasePagination<T> {
   pageNum: number
   totalPage?: number
 }
+
+export type BaseRes<T> = Promise<[null, T]> | Promise<[Err, null]>

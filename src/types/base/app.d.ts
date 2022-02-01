@@ -1,11 +1,12 @@
+import type { RouteLocation } from 'vue-router'
+
 export interface MenuItem {
   id: unknown
-  name: string
-  link?: string
+  title: string
   icon?: string
-  query?: object
-  params?: object
-  children?: MenuItem[] | null
+  children?: MenuItem[]
+  location?: Partial<RouteLocation>
+  badge?: any
 }
 
 export interface AppConfig {

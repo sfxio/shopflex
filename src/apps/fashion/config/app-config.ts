@@ -1,5 +1,4 @@
 import type { AppConfig } from '@/types'
-let menuId = 0
 
 const channel = 'fas'
 const platform = 'sho'
@@ -26,42 +25,6 @@ const shopLinks = {
   Shopify: shopifyLink,
 }
 
-const menu = {
-  public: [
-    {
-      id: menuId--,
-      name: 'Policy',
-      icon: 'icon-policy',
-      link: '/policy',
-    },
-    { id: menuId--, name: 'About us', icon: 'icon-about', link: '/about' },
-    {
-      id: menuId--,
-      name: `How to use ${name}`,
-      icon: 'icon-how',
-      link: '/how',
-    },
-    {
-      id: menuId--,
-      name: 'All Products',
-      link: '/products',
-      icon: 'icon-all',
-    },
-    {
-      id: 1122,
-      name: 'Best Selling',
-      link: 'products-id',
-      icon: 'icon-hot',
-    },
-    {
-      id: 1123,
-      link: 'products-id',
-      name: 'New Arrivals',
-      icon: 'icon-new',
-    },
-  ],
-}
-
 export const appConfig: AppConfig = {
   name,
   title,
@@ -75,5 +38,4 @@ export const appConfig: AppConfig = {
   about,
   usage,
   shopLinks,
-  menu,
 }

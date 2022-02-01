@@ -28,7 +28,7 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    const handler = (type: 'ShClick' | 'ShSelect', { keyPath }) => {
+    const handler = (type: 'ShClick' | 'ShSelect', { keyPath, key }) => {
       const itemPath = []
 
       keyPath.reduce((prev, key, index) => {
@@ -43,6 +43,8 @@ export default defineComponent({
       return emit(type, {
         itemPath,
         item: itemPath[itemPath.length - 1],
+        keyPath,
+        key,
       })
     }
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

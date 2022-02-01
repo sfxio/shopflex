@@ -26,9 +26,11 @@ export interface User {
 }
 
 export interface Category {
-  id: string | number
+  id: unknown
   name: string
   description?: string
   icon?: string
   children?: Category[]
+  badge?: string
+  location?: any
 }
