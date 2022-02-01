@@ -8,7 +8,7 @@ export const COLLECTION_MODULE_NAME = 'collection'
 export const useCollectionStore = defineStore(COLLECTION_MODULE_NAME, {
   state: () => {
     return {
-      collectionItems: Object.create({}),
+      collectionItems: Object.create({}) as any,
       currentItemKey: undefined,
     }
   },

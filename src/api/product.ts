@@ -24,7 +24,7 @@ function normalizeGetProductParams(params: ProductListParams): any {
     rest.sortBy = orderBy
   }
 
-  rest.categoryId = id
+  rest.productCategoryId = id
 
   return rest
 }

@@ -21,29 +21,23 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const collectionStore = useCollectionStore()
-    const id = computed(() => route.params.id)
-    const currentItem = computed(() => collectionStore.currentItem)
+    const id = computed((): any => route.params.id)
+    const currentItem = computed(() => {
+      console.log('key: ', id.value)
+      return collectionStore.collectionItems[id.value]
+    })
     const currentItemList = computed(() => currentItem.value?.list)
-
-    const getCollection = (id, item: any = {}) => {
-      let { pageSize = 60, pageNum = 0 } = item
-      pageNum = pageNum + 1
-
-      collectionStore.setCurrentCollectionItemAsync(id, {
-        pageNum,
-        pageSize,
-      })
-    }
 
     watch(id, () => {
       if (collectionStore.hasItemById(id.value)) {
-        collectionStore.setCurrentItemKey(id.value)
         return
       }
-      getCollection(id.value, currentItem.value)
+      collectionStore.setCollectionItemAsync(id.value, {
+        id: id.value,
+        pageNum: 1,
+        pageSize: 60,
+      })
     })
-
-    getCollection(id.value)
 
     return {
       id,
