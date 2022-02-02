@@ -3,7 +3,7 @@ import type { BaseParams, BaseRes } from '@/types/api/base'
 
 import { log } from '@/utils'
 import { nanoid } from 'nanoid'
-import { defaultHttp as http } from './http'
+import { defaultHttp as defaultHttp } from './http'
 import {
   normalizeCategories,
   normalizeCategoriesWithLocation,
@@ -16,7 +16,7 @@ export function getAppConfig(params = {}) {
   const shopifyLink = 'https://apps.shopify.com/fashionexpress-dropshipping'
 
   const name = 'Fashion Express'
-  const title = 'Women Fashion Drop Shopping.'
+  const title = 'Worldwide Women Fashion Dropshipping'
   const description =
     'Fast & Free Shipping for order above $200. Flat Shipping rate of $12.99 for all order under $200.'
   const email = 'sandy@fashionexpress.us'
@@ -55,7 +55,7 @@ export function getAppConfig(params = {}) {
 
 export function getCategory(params: BaseParams = {}) {
   return transformRes(
-    http.get('/productCategory/aws/list/product/withChildren', { params }),
+    defaultHttp.get('/productCategory/aws/list/product/withChildren', { params }),
     (res) => normalizeCategories(res.data),
   ) as BaseRes<Category[]>
 }

@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import { createHead } from '@vueuse/head'
 import { createPinia } from 'pinia'
-import { useEnhanceHttp } from './store/plugins/enhance-http'
+import { useEnhanceHttp } from '@/store/plugins'
 import { defaultHttp as http } from '@/api'
 
 // import { store } from './store'

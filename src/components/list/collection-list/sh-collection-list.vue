@@ -10,53 +10,7 @@
   >
     <template v-for="(item, index) in list" :key="item.id">
       <a-col :span="6">
-        <div
-          class="card sh-relative sh-w-full sh-rounded-lg sh-bg-white sh-overflow-hidden hover:sh-shadow-lg"
-          style="height: 25.5rem;"
-        >
-          <figure class="sh-relative sh-w-full sh-h-80 sh-mb-0">
-            <div
-              class="mask sh-mask-1 sh-cursor-pointer sh-flex sh-justify-center sh-items-center"
-              :data-index="index"
-            >
-              <button
-                class="btn sh-btn sh-btn-primary sh-btn-sm"
-                :data-index="index"
-                data-type="add"
-              >
-                Add to My Product
-              </button>
-            </div>
-            <img
-              v-lazy="item.cover"
-              class="sh-object-cover sh-w-full sh-h-full"
-            />
-          </figure>
-
-          <div class="content sh-px-4 sh-py-2">
-            <a-tooltip placement="top">
-              <template #title>
-                <h3 class="sh-text-white first-letter:sh-uppercase">
-                  {{ item.name }}
-                </h3>
-              </template>
-              <h3
-                class="sh-w-full first-letter:sh-uppercase sh-font-bold sh-whitespace-nowrap sh-overflow-ellipsis sh-overflow-hidden"
-                :data-index="index"
-              >
-                {{ item.name }}
-              </h3>
-            </a-tooltip>
-            <div class="sh-flex sh-justify-between">
-              <span>Product Cost</span>
-              <span>$11</span>
-            </div>
-            <div class="sh-flex sh-justify-between">
-              <span>Suggested Resale Price</span>
-              <span>$12.33</span>
-            </div>
-          </div>
-        </div>
+        <DefaultItem :item="item" :index="index" />
       </a-col>
     </template>
   </a-row>
@@ -66,8 +20,10 @@
 import { ProductItem } from '@/types'
 import { isVoid, log } from '@/utils'
 import { defineComponent, PropType } from 'vue'
+import DefaultItem from './items/default-item.vue'
 
 export default defineComponent({
+  components: { DefaultItem },
   props: {
     list: {
       type: Array as PropType<ProductItem[]>,

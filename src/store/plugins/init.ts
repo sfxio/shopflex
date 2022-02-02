@@ -1,6 +1,7 @@
+import type { ConfigState } from '@/types'
 import type { PiniaPluginContext } from 'pinia'
-import { ConfigState } from '~/../../types'
-import { CONFIG_MODULE_NAME } from '..'
+
+import { CONFIG_MODULE_NAME } from '../config'
 
 export function useInitConfig(initState: Partial<ConfigState>) {
   return function initConfig(ctx: PiniaPluginContext) {
