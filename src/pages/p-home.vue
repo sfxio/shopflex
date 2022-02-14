@@ -1,18 +1,17 @@
 <template>
-  <LDefault>
-    collection
-  </LDefault>
+  <div>
+    <header>
+      header
+    </header>
+    <main>main</main>
+    <footer>footer</footer>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LDefault from '~/layouts/default.vue'
 
 export default defineComponent({
-  name: 'PCollection',
-  components: {
-    LDefault,
-  },
   setup() {
     return {}
   },
