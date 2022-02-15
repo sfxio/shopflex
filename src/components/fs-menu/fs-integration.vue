@@ -9,7 +9,11 @@
 
     <a-row :gutter="[8, 8]" wrap>
       <a-col v-for="inte in integration" :key="inte.name" :span="12">
-        <FsLink :link="inte.link" :route="inte.route" :target="inte.link ? '_blank' : ''">
+        <FsLink
+          :link="inte.link"
+          :route="inte.route"
+          :target="inte.link ? '_blank' : ''"
+        >
           <div
             class="fs-flex-ic fs-gap-4 fs-p-2 fs-rounded-lg decorator-link-hover hover:fs-cursor-pointer"
           >
@@ -29,29 +33,15 @@
 
 <script setup lang="ts">
 import DCircle from '../decorator/d-circle.vue'
-import { platformIcons } from '@/assets/icons'
 import FsLink from '../fs-link.vue'
+import { useIntegration } from '@/store'
+import { computed } from 'vue'
+
 const props = defineProps({
   title: String,
 })
-const integration: any = [
-  {
-    name: 'Shopify',
-    icon: platformIcons.shopify,
-    // link: ''
-    route: {
-      path: '/integration/shopify',
-    },
-  },
-  {
-    name: 'Wix',
-    icon: platformIcons.wix,
-    // link: ''
-    route: {
-      path: '/integration/wix',
-    },
-  },
-]
+const integrationStore = useIntegration()
+const integration = computed(() => integrationStore.list)
 </script>
 
 <style scoped lang="scss"></style>
