@@ -8,7 +8,7 @@
         {{ bannerStore.title.value }}
       </h1>
       <p
-        class="fs-font-medium fs-text-xl"
+        class="fs-font-medium fs-text-xl fs-text-center xl:fs-text-left"
         v-bind="bannerStore.description.props"
       >
         {{ bannerStore.description.value }}
