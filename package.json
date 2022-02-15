@@ -3,6 +3,7 @@
   "version": "1.10.0",
   "scripts": {
     "dev": "vite",
+    "build": "vite build",
     "build:fashion": "cross-env SH_APP_NAME=fashion vite build",
     "preview": "vite build && vite preview",
     "start": "yarn dev & wait-on tcp:3000 -v",
