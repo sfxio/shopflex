@@ -54,7 +54,7 @@ import FsSupplies from './fs-supplies.vue'
 <style lang="scss" scoped>
 .menu {
   .item {
-    @apply fs-font-semibold fs-inline-flex fs-items-center fs-h-full fs-cursor-pointer;
+    @apply fs-font-medium fs-text-lg fs-inline-flex fs-items-center fs-h-full fs-cursor-pointer;
     color: #222939;
 
     &.active {

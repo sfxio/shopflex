@@ -1,7 +1,7 @@
 <template>
-  <div style="height: 100vh;">
+  <div style="height: 100vh;" class="fs-flex fs-flex-col">
     <FsHeader />
-    <main>
+    <main class="fs-flex-1">
       <slot />
     </main>
     <FsFooter />
@@ -11,11 +11,6 @@
 <script lang="ts" setup>
 import FsHeader from '@/components/fs-header.vue'
 import FsFooter from '@/components/fs-footer.vue'
-import { useConfigStore } from '@/store'
-import { computed } from 'vue'
-
-const configStore = useConfigStore()
-const headerConfig = computed(() => configStore.headerConfig)
 </script>
 
 <style scoped></style>
