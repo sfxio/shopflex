@@ -1,7 +1,10 @@
 <template>
   <div class="banner">
     <section>
-      <h1 class="fs-font-bold fs-text-4xl" v-bind="bannerStore.title.props">
+      <h1
+        class="fs-font-bold fs-text-4xl fs-text-center xl:fs-text-left"
+        v-bind="bannerStore.title.props"
+      >
         {{ bannerStore.title.value }}
       </h1>
       <p
@@ -25,12 +28,14 @@
       >
         <a-col
           v-for="(item, index) in bannerStore.benefits.list"
-          :span="8"
+          :span="24"
+          :sm="12"
+          :md="8"
           :key="index"
           v-bind="item.props"
         >
           <li
-            class="fs-py-4 fs-font-semibold fs-text-xl fs-text-center"
+            class="fs-py-4 fs-font-semibold fs-text-xl"
             v-bind="item.innerProps"
           >
             {{ item.value }}

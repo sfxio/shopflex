@@ -1,8 +1,8 @@
 <template>
   <footer
-    class="fs-py-2 fs-border-t-1 fs-border-solid fs-border-color-lightgray"
+    class="fs-py-2 fs-px-4 fs-border-t-1 fs-border-solid fs-border-color-lightgray"
   >
-    <div :style="innerStyle" class="fs-flex-jb-ic">
+    <PageContainer class="fs-flex-ic fs-flex-col fs-gap-2 sm:fs-flex-row sm:fs-justify-between">
       <div class="left">
         <p class="gray">Contact Us: support@shopflex.io</p>
         <p class="gray">
@@ -21,7 +21,7 @@
         <img v-lazy="icons.footerLogo" />
         <h4 class="fs-font-semibold">Hope you get what you want here!</h4>
       </div>
-    </div>
+    </PageContainer>
   </footer>
 </template>
 
@@ -29,16 +29,10 @@
 import { useConfigStore } from '@/store'
 import { computed } from 'vue'
 import { icons } from '@/assets/icons'
+import PageContainer from './container/page-container.vue'
 
 const configStore = useConfigStore()
 const globalConfig = computed(() => configStore.globalConfig)
-
-const innerStyle = computed(() => {
-  return {
-    width: `${globalConfig.value.pageWidth}px`,
-    margin: 'auto',
-  }
-})
 </script>
 
 <style scoped lang="scss">

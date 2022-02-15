@@ -11,7 +11,7 @@
     <section class="fs-py-4">
       <slot name="content" :list="props.list">
         <a-row :gutter="[24, 24]" wrap>
-          <a-col :span="6" v-for="(item, index) in list" :key="index">
+          <a-col :span="24" :sm="12" :md="8" v-for="(item, index) in list" :key="index">
             <FsLink
               :style="containerStyle"
               class="wrapper hover:fs-shadow-xl fs-overflow-hidden fs-block fs-border-4 fs-border-solid fs-border-primary fs-p-2 fs-rounded-lg"

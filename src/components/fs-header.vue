@@ -1,32 +1,20 @@
 <template>
-  <header :style="headerStyle" class="fs-border-1">
-    <div
-      class="header__inner fs-m-auto fs-h-full fs-flex-jb-ic"
-      :style="headerInnerStyle"
-    >
+  <header class="fs-border-1 fs-py-2 fs-px-4">
+    <PageContainer class="fs-flex-ic">
       <FsLogo />
-      <div class="wrapper fs-h-full fs-flex-1 fs-flex-je">
-        <FsMenu />
+      <div class="wrapper fs-h-full fs-flex-1">
+        <div class="inner-wrapper fs-w-full fs-h-full fs-justify-end fs-hidden md:fs-flex">
+          <FsMenu />
+        </div>
       </div>
-    </div>
+    </PageContainer>
   </header>
 </template>
 
 <script setup lang="ts">
-import { useConfigStore } from '@/store'
-import { computed } from 'vue'
 import FsLogo from './fs-logo.vue'
 import FsMenu from './fs-menu/fs-menu.vue'
-const store = useConfigStore()
-const globalConfig = computed(() => store.globalConfig)
-const headerConfig = computed(() => store.headerConfig)
-
-const headerStyle = {
-  height: `${headerConfig.value.height}px`,
-}
-const headerInnerStyle = {
-  width: `${globalConfig.value.pageWidth}px`,
-}
+import PageContainer from './container/page-container.vue'
 </script>
 
 <style scoped></style>

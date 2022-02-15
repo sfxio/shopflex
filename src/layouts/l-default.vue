@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100vh;" class="fs-flex fs-flex-col">
+  <div style="height: 100vh;" class="fs-flex fs-flex-col fs-overflow-x-hidden">
     <FsHeader />
     <main class="fs-flex-1">
       <slot />

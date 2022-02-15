@@ -1,5 +1,5 @@
 <template>
-  <ul class="menu fs-h-full fs-flex fs-gap-4">
+  <ul class="menu fs-mb-0 fs-h-full fs-flex fs-gap-4">
     <li class="item">
       <RouterLink class="fs-text-black" to="/">Home</RouterLink>
     </li>

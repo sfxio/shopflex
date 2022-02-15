@@ -13,7 +13,7 @@ const globalConfig = computed(() => configStore.globalConfig)
 
 const containerStyle = computed(() => {
   return {
-    width: `${globalConfig.value.pageWidth}px`,
+    'max-width': `${globalConfig.value.pageWidth}px`,
     margin: 'auto',
   }
 })

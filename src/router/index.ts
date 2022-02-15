@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const Home = () => import('../pages/p-home.vue')
 const Integration = () => import('../pages/p-integration.vue')
+const NotFound = () => import('../pages/p-not-found.vue')
 
 const routes = [
   {
@@ -20,10 +21,15 @@ const routes = [
       title: 'Integration',
     },
   },
+  {
+    path: '/:pathMatch(.*)*',
+    component: NotFound,
+    name: 'not-found',
+  },
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/shopflex/'),
   routes,
 })
 
