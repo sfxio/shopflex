@@ -6,9 +6,10 @@ import App from './App.vue'
 import router from './router'
 import { loadingPending } from './assets/images'
 import './assets/global.css'
-import './assets/reset.scss'
 import './assets/fix-antd-ui.css'
 import './assets/tailwind.css'
+import './assets/style/main.scss'
+
 // 按需加载
 import Antd from 'ant-design-vue'
 

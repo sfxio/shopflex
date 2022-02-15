@@ -3,68 +3,31 @@
 @tailwind utilities;
 
 @layer components {
-  .sh-flex-center-col {
-    @apply sh-flex sh-justify-center sh-items-center sh-flex-col;
+  .fs-bb-lightgray {
+    @apply fs-border-b-1 fs-border-solid fs-border-color-lightgray;
   }
 
-  .sh-flex-center-row {
-    @apply sh-flex sh-justify-center sh-items-center;
+  .fs-flex-jc-ic {
+    @apply fs-flex fs-justify-center fs-items-center;
   }
 
-  .sh-flex-between-center {
-    @apply sh-flex sh-justify-between sh-items-center;
+  .fs-flex-jb-ic {
+    @apply fs-flex fs-justify-between fs-items-center;
   }
 
-  .sh-border-1-primary {
-    @apply sh-border sh-border-solid sh-border-color-primary;
+  .fs-flex-je {
+    @apply fs-flex fs-justify-end;
   }
 
-  .sh-border-1-secondary {
-    @apply sh-border sh-border-solid  sh-border-color-secondary;
+  .fs-flex-ic {
+    @apply fs-flex fs-items-center;
   }
 
-  .sh-border-1-lightgray {
-    @apply sh-border sh-border-solid  sh-border-color-lightgray;
+  .fs-border-1-lightgray {
+    @apply fs-border fs-border-solid fs-border-color-lightgray;
   }
 
-  .sh-border-t-1-lightgray {
-    @apply sh-border-t-1 sh-border-solid  sh-border-color-lightgray;
-  }
-
-  .sh-border-b-1-lightgray {
-    @apply sh-border-b-1 sh-border-solid  sh-border-color-lightgray;
-  }
-
-  .sh-border-1-tertiary {
-    @apply sh-border sh-border-solid sh-border-color-tertiary;
-  }
-
-  .sh-h1 {
-    @apply sh-text-5xl sh-font-bold  sh-my-3;
-  }
-
-  .sh-h2 {
-    @apply sh-text-3xl sh-font-bold  sh-my-3;
-  }
-
-  .sh-h3 {
-    @apply sh-text-xl sh-font-semibold  sh-my-3;
-  }
-  .sh-h4 {
-    @apply sh-text-base sh-font-semibold  sh-my-3;
-  }
-  .sh-h5 {
-    @apply sh-text-sm sh-font-semibold  sh-my-3;
-  }
-
-  .sh-p {
-    @apply sh-h-5 sh-text-color-lightgray;
-  }
-
-  .sh-mask-1 {
-    @apply sh-absolute sh-top-0 sh-bottom-0 sh-left-0 sh-right-0 sh-z-1;
-  }
-  .sh-mask-2 {
-    @apply sh-absolute sh-top-0 sh-bottom-0 sh-left-0 sh-right-0 sh-z-2;
+  .heading2 {
+    @apply fs-font-bold fs-text-3xl;
   }
 }

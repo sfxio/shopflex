@@ -33,7 +33,7 @@ export default defineConfig({
           'primary-color': theme.primary,
           'info-color': theme.primary,
           'processing-color': theme.primary,
-          'link-color': theme.link,
+          'link-color': theme.primary,
         },
       },
     },

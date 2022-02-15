@@ -4,11 +4,31 @@ const colors = require('tailwindcss/colors')
 
 const theme = require('./theme/fashion')
 module.exports = {
-  mode: 'jit',
   prefix: 'fs-',
   content: {
     enabled: process.env.NODE_ENV === 'production',
     content: ['./index.html', './src/**/*.{vue,ts}'],
+  },
+
+  daisyui: {
+    styled: true,
+    // daisyui
+    themes: [
+      {
+        orange: {
+          // custom theme
+          primary: '#fc7234',
+          'primary-focus': '#ffa22b',
+          'primary-content': '#ffffff',
+          // other colors
+        },
+      },
+      // 'dark', // and some pre-defined theme
+    ],
+    base: false,
+    utils: false,
+    logs: false,
+    rtl: false,
   },
 
   theme: {
@@ -858,6 +878,7 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
+    require('daisyui'),
     plugin(function ({ addVariant, e, postcss }) {
       addVariant('firefox', ({ container, separator }) => {
         const isFirefoxRule = postcss.atRule({

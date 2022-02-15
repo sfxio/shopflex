@@ -1,7 +1,7 @@
-import { Bill, TagOne, Info } from '@icon-park/vue-next'
+import shopify from './shopify.svg'
+import wix from './wix.svg'
 
-export const iconMap = {
-  policy: Bill,
-  info: Info,
-  label: TagOne,
+export const platformIcons = {
+  shopify,
+  wix,
 }

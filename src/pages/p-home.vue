@@ -1,21 +1,12 @@
 <template>
-  <div>
-    <header>
-      header
-    </header>
-    <main>main</main>
-    <footer>footer</footer>
-  </div>
+  <LDefault>
+    <button class="fs-btn fs-btn-primary">button</button>
+    <p v-for="i in 100" :key="i">home{{ i }}</p>
+  </LDefault>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  setup() {
-    return {}
-  },
-})
+<script setup lang="ts">
+import LDefault from '@/layouts/l-default.vue'
 </script>
 
 <style scoped></style>
