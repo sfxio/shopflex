@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { suppliersSiteIcon } from '@/assets/icons'
 
 let id = 0
 const useSuppliersId = 'suppliersId'
@@ -22,6 +23,24 @@ export const useSuppliers = defineStore(useSuppliersId, {
             'With 13 warehouses in USA & UK, 3-7 Days FREE Shipping.',
           link: 'https://mixshop.world/',
           route: {},
+        },
+        {
+          id: id++,
+          name: 'Instocks',
+          icon: suppliersSiteIcon.instocks,
+          link: '/',
+        },
+        {
+          id: id++,
+          name: 'Vendorslink',
+          icon: suppliersSiteIcon.vendorslink,
+          link: '/',
+        },
+        {
+          id: id++,
+          name: '5 Dollar Dropshipping',
+          icon: suppliersSiteIcon.dollar,
+          link: '/',
         },
       ] as const,
     }

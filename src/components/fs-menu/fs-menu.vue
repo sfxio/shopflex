@@ -10,7 +10,9 @@
       >
         <template #title>
           <span>Integration</span>
-          <DownOutlined />
+          <span class="arrow fs-inline-block">
+            <DownOutlined />
+          </span>
         </template>
 
         <template #content>
@@ -25,7 +27,9 @@
       >
         <template #title>
           <span>Suppliers</span>
-          <DownOutlined />
+          <span class="arrow fs-inline-block">
+            <DownOutlined />
+          </span>
         </template>
 
         <template #content>
@@ -54,7 +58,7 @@ import FsSupplies from './fs-supplies.vue'
 <style lang="scss" scoped>
 .menu {
   .item {
-    @apply fs-font-medium fs-text-lg fs-inline-flex fs-items-center fs-h-full fs-cursor-pointer;
+    @apply fs-font-bold fs-text-lg fs-inline-flex fs-items-center fs-h-full fs-cursor-pointer;
     color: #222939;
 
     &.active {
@@ -63,6 +67,8 @@ import FsSupplies from './fs-supplies.vue'
   }
 }
 
-.item-integration {
+.arrow {
+  position: relative;
+  top: -2px;
 }
 </style>

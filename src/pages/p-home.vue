@@ -1,12 +1,14 @@
 <template>
   <LDefault>
-    <PageContainer class="fs-pt-16">
-      <RespContainer>
-        <FsBanner />
-      </RespContainer>
-    </PageContainer>
+    <div class="wrapper fs-pb-16" :style="{ background: '#f7faff' }">
+      <PageContainer class="fs-pt-32">
+        <RespContainer>
+          <FsBanner />
+        </RespContainer>
+      </PageContainer>
+    </div>
 
-    <PageContainer class="fs-pt-16">
+    <PageContainer class="fs-pt-8">
       <RespContainer>
         <FsBlock
           v-for="(block, index) in blocks"

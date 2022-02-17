@@ -82,13 +82,13 @@ audio,
 video,
 button {
   &::selection {
-    background: var(--color-primary, #fc7234);
+    background: var(--color-primary, #ff813e);
     color: #ffffff;
   }
 }
 
 input::selection {
-  background: var(--color-primary, #fc7234);
+  background: var(--color-primary, #ff813e);
   color: #ffffff;
 }
 
@@ -117,5 +117,5 @@ div,
     background: #ededed;
   }
   scrollbar-width: thin;
-  scrollbar-color: var(--color-primary, #fc7234) rgba(0, 0, 0, 0.2);
+  scrollbar-color: var(--color-primary, #ff813e) rgba(0, 0, 0, 0.2);
 }

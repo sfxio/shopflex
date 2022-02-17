@@ -41,7 +41,7 @@ const props = defineProps({
   title: String,
 })
 const integrationStore = useIntegration()
-const integration = computed(() => integrationStore.list)
+const integration = computed(() => integrationStore.list as any)
 </script>
 
 <style scoped lang="scss"></style>

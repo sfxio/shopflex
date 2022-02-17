@@ -17,8 +17,8 @@ module.exports = {
       {
         orange: {
           // custom theme
-          primary: '#fc7234',
-          'primary-focus': '#ffa22b',
+          primary: '#ff813e',
+          'primary-focus': '#ffffff',
           'primary-content': '#ffffff',
           // other colors
         },

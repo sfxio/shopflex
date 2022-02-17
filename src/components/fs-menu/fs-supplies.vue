@@ -9,9 +9,9 @@
           :link="sup.link"
           :route="sup.route"
           target="_blank"
-          class="fs-flex-ic fs-h-full decorator-link-hover fs-p-2 fs-rounded-lg"
+          class="fs-flex-ic fs-h-14 decorator-link-hover fs-p-2 fs-rounded-lg"
         >
-          <img :src="sup.icon" :alt="sup.name" class="fs-w-32" />
+          <img v-lazy="sup.icon" :alt="sup.name" class="fs-h-4/5" />
         </FsLink>
       </a-col>
     </a-row>

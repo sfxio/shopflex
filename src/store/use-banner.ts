@@ -5,7 +5,8 @@ export const useBanner = defineStore(useBannerId, {
   state() {
     return {
       title: {
-        value: 'Cross-border e-commerce and multi-sale channels SaaS',
+        value:
+          'Cross-border <span style="color: var(--color-primary)">e-commerce</span> and <span style="color: var(--color-primary)">multi-sale</span> channels SaaS',
         props: {},
       },
       description: {
@@ -15,7 +16,8 @@ export const useBanner = defineStore(useBannerId, {
       },
 
       benefits: {
-        props: { style: { background: '#faf7f2' } },
+        // props: { style: { background: '#faf7f2' } },
+        props: {},
         list: [
           {
             value: 'Mutiple sale channels',

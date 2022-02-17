@@ -1,6 +1,7 @@
 set -e
 
 # 构建
+rm -rf dist
 yarn build
 
 cd dist

@@ -1,4 +1,4 @@
-const primary = '#fc7234'
+const primary = '#ff813e'
 const secondary = '#ffa22b'
 const tertiary = '#f7c54c'
 const link = '#07b9fb'
