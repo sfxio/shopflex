@@ -17,12 +17,7 @@
           You will benefits from ShopFlex:
         </h2>
 
-        <a-row
-          class="fs-px-4"
-          :gutter="[8, 8]"
-          wrap
-          style="background: #faf7f2;"
-        >
+        <a-row class="fs-px-4" :gutter="[8, 8]" wrap>
           <a-col
             v-for="(item, index) in bannerStore.benefits.list"
             :span="24"

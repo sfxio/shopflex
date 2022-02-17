@@ -1,8 +1,8 @@
 <template>
   <form>
     <input
-      type="text"
-      placeholder="Type here"
+      type="email"
+      placeholder="Email"
       class="fs-input input fs-shadow-lg fs-border-none fs-w-full fs-max-w-xs"
     />
     <button

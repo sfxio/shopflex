@@ -14,7 +14,7 @@
           <a-col :span="24" :sm="12" :md="8" v-for="(item, index) in list" :key="index">
             <FsLink
               :style="containerStyle"
-              class="wrapper hover:fs-shadow-xl fs-overflow-hidden fs-block fs-border-4 fs-border-solid fs-border-primary fs-p-2 fs-rounded-lg"
+              class="wrapper hover:fs-shadow-xl fs-overflow-hidden fs-block fs-border-4 fs-border-solid fs-border-secondary fs-p-2 fs-rounded-lg"
               :link="item.link"
               target="_blank"
             >

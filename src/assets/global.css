@@ -1,9 +1,22 @@
 :root {
-  --color-primary: #ff813e;
-  --color-secondary: #ffa22b;
-  --color-tertiary: #f7c54c;
-  --color-link: #07b9fb;
+  --color-primary: #286df8;
+  --color-secondary: #56a7ff;
+  --color-tertiary: #bbdcff;
+  --color-link: #d9ebff;
   --color-mask: rgba(0, 0, 0, 0.15);
   --color-deepblue: #62628d;
   --color-lightblue: #ededf2;
+
+  --color-dodger-blue-50: #eef6ff;
+  --color-dodger-blue-100: #d9ebff;
+  --color-dodger-blue-200: #bbdcff;
+  --color-dodger-blue-300: #8cc7ff;
+  --color-dodger-blue-400: #56a7ff;
+  --color-dodger-blue-500: #2f83ff;
+  --color-dodger-blue-600: #286df8;
+  --color-dodger-blue-700: #114ce4;
+  --color-dodger-blue-800: #153eb8;
+  --color-dodger-blue-900: #173991;
+
+  --color-banner-bg: #d9ebff;
 }

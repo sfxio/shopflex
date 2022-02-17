@@ -29,7 +29,7 @@ const headerStyle = computed(() => {
   const top = isTop.value
   return {
     'border-color': top ? 'transparent' : '#eee',
-    background: top ? '#f7faff' : 'white',
+    background: top ? 'var(--color-banner-bg)' : 'white',
   }
 })
 </script>

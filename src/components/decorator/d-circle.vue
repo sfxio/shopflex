@@ -17,7 +17,7 @@ const props = defineProps({
   },
   background: {
     type: String,
-    default: '#f7faff',
+    default: 'var(--color-banner-bg)',
   },
 })
 
