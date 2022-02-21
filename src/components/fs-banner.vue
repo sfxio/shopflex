@@ -1,6 +1,6 @@
 <template>
   <div class="banner fs-flex">
-    <section class="fs-w-1/2 fs-flex fs-flex-col fs-gap-8">
+    <section class="fs-flex-1 fs-flex fs-flex-col fs-gap-8">
       <h1
         class="fs-font-extrabold fs-text-4xl fs-text-center xl:fs-text-left"
         v-bind="bannerStore.title.props"
@@ -41,7 +41,7 @@
       </div>
     </section>
 
-    <section class="fs-w-1/2 fs-flex-ic">
+    <section class="fs-flex-1 fs-flex-ic fs-hidden md:fs-flex">
       <img alt="banner" v-lazy="banner" />
     </section>
   </div>

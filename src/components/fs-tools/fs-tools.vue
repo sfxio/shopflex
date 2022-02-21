@@ -13,16 +13,16 @@
           <h3 :id="item.id" class="fs-text-2xl fs-font-semibold fs-mb-4">
             {{ item.name }}
           </h3>
-          <div class="btns fs-flex fs-gap-2 fs-mb-4">
-            <AButton @click="handleBtnClick(item, undefined)">All</AButton>
-            <AButton
-              v-for="cItem in item.children"
-              :key="cItem.id"
-              @click="handleBtnClick(item, cItem.id)"
-            >
-              {{ cItem.name }}
-            </AButton>
-          </div>
+          <ARow wrap :gutter="[12, 12]" class="fs-mb-4">
+            <ACol>
+              <AButton @click="handleBtnClick(item, undefined)">All</AButton>
+            </ACol>
+            <ACol v-for="cItem in item.children" :key="cItem.id">
+              <AButton @click="handleBtnClick(item, cItem.id)">
+                {{ cItem.name }}
+              </AButton>
+            </ACol>
+          </ARow>
 
           <FsList :list="getList(item)" />
         </template>

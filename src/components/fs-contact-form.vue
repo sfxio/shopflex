@@ -3,7 +3,7 @@
     <input
       type="email"
       placeholder="Email"
-      class="fs-input input fs-shadow-lg fs-border-none fs-w-full fs-max-w-xs"
+      class="fs-input input fs-shadow-lg fs-border-none fs-w-48 sm:fs-w-full fs-max-w-xs"
     />
     <button
       class="fs-btn fs-relative fs-w-36 fs-btn-primary hover:fs-bg-primary hover:fs-text-white"

@@ -14,7 +14,7 @@
           <template #title>
             <a
               class="title fs-flex fs-gap-2 fs-justify-center"
-              style="min-width: 80px;"
+              style="min-width: 80px; line-height: 44px;"
               :href="`#${item.id}`"
             >
               <span>
@@ -23,7 +23,7 @@
               <svg
                 class="icon"
                 style="
-                  margin-top: 6px;
+                  margin-top: 14px;
                   width: 1em;
                   height: 1em;
                   vertical-align: middle;

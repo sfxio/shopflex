@@ -1,6 +1,13 @@
 <template>
-  <a-row :gutter="[24, 24]" wrap v-bind="$attrs">
-    <a-col :span="8" v-for="(item, index) in list" :key="index">
+  <ARow :gutter="[24, 24]" wrap v-bind="$attrs">
+    <ACol
+      :span="24"
+      :md="12"
+      :lg="8"
+      :xl="6"
+      v-for="(item, index) in list"
+      :key="index"
+    >
       <a
         :href="item.link"
         target="_blank"
@@ -37,8 +44,8 @@
           <span class="fs-text-gray-300" v-if="item.date">{{ item.date }}</span>
         </div>
       </a>
-    </a-col>
-  </a-row>
+    </ACol>
+  </ARow>
 </template>
 
 <script setup lang="ts">

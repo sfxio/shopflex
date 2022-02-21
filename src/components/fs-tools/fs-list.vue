@@ -1,6 +1,13 @@
 <template>
   <a-row :gutter="[24, 24]" wrap v-bind="$attrs">
-    <a-col :span="6" v-for="(item, index) in list" :key="index">
+    <a-col
+      :span="24"
+      :sm="12"
+      :md="8"
+      :xl="6"
+      v-for="(item, index) in list"
+      :key="index"
+    >
       <a
         class="card-item fs-flex fs-flex-col fs-border-1-lightgray fs-text-black hover:fs-shadow-lg"
         target="_blank"
@@ -16,7 +23,7 @@
                 v-bind="item.iconProps"
               />
               <span
-                class="card-name fs-font-bold fs-text-2xl"
+                class="card-name fs-text-center fs-font-bold fs-text-2xl"
                 v-html="item.name"
               ></span>
             </div>
@@ -31,7 +38,7 @@
           </template>
           <template v-else-if="item.name">
             <span
-              class="card-name fs-font-bold fs-text-2xl"
+              class="card-name fs-text-center fs-font-bold fs-text-2xl"
               v-html="item.name"
             ></span>
           </template>

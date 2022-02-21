@@ -7,9 +7,7 @@
       <FsLogo />
       <span class="fs-flex-1"></span>
       <div class="wrapper fs-h-full">
-        <div
-          class="inner-wrapper fs-w-full fs-h-full fs-justify-end fs-hidden md:fs-flex"
-        >
+        <div class="inner-wrapper fs-w-full fs-h-full fs-justify-end fs-flex">
           <FsMenu />
         </div>
       </div>
