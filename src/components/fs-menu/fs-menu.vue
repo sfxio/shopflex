@@ -39,7 +39,7 @@
     </li>
 
     <li class="item">
-      <span>Tools</span>
+      <a href="#tools">Tools</a>
     </li>
 
     <li class="item">

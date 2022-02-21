@@ -9,7 +9,12 @@
         <header class="header fs-flex-jc-ic fs-h-20 fs-border-b-1-lightgray">
           <template v-if="item.icon && item.name">
             <div class="fs-flex-jc-ic">
-              <img :src="item.icon" :alt="item.name" v-bind="item.iconProps" />
+              <img
+                style="max-height: 84px;"
+                v-lazy="item.icon"
+                :alt="item.description"
+                v-bind="item.iconProps"
+              />
               <span
                 class="card-name fs-font-bold fs-text-2xl"
                 v-html="item.name"
@@ -17,7 +22,12 @@
             </div>
           </template>
           <template v-else-if="item.icon">
-            <img :src="item.icon" :alt="item.name" v-bind="item.iconProps" />
+            <img
+              v-lazy="item.icon"
+              :alt="item.description"
+              style="max-height: 84px;"
+              v-bind="item.iconProps"
+            />
           </template>
           <template v-else-if="item.name">
             <span
@@ -27,8 +37,10 @@
           </template>
         </header>
 
-        <section class="content fs-px-4 fs-py-6 fs-h-44">
-          <p class="description">{{ item.description }}</p>
+        <section class="content fs-px-4 fs-pt-6 fs-pb-3 fs-h-36">
+          <p class="description fs-h-full fs-font-medium fs-overflow-hidden">
+            {{ item.description }}
+          </p>
         </section>
       </a>
     </a-col>
@@ -50,12 +62,12 @@ const list = computed(() => props.list)
     }
   }
 
-  .card-name {
-    color: black;
-  }
-
   .description {
     color: #505a64;
+  }
+
+  .card-name {
+    color: black;
   }
 }
 </style>

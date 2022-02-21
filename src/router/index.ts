@@ -1,8 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../pages/p-home.vue'
+import Integration from '../pages/p-integration.vue'
+import NotFound from '../pages/p-not-found.vue'
 
-const Home = () => import('../pages/p-home.vue')
-const Integration = () => import('../pages/p-integration.vue')
-const NotFound = () => import('../pages/p-not-found.vue')
+// const Home = () => import('../pages/p-home.vue')
+// const Integration = () => import('../pages/p-integration.vue')
+// const NotFound = () => import('../pages/p-not-found.vue')
 
 const routes = [
   {

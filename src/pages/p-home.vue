@@ -9,22 +9,19 @@
       <div class="wave fs-h-52" :style="waveStyle"></div>
     </div>
 
-    <div class="wrapper fs-flex fs-flex-col fs-gap-8 -fs-mt-16">
+    <div
+      class="wrapper fs-mb-10 fs-flex fs-flex-col fs-gap-8"
+      style="margin-top: -52px;"
+    >
       <PageContainer class="fs-w-full">
         <RespContainer>
           <FsTools />
         </RespContainer>
       </PageContainer>
 
-      <PageContainer>
+      <PageContainer class="fs-w-full">
         <RespContainer>
-          <FsBlock
-            v-for="(block, index) in blocks"
-            :key="index"
-            :title="block.title"
-            :list="block.list"
-            :height="block.height"
-          ></FsBlock>
+          <FsNews />
         </RespContainer>
       </PageContainer>
     </div>
@@ -33,17 +30,14 @@
 
 <script setup lang="ts">
 import LDefault from '@/layouts/l-default.vue'
-import { computed } from 'vue'
 import FsBanner from '@/components/fs-banner.vue'
 import PageContainer from '@/components/container/page-container.vue'
-import FsBlock from '@/components/fs-block.vue'
-import { useBlock } from '@/store/use-block'
 import RespContainer from '@/components/container/resp-container.vue'
 import { icons } from '@/assets/icons'
 import FsTools from '../components/fs-tools/fs-tools.vue'
+import FsNews from '@/components/fs-news/fs-news.vue'
 
-const blockStore = useBlock()
-const blocks = computed(() => blockStore.blocks)
+// const blocks = computed(() => blockStore.blocks)
 const waveStyle = {
   'background-image': `url(${icons.bgWave})`,
   height: '48rem',
