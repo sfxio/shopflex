@@ -12,7 +12,7 @@
     <div class="wrapper fs-flex fs-flex-col fs-gap-8 -fs-mt-16">
       <PageContainer class="fs-w-full">
         <RespContainer>
-          <FsList />
+          <FsTools />
         </RespContainer>
       </PageContainer>
 
@@ -40,11 +40,7 @@ import FsBlock from '@/components/fs-block.vue'
 import { useBlock } from '@/store/use-block'
 import RespContainer from '@/components/container/resp-container.vue'
 import { icons } from '@/assets/icons'
-<<<<<<< HEAD
-import FsList from '../components/fs-tools/fs-tools.vue'
-=======
-import FsList from '../components/fs-list.vue'
->>>>>>> 68b5b1bb5d62625c7ca1924e55ce68c40dfc1cd1
+import FsTools from '../components/fs-tools/fs-tools.vue'
 
 const blockStore = useBlock()
 const blocks = computed(() => blockStore.blocks)

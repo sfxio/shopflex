@@ -29,8 +29,5 @@ export const icons = {
   footerLogo,
   bgWave,
 }
-<<<<<<< HEAD
 
 export const toolsIcons = {}
-=======
->>>>>>> 68b5b1bb5d62625c7ca1924e55ce68c40dfc1cd1
