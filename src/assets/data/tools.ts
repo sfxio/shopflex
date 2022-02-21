@@ -448,3 +448,12 @@ export const toolsData = {
     },
   ],
 }
+
+export const toolsItem = {
+  id: toolsData.id,
+  title: toolsData.title,
+  children: toolsData.children.map((item) => ({
+    id: item.id,
+    title: item.name,
+  })),
+}
