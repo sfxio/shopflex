@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .fs-bb-lightgray {
+  .fs-border-b-1-lightgray {
     @apply fs-border-b-1 fs-border-solid fs-border-color-lightgray;
   }
 

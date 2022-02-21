@@ -12,6 +12,7 @@
     ],
     "types": [
       "vite/client",
+      "vue-router",
       "cypress"
     ],
     "resolveJsonModule": true,
