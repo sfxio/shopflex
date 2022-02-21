@@ -1,5 +1,6 @@
 <template>
   <LDefault>
+    <div id="home" class="anchor"></div>
     <div class="wrapper" :style="{ background: 'var(--color-banner-bg)' }">
       <PageContainer class="fs-pt-32">
         <RespContainer>
@@ -9,10 +10,7 @@
       <div class="wave fs-h-52" :style="waveStyle"></div>
     </div>
 
-    <div
-      class="wrapper fs-mb-10 fs-flex fs-flex-col fs-gap-8"
-      style="margin-top: -52px;"
-    >
+    <div class="wrapper fs-mb-10 fs-flex fs-flex-col fs-gap-8">
       <PageContainer class="fs-w-full">
         <RespContainer>
           <FsTools />

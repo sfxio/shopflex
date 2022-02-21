@@ -1,74 +1,85 @@
 <template>
-  <ul class="menu fs-mb-0 fs-h-full fs-flex fs-gap-4">
-    <li class="item">
-      <RouterLink class="fs-text-black" to="/">Home</RouterLink>
-    </li>
+  <AMenu
+    mode="horizontal"
+    style="
+      width: 100%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <template v-for="item in menu" :key="item.id">
+      <template v-if="item.children">
+        <ASubMenu :key="item.id">
+          <template #title>
+            <a
+              class="title fs-flex fs-gap-2 fs-justify-center"
+              style="min-width: 80px;"
+              :href="`#${item.id}`"
+            >
+              <span>
+                {{ item.title }}
+              </span>
+              <svg
+                class="icon"
+                style="
+                  margin-top: 6px;
+                  width: 1em;
+                  height: 1em;
+                  vertical-align: middle;
+                  fill: currentColor;
+                  overflow: hidden;
+                "
+                viewBox="0 0 1024 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                p-id="1466"
+              >
+                <path
+                  d="M979.0208 301.99808l-47.104-47.04768-419.98848 419.9424-419.89632-419.9424-47.0528 47.0528 419.89632 419.93728v0.00512l47.09888 47.104 47.04256-47.0528z"
+                  p-id="1467"
+                ></path>
+              </svg>
+            </a>
+          </template>
+          <AMenuItem v-for="cItem in item.children" :key="cItem.id">
+            <a class="sub-title" :href="`#${cItem.id}`">{{ cItem.title }}</a>
+          </AMenuItem>
+        </ASubMenu>
+      </template>
 
-    <li class="item item-integration">
-      <Dropdown
-        content-style="top: 95%; left: 50%; transform: translate(-60%);"
-      >
-        <template #title>
-          <span>Integration</span>
-          <span class="arrow fs-inline-block">
-            <DownOutlined />
-          </span>
-        </template>
-
-        <template #content>
-          <FsIntegration title="Integration" />
-        </template>
-      </Dropdown>
-    </li>
-
-    <li class="item item-suppliers">
-      <Dropdown
-        content-style="top: 95%; left: 50%; transform: translate(-60%);"
-      >
-        <template #title>
-          <span>Suppliers</span>
-          <span class="arrow fs-inline-block">
-            <DownOutlined />
-          </span>
-        </template>
-
-        <template #content>
-          <FsSupplies />
-        </template>
-      </Dropdown>
-    </li>
-
-    <li class="item">
-      <a href="#tools">Tools</a>
-    </li>
-
-    <li class="item">
-      <span>Resources</span>
-    </li>
-  </ul>
+      <template v-else>
+        <AMenuItem :key="item.id">
+          <a class="title" :href="`#${item.id}`">{{ item.title }}</a>
+        </AMenuItem>
+      </template>
+    </template>
+  </AMenu>
 </template>
 
 <script setup lang="ts">
-import FsIntegration from './fs-integration.vue'
-import { DownOutlined } from '@ant-design/icons-vue'
-import Dropdown from '../dropdown.vue'
-import FsSupplies from './fs-supplies.vue'
+import { toolsItem } from '@/assets/data'
+interface Item {
+  title: string
+  id: string
+  href?: string
+  as?: string
+  children?: Item[]
+}
+
+const menu = [
+  { title: 'Home', id: 'home', href: '/', as: 'RouterLink' },
+  toolsItem,
+  { title: 'News', id: 'news' },
+] as Item[]
 </script>
 
 <style lang="scss" scoped>
-.menu {
-  .item {
-    @apply fs-font-bold fs-text-lg fs-inline-flex fs-items-center fs-h-full fs-cursor-pointer;
-    color: #222939;
-
-    &.active {
-      @apply fs-text-primary;
-    }
-  }
+.title {
+  @apply fs-text-lg fs-font-semibold;
 }
 
-.arrow {
-  position: relative;
-  top: -2px;
+.sub-title {
+  @apply fs-font-medium;
 }
 </style>

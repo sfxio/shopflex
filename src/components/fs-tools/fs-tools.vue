@@ -1,18 +1,18 @@
 <template>
-  <div id="tools">
+  <div>
     <header v-if="data.title" class="fs-py-2 fs-mb-8">
-      <slot name="title" :title="data.title">
-        <h2 class="fs-text-center fs-mb-0 fs-text-4xl fs-font-bold">
-          {{ data.title }}
-        </h2>
-      </slot>
+      <h2 :id="data.id" class="fs-text-center fs-mb-0 fs-text-4xl fs-font-bold">
+        {{ data.title }}
+      </h2>
       <p v-if="data.description">{{ data.description }}</p>
     </header>
 
     <div class="container fs-flex fs-flex-col fs-gap-12">
       <div class="wrapper" v-for="(item, index) in data.children" :key="index">
         <template v-if="item.children">
-          <h3 class="fs-text-2xl fs-font-semibold fs-mb-4">{{ item.name }}</h3>
+          <h3 :id="item.id" class="fs-text-2xl fs-font-semibold fs-mb-4">
+            {{ item.name }}
+          </h3>
           <div class="btns fs-flex fs-gap-2 fs-mb-4">
             <AButton @click="handleBtnClick(item, undefined)">All</AButton>
             <AButton
@@ -28,7 +28,9 @@
         </template>
 
         <template v-else>
-          <h3 class="fs-text-2xl fs-font-semibold fs-mb-4">{{ item.name }}</h3>
+          <h3 :id="item.id" class="fs-text-2xl fs-font-semibold fs-mb-4">
+            {{ item.name }}
+          </h3>
           <FsList :list="item.list" />
         </template>
       </div>
