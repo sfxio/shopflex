@@ -32,7 +32,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/shopflex/'),
+  history: createWebHistory(),
   routes,
 })
 

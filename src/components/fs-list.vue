@@ -22,7 +22,6 @@
           <img
             style="max-width: 42px; max-height: 42px;"
             v-lazy="item.icon"
-            :alt="item.name"
           />
           <span class="fs-text-lg fs-font-medium">{{ item.name }}</span>
         </a>

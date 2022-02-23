@@ -11,7 +11,7 @@
           target="_blank"
           class="fs-flex-ic fs-h-14 decorator-link-hover fs-p-2 fs-rounded-lg"
         >
-          <img v-lazy="sup.icon" :alt="sup.name" class="fs-h-4/5" />
+          <img v-lazy="sup.icon" class="fs-h-4/5" />
         </FsLink>
       </a-col>
     </a-row>

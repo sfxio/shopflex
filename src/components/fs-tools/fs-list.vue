@@ -9,7 +9,7 @@
       :key="index"
     >
       <a
-        class="card-item fs-flex fs-flex-col fs-border-1-lightgray fs-text-black hover:fs-shadow-lg"
+        class="card-item fs-flex fs-flex-col fs-border-1-lightgray fs-text-black fs-shadow hover:fs-shadow-xl"
         target="_blank"
         :href="item.link"
       >
@@ -19,7 +19,6 @@
               <img
                 style="max-height: 84px;"
                 v-lazy="item.icon"
-                :alt="item.description"
                 v-bind="item.iconProps"
               />
               <span
@@ -31,7 +30,6 @@
           <template v-else-if="item.icon">
             <img
               v-lazy="item.icon"
-              :alt="item.description"
               style="max-height: 84px;"
               v-bind="item.iconProps"
             />

@@ -6,7 +6,6 @@ import vue from '@vitejs/plugin-vue'
 const theme = require('./theme/fashion')
 
 export default defineConfig({
-  base: '/shopflex/',
   plugins: [
     vue({
       script: {
