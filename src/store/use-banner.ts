@@ -5,13 +5,16 @@ export const useBanner = defineStore(useBannerId, {
   state() {
     return {
       title: {
+        // 'B2B and Multichannel Selling SaaS',
         value:
-          'Cross-border <span style="color: var(--color-primary)">e-commerce</span> and <span style="color: var(--color-primary)">multi-sale</span> channels SaaS',
-        props: {},
+          '<span style="color: var(--color-primary);">B2B</span> and <span style="color: var(--color-primary);">Multichannel</span> Selling SaaS',
+        props: {
+          style: 'text-align: center',
+        },
       },
       description: {
         value:
-          'ShopFlex is the ideal platform for your omnichannel strategy, creating a seamless connection across sallers and cyber celebrities in order to sell all your products.',
+          'ShopFlex is the ideal platform for your omnichannel strategy, creating a seamless connection across sallers and influencers in order to sell all your products worldwide.',
         props: {},
       },
 
@@ -20,17 +23,17 @@ export const useBanner = defineStore(useBannerId, {
         props: {},
         list: [
           {
-            value: 'Mutiple sale channels',
+            value: 'Multiple Sales Channels',
             props: {},
             innerProps: {},
           },
           {
-            value: 'Free exposure opportunities',
+            value: 'Free Exposure Opportunities',
             props: {},
             innerProps: {},
           },
           {
-            value: 'Low investment',
+            value: 'Low Investment',
             props: {},
             innerProps: {},
           },

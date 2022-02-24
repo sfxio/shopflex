@@ -1,9 +1,11 @@
 <template>
   <div>
     <header v-if="data.title" class="fs-py-2 fs-mb-8">
-      <h2 :id="data.id" class="fs-text-center fs-mb-0 fs-text-4xl fs-font-bold">
-        {{ data.title }}
-      </h2>
+      <h2
+        :id="data.id"
+        class="fs-text-center fs-mb-0 fs-text-4xl fs-font-bold"
+        v-html="data.title"
+      ></h2>
       <p v-if="data.description">{{ data.description }}</p>
     </header>
 
@@ -24,14 +26,16 @@
             </ACol>
           </ARow>
 
+          <!-- <FadeInOut entry="left" exit="left" :duration="500"> -->
           <FsList :list="getList(item)" />
+          <!-- </FadeInOut> -->
         </template>
 
         <template v-else>
           <h3 :id="item.id" class="fs-text-2xl fs-font-semibold fs-mb-4">
             {{ item.name }}
           </h3>
-          <FsList :list="item.list" />
+          <FsList v-if="item.list && item.list.length" :list="item.list" />
         </template>
       </div>
     </div>
@@ -44,7 +48,7 @@ import { Ref, ref } from 'vue'
 import { toolsData } from '@/assets/data'
 
 const keyMap = ref({}) as Ref<any>
-const data = toolsData
+const data = toolsData as any
 
 const getList = (parent) => {
   const id = keyMap.value[parent.id]

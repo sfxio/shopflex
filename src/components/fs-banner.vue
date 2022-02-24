@@ -41,8 +41,8 @@
       </div>
     </section>
 
-    <section class="fs-flex-1 fs-flex-ic fs-hidden md:fs-flex">
-      <img alt="banner" v-lazy="banner" />
+    <section class="fs-flex-1 fs-flex-jc-ic fs-hidden md:fs-flex">
+      <img style="width: 84%;" alt="banner" v-lazy="banner" />
     </section>
   </div>
 </template>

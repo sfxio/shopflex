@@ -6,6 +6,7 @@
       background: transparent;
       display: flex;
       align-items: center;
+      border-bottom: none;
     "
   >
     <template v-for="item in menu" :key="item.id">
@@ -15,8 +16,8 @@
             <a
               class="title fs-flex fs-gap-2 fs-justify-center"
               style="min-width: 80px; line-height: 44px;"
-              :href="`#${item.id}`"
             >
+              <!-- :href="`#${item.id}`" -->
               <span>
                 {{ item.title }}
               </span>
@@ -80,6 +81,6 @@ const menu = [
 }
 
 .sub-title {
-  @apply fs-font-medium;
+  @apply fs-font-semibold;
 }
 </style>
