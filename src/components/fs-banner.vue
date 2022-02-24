@@ -17,7 +17,7 @@
           You will benefits from ShopFlex:
         </h2>
 
-        <a-row class="fs-px-4" :gutter="[8, 8]" wrap>
+        <a-row class="fs-px-4" :gutter="notPhone ? [8, 8] : [16, 16]" wrap>
           <a-col
             v-for="(item, index) in bannerStore.benefits.list"
             :span="24"
@@ -51,6 +51,9 @@
 import { useBanner } from '@/store'
 import { banner } from '@/assets/images'
 import FsContactForm from './fs-contact-form.vue'
+import { useTailwindBreakpoints } from '@/hooks'
+
+const { notPhone } = useTailwindBreakpoints()
 
 const bannerStore = useBanner()
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <a-row :gutter="[24, 24]" wrap v-bind="$attrs">
+  <a-row :gutter="notPhone ? [24, 24] : [48, 48]" wrap v-bind="$attrs">
     <a-col
       :span="24"
       :sm="12"
@@ -53,10 +53,12 @@
 </template>
 
 <script setup lang="ts">
+import { useTailwindBreakpoints } from '@/hooks'
 import { computed, PropType } from 'vue'
 
 const props = defineProps({ list: Array as PropType<Array<any>> })
 const list = computed(() => props.list)
+const { notPhone } = useTailwindBreakpoints()
 </script>
 
 <style lang="scss" scoped>
