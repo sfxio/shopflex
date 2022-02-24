@@ -68,20 +68,4 @@ const handleBtnClick = (parent, id) => {
 }
 </script>
 
-<style lang="scss" scoped>
-.card-item {
-  &:hover {
-    .description {
-      color: var(--color-primary);
-    }
-  }
-
-  .card-name {
-    color: black;
-  }
-
-  .description {
-    color: #505a64;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

@@ -61,12 +61,6 @@ const list = computed(() => props.list)
 
 <style lang="scss" scoped>
 .card-item {
-  &:hover {
-    .description {
-      color: var(--color-primary);
-    }
-  }
-
   .description {
     color: #505a64;
   }

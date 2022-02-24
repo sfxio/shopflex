@@ -2,12 +2,12 @@
   <div class="banner fs-flex">
     <section class="fs-flex-1 fs-flex fs-flex-col fs-gap-8">
       <h1
-        class="fs-font-extrabold fs-text-4xl fs-text-center xl:fs-text-left"
+        class="fs-font-extrabold fs-text-3xl"
         v-bind="bannerStore.title.props"
         v-html="bannerStore.title.value"
       ></h1>
       <p
-        class="fs-font-medium fs-text-xl fs-text-center xl:fs-text-left"
+        class="fs-font-medium fs-text-xl"
         v-html="bannerStore.description.value"
         v-bind="bannerStore.description.props"
       ></p>
@@ -27,7 +27,7 @@
             v-bind="item.props"
           >
             <li
-              class="fs-py-4 fs-font-semibold fs-text-xl"
+              class="fs-py-2 fs-font-semibold sm:fs-py-4"
               v-bind="item.innerProps"
             >
               {{ item.value }}

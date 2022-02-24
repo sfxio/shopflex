@@ -10,7 +10,7 @@
       <div class="wave fs-h-52" :style="waveStyle"></div>
     </div>
 
-    <div class="wrapper fs-mb-10 fs-flex fs-flex-col fs-gap-8">
+    <div class="wrapper fs-mb-10 fs-flex fs-flex-col fs-gap-20">
       <PageContainer class="fs-w-full">
         <RespContainer>
           <FsTools />
