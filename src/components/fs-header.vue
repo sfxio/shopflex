@@ -60,7 +60,11 @@
 import FsLogo from './fs-logo.vue'
 import FsMenu from './fs-menu/fs-menu.vue'
 import PageContainer from './container/page-container.vue'
+<<<<<<< HEAD
 import { computed, Ref, ref } from 'vue'
+=======
+import { computed, ref } from 'vue'
+>>>>>>> bbc20bbe721263b0378ba7b7ac3df928a53fdd94
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { useScrollContext } from '@/context'
 
@@ -75,12 +79,16 @@ const headerStyle = computed(() => {
     background: top ? 'var(--color-banner-bg)' : 'white',
   }
 })
+<<<<<<< HEAD
 const extra = ref() as Ref<any>
+=======
+>>>>>>> bbc20bbe721263b0378ba7b7ac3df928a53fdd94
 
 const isVisible = ref(false)
 
 const handleOpenMenu = () => {
   isVisible.value = !isVisible.value
+<<<<<<< HEAD
 
   if (isVisible.value) {
     extra.value = {
@@ -89,6 +97,8 @@ const handleOpenMenu = () => {
   } else {
     extra.value = {}
   }
+=======
+>>>>>>> bbc20bbe721263b0378ba7b7ac3df928a53fdd94
 }
 
 const handleSelect = () => {
