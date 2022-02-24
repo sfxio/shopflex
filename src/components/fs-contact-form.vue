@@ -2,7 +2,7 @@
   <form>
     <input
       type="email"
-      placeholder="Email Subject"
+      placeholder="Get Free Sales Strategy Newsletter"
       v-model="emailSubject"
       class="fs-input input fs-shadow-lg fs-border-none fs-w-48 sm:fs-w-full fs-max-w-xs"
     />
@@ -17,7 +17,7 @@
           : `mailto:support@shopflex.io`
       "
     >
-      Contact
+      Subscribe
     </a>
   </form>
 </template>

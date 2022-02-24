@@ -11,7 +11,7 @@
       <a
         :href="item.link"
         target="_blank"
-        class="fs-flex fs-flex-col fs-justify-between fs-gap-2 fs-w-full fs-p-4 fs-shadow-md fs-rounded-lg hover:fs-shadow-xl"
+        class="fs-flex fs-flex-col fs-justify-between fs-gap-2 fs-w-full fs-p-4 fs-shadow-md fs-rounded-lg hover:fs-shadow-xl hover:fs-text-black"
         style="height: 480px;"
       >
         <template v-if="item.icon">
