@@ -5,7 +5,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
   state() {
     return {
       globalConfig: {
-        pageWidth: 1200,
+        pageWidth: 1320,
       },
       headerConfig: {
         height: 56,

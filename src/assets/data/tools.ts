@@ -507,22 +507,22 @@ const Othres = {
       ],
     },
 
-    {
-      id: nanoid(),
-      name: `Graphic AntiTheft`,
-      list: [
-        {
-          id: nanoid(),
-          name: `Cozy AntiTheft`,
-          link: `https://apps.shopify.com/cozy-antitheft-for-images-and-more`,
-          description: `Cozy Anti-Theft restricts the download of images with drag and drop, as well as right click. Protect your hard-work & content in your store.`,
-        },
-      ],
-    },
+    // {
+    //   id: nanoid(),
+    //   name: `Graphic AntiTheft`,
+    //   list: [
+    //     {
+    //       id: nanoid(),
+    //       name: `Cozy AntiTheft`,
+    //       link: `https://apps.shopify.com/cozy-antitheft-for-images-and-more`,
+    //       description: `Cozy Anti-Theft restricts the download of images with drag and drop, as well as right click. Protect your hard-work & content in your store.`,
+    //     },
+    //   ],
+    // },
 
     {
       id: nanoid(),
-      name: `Box`,
+      name: `Cloud`,
       list: [
         {
           id: nanoid(),
@@ -537,7 +537,7 @@ const Othres = {
     },
     {
       id: nanoid(),
-      name: `Package Tracking`,
+      name: `Tracking`,
       list: [
         {
           id: nanoid(),
@@ -553,19 +553,19 @@ const Othres = {
         },
       ],
     },
-    {
-      id: nanoid(),
-      name: `Addons`,
-      list: [
-        {
-          id: nanoid(),
-          link: `	https://www.whatruns.com/`,
-          description: `A free browser extension that helps you identify technologies used on any website at the click of a button.`,
-          icon: `https://www.whatruns.com/images/home/WhatRuns-logo.svg`,
-          iconProps: { style: { width: `184px` } },
-        },
-      ],
-    },
+    // {
+    //   id: nanoid(),
+    //   name: `Addons`,
+    //   list: [
+    //     {
+    //       id: nanoid(),
+    //       link: `	https://www.whatruns.com/`,
+    //       description: `A free browser extension that helps you identify technologies used on any website at the click of a button.`,
+    //       icon: `https://www.whatruns.com/images/home/WhatRuns-logo.svg`,
+    //       iconProps: { style: { width: `184px` } },
+    //     },
+    //   ],
+    // },
   ],
 }
 
