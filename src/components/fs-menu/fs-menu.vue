@@ -1,20 +1,16 @@
 <template>
-  <AMenu
-    mode="horizontal"
-    style="
-      width: 100%;
-      background: transparent;
-      display: flex;
-      align-items: center;
-      border-bottom: none;
-    "
-  >
+  <AMenu v-bind="$attrs">
     <template v-for="item in menu" :key="item.id">
       <template v-if="item.children">
         <ASubMenu :key="item.id">
           <template #title>
             <a
-              class="title fs-flex fs-gap-2 fs-justify-center"
+              class="title"
+              :class="
+                mode === 'horizontal'
+                  ? 'fs-flex fs-justify-center fs-gap-2'
+                  : 'fs-flex-ic'
+              "
               style="min-width: 80px; line-height: 44px;"
             >
               <!-- :href="`#${item.id}`" -->
@@ -22,6 +18,7 @@
                 {{ item.title }}
               </span>
               <svg
+                v-if="mode === 'horizontal'"
                 class="icon"
                 style="
                   margin-top: 14px;
@@ -60,6 +57,7 @@
 
 <script setup lang="ts">
 import { toolsItem } from '@/assets/data'
+import { computed, ComputedRef, useAttrs } from 'vue'
 interface Item {
   title: string
   id: string
@@ -73,6 +71,11 @@ const menu = [
   toolsItem,
   { title: 'News', id: 'news' },
 ] as Item[]
+
+const attrs = useAttrs()
+const mode = computed(() => attrs.mode || 'vertical') as ComputedRef<
+  'vertical' | 'inline' | 'horizontal'
+>
 </script>
 
 <style lang="scss" scoped>
