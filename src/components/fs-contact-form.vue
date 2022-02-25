@@ -10,7 +10,7 @@
       @click.prevent="handleClick" -->
     <a
       class="fs-btn fs-relative fs-w-36 fs-btn-primary hover:fs-bg-primary hover:fs-text-white"
-      style="left: -16px;"
+      :style="btnStyle"
       :href="
         emailSubject
           ? `mailto:support@shopflex.io?subject=${emailSubject}`
@@ -23,10 +23,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useTailwindBreakpoints } from '@/hooks'
 
 // const handleClick = () => {}
 const emailSubject = ref('')
+const bks = useTailwindBreakpoints()
+const btnStyle = computed(() => {
+  return bks.notPhone.value
+    ? {
+      left: '-16px',
+    }
+    : {
+      left: '-4px',
+    }
+})
 </script>
 
 <style lang="scss" scoped>
