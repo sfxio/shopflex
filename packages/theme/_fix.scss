@@ -1,0 +1,17 @@
+.fs-button.fs-button-loading {
+  .el-loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.fs-btn-sm {
+    .el-loading-spinner {
+      height: 42px;
+      svg {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+}

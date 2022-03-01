@@ -1,0 +1,17 @@
+{
+  "name": "@shopflex-site-ssr/plugins",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts",
+  "scripts": {
+    "postinstall": "yarn link"
+  },
+  "devDependencies": {
+    "@shopflex-site-ssr/tsconfig": "*",
+    "@nuxtjs/composition-api": "^0.22.0",
+    "ant-design-vue": "^1.7.8",
+    "vue": "^2.6.12"
+  },
+  "dependencies": {}
+}

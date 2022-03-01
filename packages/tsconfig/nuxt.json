@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Nuxt",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["DOM"],
+    "types": ["node", "@nuxt/types", "@nuxt/typescript-build"]
+  },
+  "exclude": ["tests", "node_modules", "dist", "build"]
+}

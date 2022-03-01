@@ -1,0 +1,6 @@
+{
+  "extends": "@shopflex-site-ssr/tsconfig/nuxt.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}

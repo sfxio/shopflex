@@ -1,0 +1,29 @@
+.fs-df {
+  @apply fs-flex;
+}
+
+.fs-df-col {
+  @apply fs-flex fs-flex-col;
+}
+
+.fs-flex-jcic,
+.fs-flex-icjc {
+  @apply fs-flex fs-justify-center fs-items-center;
+}
+
+.fs-border-1-gray {
+  border: 1px solid var(--fs-c-border-gray);
+}
+
+.fs-border-l-1-gray {
+  border-left: 1px solid var(--fs-c-border-gray);
+}
+.fs-border-r-1-gray {
+  border-right: 1px solid var(--fs-c-border-gray);
+}
+.fs-border-t-1-gray {
+  border-top: 1px solid var(--fs-c-border-gray);
+}
+.fs-border-b-1-gray {
+  border-bottom: 1px solid var(--fs-c-border-gray);
+}

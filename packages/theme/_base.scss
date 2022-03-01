@@ -1,0 +1,64 @@
+h1,
+.fs-h1 {
+  font-size: var(--fs-h1-fs, 24px);
+  font-weight: var(--fs-h1-fw, 600);
+  font-family: var(--fs-h1-ff, var(--fs-ff-primary));
+
+  color: var(--fs-h1-c, #000000);
+  margin-top: var(--fs-h1-mg, 0px);
+  margin-bottom: var(--fs-h1-mg, 0px);
+}
+
+h2,
+.fs-h2 {
+  font-size: var(--fs-h2-fs, 20px);
+  font-weight: var(--fs-h2-fw, 600);
+  font-family: var(--fs-h2-ff, var(--fs-ff-primary));
+
+  color: var(--fs-h2-c, #000000);
+  margin-top: var(--fs-h2-mg, 0px);
+  margin-bottom: var(--fs-h2-mg, 0px);
+}
+
+h3,
+.fs-h3 {
+  font-size: var(--fs-h3-fs, 16px);
+  font-weight: var(--fs-h3-fw, 500);
+  font-family: var(--fs-h3-ff, var(--fs-ff-primary));
+
+  color: var(--fs-h3-c, #000000);
+  margin-top: var(--fs-h3-mg, 0px);
+  margin-bottom: var(--fs-h3-mg, 0px);
+}
+
+h4,
+.fs-h4 {
+  font-size: var(--fs-h4-fs, 14px);
+  font-weight: var(--fs-h4-fw, 500);
+  font-family: var(--fs-h4-ff, var(--fs-ff-primary));
+
+  color: var(--fs-h4-c, #000000);
+  margin-top: var(--fs-h4-mg, 0px);
+  margin-bottom: var(--fs-h4-mg, 0px);
+}
+
+h5,
+.fs-h5 {
+  font-size: var(--fs-h5-fs, 12px);
+  font-weight: var(--fs-h5-fw, 500);
+  font-family: var(--fs-h5-ff, var(--fs-ff-primary));
+
+  color: var(--fs-h5-c, #000000);
+  margin-top: var(--fs-h5-mg, 0px);
+  margin-bottom: var(--fs-h5-mg, 0px);
+}
+
+p .fs-p {
+  font-size: var(--fs-p-fs, 16px);
+  font-weight: var(--fs-p-fw, 400);
+  font-family: var(--fs-p-ff, var(--fs-ff-primary));
+
+  color: var(--fs-p-c, #000000);
+  margin-top: var(--fs-p-mg, 0px);
+  margin-bottom: var(--fs-p-mg, 0px);
+}

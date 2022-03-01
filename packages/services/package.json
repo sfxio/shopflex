@@ -1,0 +1,16 @@
+{
+  "name": "@shopflex-site-ssr/services",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts",
+  "scripts": {
+    "postinstall": "yarn link"
+  },
+  "devDependencies": {
+    "@shopflex-site-ssr/tsconfig": "*"
+  },
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
