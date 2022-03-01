@@ -30,7 +30,11 @@
           :placement="'left'"
           :visible="isVisible"
         >
-          <FsMenu class="fs-mt-20" mode="inline" @select="handleSelect" />
+          <FsMenu
+            style="margin-top: 60px"
+            mode="inline"
+            @select="handleSelect"
+          />
         </ADrawer>
         <svg
           class="icon"
@@ -83,11 +87,11 @@ export default defineComponent({
     const notPhone = computed(() => bps.value.xm)
 
     const headerStyle = computed(() => {
-      const top = isTop.value
       const isHome = computed(() => route.value.path === '/')
       return {
-        'border-color': top && isHome.value ? 'transparent' : '#eee',
-        background: top && isHome.value ? 'var(--color-banner-bg)' : 'white',
+        'border-color': isTop.value && isHome.value ? 'transparent' : '#eee',
+        background:
+          isTop.value && isHome.value ? 'var(--color-banner-bg)' : 'white',
       }
     })
     const extra = ref() as Ref<any>

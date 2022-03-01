@@ -56,7 +56,7 @@ export default defineComponent({
   setup() {
     const rootRef = ref<HTMLElement>()
     const target = () => rootRef.value
-    useScrollProvide(rootRef)
+    useScrollProvide(rootRef, 100)
 
     return {
       rootRef,

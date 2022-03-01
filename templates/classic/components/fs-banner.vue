@@ -39,7 +39,10 @@
       </div>
     </section>
 
-    <section class="fs-flex-jc-ic fs-hidden md:fs-flex" style="width: 40%">
+    <section
+      class="fs-hidden md:fs-flex fs-justify-center fs-items-center"
+      style="width: 40%"
+    >
       <img
         v-lazy="banner"
         class="fs-absolute"

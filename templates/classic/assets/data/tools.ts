@@ -1,13 +1,15 @@
 /* eslint-disable quotes */
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 import { toolsIcons } from '../icons'
 
+const key = 'tools__'
+let id = 1
 const Statistics = {
-  id: nanoid(),
+  id: key + id++,
   name: 'Statistics',
   list: [
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Store Leads',
       description:
         'With over 4.5 million active e-commerce stores is ideal for lead generation, market research and data enrichment.',
@@ -21,7 +23,7 @@ const Statistics = {
       },
     },
     {
-      id: nanoid(),
+      id: key + id++,
       // name: 'Shopify Spy',
       description:
         'Shopifyspy collects comprehensive data from the most successful and powerful shopify stores, containing rankings on Alexa and different social media.',
@@ -37,7 +39,7 @@ const Statistics = {
       },
     },
     {
-      id: nanoid(),
+      id: key + id++,
       description:
         'CartInsight scans & analyzes millions of ecommerce stores and online sellers to discover high quality prospecting worthy leads for your sales & marketing.',
       icon: toolsIcons.cartinsight,
@@ -46,7 +48,7 @@ const Statistics = {
     },
 
     {
-      id: nanoid(),
+      id: key + id++,
       description: `Clicky Web Analytics is simply the best way to monitor, analyze, and react to your blog or web site's traffic in real time.`,
       link: 'https://clicky.com/',
       icon: toolsIcons.clicky,
@@ -59,7 +61,7 @@ const Statistics = {
       },
     },
     {
-      id: nanoid(),
+      id: key + id++,
       description: `Easily identify your key traffic sources and exactly what content they're looking for on your website. See Sample Reports. Meet the Widgets ...`,
       link: 'https://www.w3counter.com',
       icon: toolsIcons.w3counter,
@@ -71,18 +73,18 @@ const Statistics = {
 }
 
 const ProductSearch = {
-  id: nanoid(),
+  id: key + id++,
   name: 'Product Research',
   list: [
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Google Trends',
       description:
         'Google Trends is a website by Google that analyzes the popularity of top search queries in Google Search across various regions and languages.',
       link: 'https://trends.google.com/trends/',
     },
     {
-      id: nanoid(),
+      id: key + id++,
 
       // name: 'DropshipSpy',
       description:
@@ -94,7 +96,7 @@ const ProductSearch = {
       },
     },
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Camel',
       link: 'https://camelcamelcamel.com',
       description:
@@ -105,7 +107,7 @@ const ProductSearch = {
       },
     },
     {
-      id: nanoid(),
+      id: key + id++,
       description: `We'll monitor your competitors' websites for key changes. We detect business-critical website changes.`,
       link: 'https://deepdiveduck.com/',
       icon: toolsIcons.ddd,
@@ -115,22 +117,22 @@ const ProductSearch = {
 }
 
 const CustomerService = {
-  id: nanoid(),
+  id: key + id++,
   name: 'Customer Service',
   children: [
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Email/SMS Marketing',
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           link: 'https://sendgrid.com/',
           name: '<svg width="147px" height="33px" viewBox="0 0 147 33" version="1.1"><title>SendGrid logo</title><description>Go to the SendGrid homepage</description><g id="Active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Products-Hover" transform="translate(-80.000000, -37.000000)"><g id="Navigation-Bar"><g id="SG-Twilio-Logo" transform="translate(80.000000, 37.000000)"><path d="M50.8034045,22.808402 C51.4136046,21.4424019 52.6924047,20.5124018 54.3784049,20.5124018 C56.064405,20.5124018 57.3142051,21.2970019 57.8374052,22.808402 L50.8034045,22.808402 Z M61.8484055,24.5524022 C61.8484055,20.3668018 58.7962053,17.0244015 54.3494049,17.0244015 C50.1638045,17.0244015 46.7922042,20.3958018 46.7922042,24.5816022 C46.7922042,28.7670026 49.9316045,32.1386029 54.4658049,32.1386029 C57.6060052,32.1386029 59.8646054,30.6238027 61.1354055,28.4524025 L57.9770052,26.5690024 C57.3070051,27.8546025 56.020805,28.6508026 54.4948049,28.6508026 C52.4020047,28.6508026 51.0942046,27.6042025 50.6290045,26.0056023 L61.8484055,26.0056023 L61.8484055,24.5524022 Z M142.916013,24.5524022 C142.916013,22.401602 141.346413,20.6576018 139.195812,20.6576018 C136.986812,20.6576018 135.300812,22.314402 135.300812,24.5524022 C135.300812,26.7904024 136.986812,28.4764025 139.195812,28.4764025 C141.346413,28.4764025 142.916013,26.7034024 142.916013,24.5524022 L142.916013,24.5524022 Z M131.406012,24.5816022 C131.406012,19.4372017 135.184612,17.0244015 138.469012,17.0244015 C140.358213,17.0244015 141.840613,17.7220016 142.799813,18.7392017 L142.799813,10.630001 L146.781813,10.630001 L146.781813,31.8478028 L142.799813,31.8478028 L142.799813,30.2204027 C141.840613,31.3540028 140.300213,32.1386029 138.411012,32.1386029 C135.329812,32.1386029 131.406012,29.6970027 131.406012,24.5816022 L131.406012,24.5816022 Z M128.480811,15.1032014 C129.796412,15.1032014 130.862812,14.0368013 130.862812,12.7212011 C130.862812,11.405601 129.796412,10.3392009 128.480811,10.3392009 C127.165411,10.3392009 126.099211,11.405601 126.099211,12.7212011 C126.099211,14.0368013 127.165411,15.1032014 128.480811,15.1032014 L128.480811,15.1032014 Z M126.490011,17.3152015 L130.471812,17.3152015 L130.471812,31.8478028 L126.490011,31.8478028 L126.490011,21.1810019 L125.044811,21.1808019 L126.490011,17.3152015 Z M115.88221,17.3152015 L119.835211,17.3152015 L119.835211,19.6986018 C120.561811,18.1872016 121.869811,17.3152015 123.846211,17.3152015 L125.445011,17.3152015 L124.001211,21.1808019 L122.916011,21.1808019 C120.794411,21.1808019 119.864211,22.285402 119.864211,24.9884022 L119.864211,31.8478028 L115.88221,31.8478028 L115.88221,17.3152015 Z M93.4808084,21.2390019 C93.4808084,15.1932014 98.0442088,10.3392009 104.322209,10.3392009 C107.46261,10.3392009 110.10341,11.470001 112.01541,13.2720012 C112.79361,14.0052013 113.45081,14.8498013 113.97201,15.7746014 L110.42621,17.9254016 C109.11821,15.5128014 107.11261,14.2630013 104.351409,14.2630013 C100.485609,14.2630013 97.4918087,17.4314016 97.4918087,21.2390019 C97.4918087,25.1338022 100.427609,28.2146025 104.496609,28.2146025 C107.57781,28.2146025 109.75741,26.4708024 110.51321,23.7676021 L103.857209,23.7676021 L103.857209,19.9020018 L114.87301,19.9020018 L114.87301,21.5296019 C114.87301,27.2266024 110.80401,32.1386029 104.496609,32.1386029 C97.8698088,32.1386029 93.4808084,27.1104024 93.4808084,21.2390019 L93.4808084,21.2390019 Z M88.6808079,24.5524022 C88.6808079,22.401602 87.1114078,20.6576018 84.9606076,20.6576018 C82.7516074,20.6576018 81.0656072,22.314402 81.0656072,24.5524022 C81.0656072,26.7904024 82.7516074,28.4764025 84.9606076,28.4764025 C87.1114078,28.4764025 88.6808079,26.7034024 88.6808079,24.5524022 L88.6808079,24.5524022 Z M77.1708069,24.5816022 C77.1708069,19.4372017 80.9492072,17.0244015 84.2338075,17.0244015 C86.1230077,17.0244015 87.6054078,17.7220016 88.5646079,18.7392017 L88.5646079,10.630001 L92.5466083,10.630001 L92.5466083,31.8478028 L88.5646079,31.8478028 L88.5646079,30.2204027 C87.6054078,31.3540028 86.0650077,32.1386029 84.1758075,32.1386029 C81.0948073,32.1386029 77.1708069,29.6970027 77.1708069,24.5816022 L77.1708069,24.5816022 Z M62.7792056,17.3152015 L66.732406,17.3152015 L66.732406,18.9428017 C67.662406,17.7510016 69.0868062,17.0244015 70.7434063,17.0244015 C74.1730066,17.0244015 76.2368068,19.2334017 76.2368068,22.9828021 L76.2368068,31.8478028 L72.1966065,31.8478028 L72.1966065,23.5060021 C72.1966065,21.5586019 71.2956064,20.4250018 69.5228062,20.4250018 C68.0112061,20.4250018 66.761406,21.4714019 66.761406,23.9128021 L66.761406,31.8478028 L62.7792056,31.8478028 L62.7792056,17.3152015 Z M30.2666027,28.3310025 L33.958203,25.4242023 C35.0044031,27.2266024 36.6612033,28.2728025 38.5502034,28.2728025 C40.6142036,28.2728025 41.7188037,26.9360024 41.7188037,25.4824023 C41.7188037,23.7386021 39.5966035,23.1866021 37.3296033,22.488602 C34.4814031,21.6168019 31.3130028,20.5124018 31.3130028,16.4430015 C31.3130028,13.0424012 34.2780031,10.3392009 38.3760034,10.3392009 C41.8350037,10.3392009 43.8114039,11.647201 45.5264041,13.4204012 L42.1836038,15.9490014 C41.3118037,14.6412013 40.0620036,13.9434012 38.4050034,13.9434012 C36.5158033,13.9434012 35.4988032,14.9608013 35.4988032,16.2978015 C35.4988032,17.9254016 37.5332034,18.4780017 39.8002036,19.2334017 C42.6780038,20.1634018 45.9332041,21.4424019 45.9332041,25.5118023 C45.9332041,28.8832026 43.2590039,32.1386029 38.5794034,32.1386029 C34.7430031,32.1386029 32.1852029,30.5112027 30.2666027,28.3310025 L30.2666027,28.3310025 Z" id="Fill-1" fill="#212F38"></path><polygon id="Fill-2" fill="#9DD6E3" points="8.52940076 31.8478028 17.0162015 31.8478028 17.0162015 23.3610021 8.52940076 23.3610021"></polygon><polygon id="Fill-3" fill="#9DD6E3" points="0.0426000038 23.3614021 8.52940076 23.3614021 8.52940076 14.8744013 0.0426000038 14.8744013"></polygon><polygon id="Fill-4" fill="#3F72AB" points="0.0428000038 31.8478028 8.52960076 31.8478028 8.52960076 23.3610021 0.0428000038 23.3610021"></polygon><polygon id="Fill-5" fill="#00A9D1" points="17.0162015 23.3614021 25.5030023 23.3614021 25.5030023 14.8744013 17.0162015 14.8744013"></polygon><polygon id="Fill-6" fill="#00A9D1" points="8.52940076 14.8746013 17.0162015 14.8746013 17.0162015 6.38780057 8.52940076 6.38780057"></polygon><polygon id="Fill-7" fill="#2191C4" points="8.52940076 23.3612021 17.0162015 23.3612021 17.0162015 14.8744013 8.52940076 14.8744013"></polygon><polygon id="Fill-8" fill="#3F72AB" points="17.0162015 14.8746013 25.5030023 14.8746013 25.5030023 6.38780057 17.0162015 6.38780057"></polygon><polyline id="Fill-9" fill="#212F38" points="34.2702031 1.26060011 34.2702031 6.20820056 33.125603 6.20820056 33.125603 1.26060011 31.3618028 1.26060011 31.3618028 0.270800024 36.0398032 0.270800024 36.0380032 1.26060011 34.2702031 1.26060011"></polyline><polyline id="Fill-10" fill="#212F38" points="44.382604 6.20820056 43.2984039 6.20820056 41.9818038 1.88840017 40.6654036 6.20820056 39.5898035 6.20820056 37.9304034 0.243000022 39.1316035 0.259400023 40.2350036 4.4614004 41.4742037 0.270800024 42.6186038 0.270800024 43.8578039 4.4614004 44.942004 0.270800024 46.0864041 0.270800024 44.382604 6.20820056"></polyline><polygon id="Fill-11" fill="#212F38" points="48.3440043 6.20820056 49.4884044 6.20820056 49.4884044 0.270800024 48.3440043 0.270800024"></polygon><polyline id="Fill-12" fill="#212F38" points="52.1398047 6.20820056 52.1398047 0.270800024 53.2844048 0.270800024 53.2844048 5.20140047 55.2634049 5.20140047 55.2734049 6.20820056 52.1398047 6.20820056"></polyline><polygon id="Fill-13" fill="#212F38" points="57.6488052 6.20820056 58.7932053 6.20820056 58.7932053 0.270800024 57.6488052 0.270800024"></polygon><path d="M64.0000057,1.1058001 C62.9846056,1.1058001 62.3738056,1.94040017 62.3738056,3.23980029 C62.3738056,4.53920041 62.9846056,5.37360048 64.0000057,5.37360048 C65.0240058,5.37360048 65.6350059,4.53920041 65.6350059,3.23980029 C65.6350059,1.94040017 65.0156058,1.1058001 64.0000057,1.1058001 M63.9916057,6.32040057 C62.3048056,6.32040057 61.2124055,5.08100045 61.2124055,3.24800029 C61.2124055,1.40660013 62.3134056,0.159200014 64.0086057,0.159200014 C65.7126059,0.159200014 66.787806,1.39780012 66.787806,3.23100029 C66.787806,5.06360045 65.6954059,6.32040057 63.9916057,6.32040057" id="Fill-14" fill="#212F38"></path></g></g></g></g></svg>',
           description:
             'SendGrid is a cloud-based customer communication platform that drives engagement and business growth.',
         },
         {
-          id: nanoid(),
+          id: key + id++,
 
           name: `<svg xmlns="http://www.w3.org/2000/svg" class="brandLogo brandLogo--lockup--animated" aria-label="Mailchimp" width="168" height="42" viewBox="0 0 228 60">
     <g class="brandLogo__freddie">
@@ -165,7 +167,7 @@ const CustomerService = {
           link: 'https://mailchimp.com/',
         },
         {
-          id: nanoid(),
+          id: key + id++,
 
           icon: 'https://us-ws.gr-cdn.com/images/global/logo.svg',
           link: 'https://www.getresponse.com/',
@@ -179,12 +181,12 @@ const CustomerService = {
     },
 
     {
-      id: nanoid(),
+      id: key + id++,
 
       name: 'Live Chatbot',
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
 
           link: 'https://www.tidio.com/',
           description:
@@ -192,7 +194,7 @@ const CustomerService = {
           icon: '	https://www.tidio.com/images/tidio-logo.svg',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           link: 'https://www.instabot.io/shopify-bot',
           description:
             'Instabot is a conversion chatbot that can be added to your Shopify site in minutes.',
@@ -239,15 +241,15 @@ const CustomerService = {
 }
 
 const Editing = {
-  id: nanoid(),
+  id: key + id++,
   name: 'Product Image/Video Editing',
   children: [
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Image',
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           name: '<div style="display: flex; align-items: center; gap: 4px;"><svg width="32" height="32" class="hic6U" viewBox="0 0 32 32" version="1.1" aria-labelledby="unsplash-home" aria-hidden="false"><title id="unsplash-home">Unsplash Home</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg> Unsplash</div>',
           description:
             'Beautiful, free images and photos that you can download and use for any project.',
@@ -255,21 +257,21 @@ const Editing = {
         },
 
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="30" viewBox="0 0 80 30"><defs><radialGradient id="_3141735796__a" cx="0" cy="0" r="1" gradientTransform="matrix(16.80002 -17.28 11.48403 11.16504 40.96 29)" gradientUnits="userSpaceOnUse"><stop stop-color="#6420FF"></stop><stop offset="1" stop-color="#6420FF" stop-opacity="0"></stop></radialGradient><radialGradient id="_3141735796__b" cx="0" cy="0" r="1" gradientTransform="matrix(46.71996 4.16 -3.31561 37.23688 1.92 17.64)" gradientUnits="userSpaceOnUse"><stop offset=".25" stop-color="#00C4CC"></stop><stop offset="1" stop-color="#00C4CC" stop-opacity="0"></stop></radialGradient><radialGradient id="_3141735796__c" cx="0" cy="0" r="1" gradientTransform="rotate(-38.85 54.22 -35.3) scale(30.226 20.6676)" gradientUnits="userSpaceOnUse"><stop stop-color="#6420FF"></stop><stop offset="1" stop-color="#6420FF" stop-opacity="0"></stop></radialGradient><radialGradient id="_3141735796__d" cx="0" cy="0" r="1" gradientTransform="matrix(31.32001 -15.36 10.50269 21.41566 2.28 26.2)" gradientUnits="userSpaceOnUse"><stop stop-color="#6420FF"></stop><stop offset="1" stop-color="#6420FF" stop-opacity="0"></stop></radialGradient><radialGradient id="_3141735796__e" cx="0" cy="0" r="1" gradientTransform="matrix(67.99982 15.03996 -18.44596 83.39925 7.68 2.92)" gradientUnits="userSpaceOnUse"><stop stop-color="#00C4CC"></stop><stop offset="1" stop-color="#00C4CC" stop-opacity="0"></stop></radialGradient><pattern id="_3141735796__g" width="1" height="1"><path fill="#7D2AE7" d="M0 0h100v100H0z"></path><path fill="url(#_3141735796__a)" d="M0 0h100v100H0z"></path><path fill="url(#_3141735796__b)" d="M0 0h100v100H0z"></path><path fill="url(#_3141735796__c)" d="M0 0h100v100H0z"></path><path fill="url(#_3141735796__d)" d="M0 0h100v100H0z"></path><path fill="url(#_3141735796__e)" d="M0 0h100v100H0z"></path></pattern></defs><mask id="_3141735796__f"><path fill="#fff" d="M79.444 18.096c-.136 0-.26.088-.324.272-.82 2.34-1.928 3.732-2.84 3.732-.524 0-.736-.584-.736-1.5 0-2.292 1.372-7.152 2.064-9.368.08-.268.132-.508.132-.712 0-.644-.352-.96-1.224-.96-.94 0-1.952.368-2.936 2.092-.34-1.52-1.368-2.184-2.804-2.184-1.66 0-3.264 1.068-4.584 2.8-1.32 1.732-2.872 2.3-4.04 2.02.84-2.056 1.152-3.592 1.152-4.732 0-1.788-.884-2.868-2.312-2.868-2.172 0-3.424 2.072-3.424 4.252 0 1.684.764 3.416 2.444 4.256-1.408 3.184-3.464 6.064-4.244 6.064-1.008 0-1.304-4.932-1.248-8.46.036-2.024.204-2.128.204-2.74 0-.352-.228-.592-1.144-.592-2.136 0-2.796 1.808-2.896 3.884a10.233 10.233 0 0 1-.368 2.332c-.892 3.184-2.732 5.6-3.932 5.6-.556 0-.708-.556-.708-1.284 0-2.292 1.284-5.156 1.284-7.6 0-1.796-.788-2.932-2.272-2.932-1.748 0-4.06 2.08-6.248 5.976.72-2.984 1.016-5.872-1.116-5.872A2.886 2.886 0 0 0 36 9.916a.752.752 0 0 0-.432.728c.204 3.176-2.56 11.312-5.18 11.312-.476 0-.708-.516-.708-1.348 0-2.296 1.368-7.144 2.056-9.364.088-.288.136-.536.136-.752 0-.608-.376-.92-1.228-.92-.936 0-1.952.356-2.932 2.08-.344-1.52-1.372-2.184-2.808-2.184-2.356 0-4.988 2.492-6.144 5.74-1.548 4.336-4.668 8.524-8.868 8.524-3.812 0-5.824-3.172-5.824-8.184C4.068 8.312 9.38 2.4 13.32 2.4c1.884 0 2.784 1.2 2.784 3.04 0 2.228-1.244 3.264-1.244 4.112 0 .26.216.516.644.516 1.712 0 3.728-2.012 3.728-4.756S17.004.56 13.064.56C6.552.56 0 7.112 0 15.508c0 6.68 3.296 10.708 8.996 10.708 3.888 0 7.284-3.024 9.116-6.552.208 2.924 1.536 4.452 3.56 4.452 1.8 0 3.256-1.072 4.368-2.956.428 1.972 1.564 2.936 3.04 2.936 1.692 0 3.108-1.072 4.456-3.064-.02 1.564.336 3.036 1.692 3.036.64 0 1.404-.148 1.54-.708 1.428-5.904 4.956-10.724 6.036-10.724.32 0 .408.308.408.672 0 1.604-1.132 4.892-1.132 6.992 0 2.268.964 3.768 2.956 3.768 2.208 0 4.452-2.704 5.948-6.656.468 3.692 1.48 6.672 3.064 6.672 1.944 0 5.396-4.092 7.488-8.424.82.104 2.052.076 3.236-.76-.504 1.276-.8 2.672-.8 4.068 0 4.02 1.92 5.148 3.572 5.148 1.796 0 3.252-1.072 4.368-2.956.368 1.7 1.308 2.932 3.036 2.932 2.704 0 5.052-2.764 5.052-5.032 0-.6-.256-.964-.556-.964zM23.32 21.888c-1.092 0-1.52-1.1-1.52-2.74 0-2.848 1.948-7.604 4.008-7.604.9 0 1.24 1.06 1.24 2.356 0 2.892-1.852 7.988-3.728 7.988zm37.404-8.5c-.652-.776-.888-1.832-.888-2.772 0-1.16.424-2.14.932-2.14s.664.5.664 1.196c0 1.164-.416 2.864-.708 3.716zm8.468 8.5c-1.092 0-1.52-1.264-1.52-2.74 0-2.748 1.948-7.604 4.024-7.604.9 0 1.22 1.052 1.22 2.356 0 2.892-1.82 7.988-3.724 7.988z"></path></mask><path mask="url(#_3141735796__f)" fill="url(#_3141735796__g)" d="M0 0h100v100H0z"></path></svg>`,
           link: 'https://www.canva.com/',
           description: `Canva is a free graphic design platform that's great for making invitations, business cards, Instagram posts, and more. A drag and drop interface makes customizing thousands of templates simple and easy.`,
         },
 
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg width="144" viewBox="0 0 120 33" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M9.059 7.279c4.417-.1 8.564 3.492 9.03 7.897.56 3.872-1.72 7.893-5.287 9.464-2.163 1.073-4.604.743-6.93.798H3.599v7.28H.002c.007-5.617-.014-11.234.01-16.85.12-4.186 3.545-7.932 7.682-8.49.45-.066.91-.1 1.365-.1v.001zm0 14.56c2.596.064 5.03-1.96 5.42-4.533.517-2.588-1.135-5.37-3.66-6.146-2.438-.866-5.372.272-6.564 2.575-.922 1.576-.594 3.434-.656 5.167v2.938h5.46v-.001zM19.826 7.191h3.557v18.16h-3.556V7.19l-.001.001zm14.25 11.42h.13l5.057 6.745h4.41l-6.874-9.34L42.895 7.2h-4.41l-4.28 6.225h-.128l-4.28-6.224h-4.41l6.095 8.818-6.873 9.336h4.41l5.057-6.744z" fill="#333" fill-rule="nonzero"></path><path d="M51.735 7.191c3.603-.07 7.06 2.29 8.394 5.624.694 1.55.683 3.264.66 4.926v7.61c-3.21-.01-6.422.022-9.636-.018-3.688-.18-7.065-2.87-8.12-6.404-.97-3.07-.166-6.635 2.116-8.932 1.703-1.763 4.123-2.827 6.583-2.803l.003-.003zm5.46 14.56c-.015-2.02.033-4.04-.028-6.058-.212-2.705-2.718-4.972-5.432-4.9-2.582-.064-5.015 1.937-5.42 4.492-.472 2.454.937 5.126 3.276 6.04 1.442.628 3.035.367 4.56.423h3.045l-.001.003zM71.628 7.279c4.262-.104 8.245 3.25 8.924 7.445.77 3.98-1.476 8.278-5.182 9.916-3.62 1.71-8.275.607-10.764-2.523-1.542-1.817-2.208-4.235-2.077-6.59V0h3.6v7.28h5.5l-.001-.001zm0 14.56c2.733.073 5.23-2.223 5.433-4.942.34-2.702-1.662-5.42-4.337-5.912-1.48-.204-2.982-.065-4.472-.11h-2.124c.022 2.054-.05 4.11.042 6.158.286 2.71 2.735 4.856 5.46 4.8l-.002.006zM91.13 7.191c3.604-.07 7.06 2.29 8.394 5.624.696 1.55.686 3.264.664 4.926v7.61c-3.21-.01-6.424.022-9.636-.018-3.69-.18-7.067-2.87-8.124-6.404-.97-3.07-.165-6.635 2.117-8.932 1.702-1.762 4.122-2.826 6.582-2.803l.003-.003zm5.46 14.56c-.016-2.02.032-4.04-.027-6.058-.208-2.705-2.715-4.972-5.43-4.9-2.58-.064-5.014 1.937-5.417 4.492-.474 2.454.936 5.126 3.274 6.04 1.44.628 3.033.367 4.556.423h3.045l-.001.003zm23.407-14.517c-.007 5.605.015 11.208-.01 16.81-.13 4.41-3.922 8.374-8.345 8.604-.84.044-1.682.016-2.523.022v-3.598c1.536-.007 3.178.15 4.537-.72 1.7-.955 2.78-2.878 2.743-4.822-3.19 2.574-8.136 2.44-11.238-.214-2.262-1.825-3.497-4.76-3.323-7.65v-8.43h3.6c.016 3.205-.034 6.413.026 9.617.195 2.587 2.46 4.797 5.055 4.926 2.674.276 5.306-1.74 5.77-4.383.203-1.48.067-2.984.108-4.476V7.239h3.6v-.005z" fill="#333" fill-rule="nonzero"></path></svg>`,
           description:
             'Over 2.5 million+ high quality stock images, videos and music shared by our talented community.',
           link: 'https://pixabay.com',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<div style="display: flex; align-items: center; gap: 4px;"><svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 32">
 <path d="M2 0h28a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#05A081"></path>
 <path d="M13 21h3.863v-3.752h1.167a3.124 3.124 0 1 0 0-6.248H13v10zm5.863 2H11V9h7.03a5.124 5.124 0 0 1 .833 10.18V23z" fill="#fff"></path>
@@ -279,13 +281,13 @@ const Editing = {
           link: 'https://www.pexels.com/?locale=en-us',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           icon: 'https://www.freeimages.com/static/assets/icons/logo.svg',
           link: 'https://www.freeimages.com/',
           description: 'Free Stock Photos & Royalty-Free Images',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           icon: toolsIcons.ezgif,
           iconProps: { style: { width: '192px' } },
           link: 'https://ezgif.com/',
@@ -294,11 +296,11 @@ const Editing = {
       ],
     },
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Video',
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116px" height="32px" viewBox="0 0 116 32" version="1.1">
     <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
     <title>logo</title>
@@ -336,13 +338,13 @@ const Editing = {
             'Promo.com is the #1 video creation platform for businesses and agencies.',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           icon: 'https://animoto.com/static/logo-1d220e413f4f69fa42d66d93381db371.svg',
           description: `Make your own product demo videos in minutes. Turn your existing photos and video clips into professional videos with Animoto's drag-and-drop video maker.`,
           link: 'https://animoto.com/business/ecommerce-video-marketing',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg width="80" height="17" viewBox="0 0 80 17" xmlns="http://www.w3.org/2000/svg">
   <path d="M79.7 14.8c-.6.7-1.3 1.3-2.1 1.6a6.7 6.7 0 0 1-5.2.1 5.7 5.7 0 0 1-3.2-3.2c-.4-.8-.5-1.7-.5-2.6a6.7 6.7 0 0 1 1.5-4.4c.6-.6 1.2-1 1.9-1.4a5.4 5.4 0 0 1 6.3 1.4 6 6 0 0 1 1.2 2 6.8 6.8 0 0 1 .3 3.2h-8.1l.3 1.2a3 3 0 0 0 1.7 1.5l1.1.2c.7 0 1.3-.2 1.8-.5a5 5 0 0 0 1.2-1l1.8 2zm-3-5.7a2.6 2.6 0 0 0-.7-1.4 2.3 2.3 0 0 0-1.6-.7c-.6 0-1.2.2-1.7.7-.4.3-.7.9-.8 1.4h4.9zM64.6.3h3.1v16.5h-3.1V.3zM51 16.8V.3h3.2v5.3a5 5 0 0 1 3.3-1.2A5.8 5.8 0 0 1 63 8.2c.4.8.5 1.7.5 2.5A6.6 6.6 0 0 1 62 15c-.5.6-1.2 1.1-2 1.4a5.9 5.9 0 0 1-4.2.3c-.5-.2-1.5-1-1.5-1v1H51zm3.2-4.3A3.5 3.5 0 0 0 57 14a3 3 0 0 0 3-2 3.6 3.6 0 0 0 0-2.5c-.2-.4-.4-.8-.7-1a2.9 2.9 0 0 0-2.2-1c-.6 0-1.1 0-1.7.3-.5.3-.9.7-1.2 1.1v3.6zm-4.8 4.3h-3v-1a4.6 4.6 0 0 1-3.3 1.2 6 6 0 0 1-5.6-4c-.3-.7-.4-1.5-.4-2.3A6.7 6.7 0 0 1 39 6.3c.5-.6 1.2-1 1.9-1.4a5.6 5.6 0 0 1 5.7.8v-1h3v12zm-3.1-7.9c-.4-.4-.8-.8-1.3-1-.5-.3-1-.5-1.7-.5-.8 0-1.6.4-2.2 1a3.5 3.5 0 0 0-.8 2.3c0 .5 0 1 .2 1.3.2.4.4.8.7 1a3 3 0 0 0 2.2 1 3 3 0 0 0 1.6-.4c.5-.3 1-.6 1.3-1V8.8zm-10.5 6c-.6.6-1.3 1.2-2.1 1.5a6.7 6.7 0 0 1-5.2.1 5.7 5.7 0 0 1-3.2-3.2 7.1 7.1 0 0 1 0-5c.2-.7.6-1.4 1-2 .6-.6 1.2-1 1.9-1.4a5.4 5.4 0 0 1 6.3 1.4 6 6 0 0 1 1.2 2 6.8 6.8 0 0 1 .3 3.2h-8l.3 1.2a3 3 0 0 0 1.7 1.5l1.2.2c.6 0 1.2-.2 1.7-.5a5 5 0 0 0 1.2-1l1.8 2zM33 9a2.6 2.6 0 0 0-.6-1.4 2.3 2.3 0 0 0-1.7-.7c-.6 0-1.2.2-1.7.7-.4.3-.7.9-.8 1.4H33zm-13.5 7.7V7.5h-2.2V4.7h2.2V.3h3.2v4.4h2.2v2.8h-2.2v9.3h-3.2zm-6.6-15c0-.5.2-1 .5-1.3.7-.7 1.8-.7 2.6 0A1.8 1.8 0 0 1 13.4 3c-.3-.3-.5-.8-.5-1.3zm3.4 15H13v-12h3.2v12zM5.5.3c.9 0 1.6.1 2.1.3A4.4 4.4 0 0 1 10.1 3a4.2 4.2 0 0 1 .1 3.5c-.1.4-.4.8-.7 1.1.7.4 1.3 1 1.8 1.7a5.4 5.4 0 0 1-.8 6.1c-.5.4-1 .8-1.7 1-.7.3-1.5.5-2.5.5H0V.3h5.5zM3 6.7h2.2c.3 0 .7 0 1-.2.3 0 .5-.2.7-.4l.3-.6c.2-.4.2-.8 0-1.2a2 2 0 0 0-.3-.6 2 2 0 0 0-.6-.4c-.4-.1-.8-.2-1.1-.1H3v3.5zm3 7.2c.5 0 1 0 1.4-.2.3 0 .5-.3.8-.5.7-.8.7-2.1 0-3l-.8-.5c-.4-.2-.9-.2-1.3-.2H3v4.4h3z" fill="currentColor"></path>
 </svg>`,
@@ -350,13 +352,13 @@ const Editing = {
           link: 'https://biteable.com',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           icon: 'https://www.moovly.com/wp-content/uploads/2021/05/cropped-MoovlyLogo_TickerWeb.png',
           description: `Moovly is the #1 customizable, easy-to-use solution for the creation of videos in any style.`,
           link: 'https://www.moovly.com/',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg width="144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="700px" viewBox="0 0 700 140" style="enable-background:new 0 0 700 140;" xml:space="preserve"> <path id="XMLID_708_" style="fill:#F05E4E;" d="M168.5,89.2c0.1,0,0.1,0,0.2,0L200.3,73c-9.4-6.2-58.9-30-78.1-9.8  c-1.3,1.3-2.6,2.7-3.8,4.1C138.6,70.3,156.3,78.1,168.5,89.2z"></path> <path id="XMLID_509_" style="fill:#B23232;" d="M153.6,78.7l27.5-15.1c-24.8-10.1-38.8-7.1-54.7,2.7c-1,0.6-1.9,1.2-2.8,1.9  C134.7,70.3,144.8,73.9,153.6,78.7z"></path> <path id="XMLID_506_" style="fill:#6CC294;" d="M93.9,66.2c20-1.1,38.6,2.6,53.9,9.6h0.1c0,0,9.2-7.2,22.7-16.6  c13.5-9.3,22.3-16,22.3-16c-7-4.8-24.1-9.2-34.8-10.7c-31.8-4.5-57.8,11.1-68.2,34C91.3,66.4,92.6,66.3,93.9,66.2z"></path> <path id="XMLID_503_" style="fill:#4B9F71;" d="M93.9,66.2c15.3-0.8,29.8,1.1,42.6,5.2L149,31.9c-30.6-1-57.1,14-66.1,34.8  c-0.1,0.2-0.2,0.4-0.2,0.6C86.3,66.8,90.1,66.4,93.9,66.2z"></path> <path id="XMLID_500_" style="fill:#F3DE3C;" d="M93.9,66.2c12.1-0.6,23.8,0.7,34.5,3.1L146,4.7c-13.7-1.1-28.4,0.4-42.8,4.7  C63.5,21.3,40.1,51,46.7,78.5C60.2,71.6,76.4,67.2,93.9,66.2z"></path> <path id="XMLID_497_" style="fill:#CDAF31;" d="M93.9,66.2c5.3-0.3,10.5-0.2,15.6,0.1L87.9,15.2C57.7,29.4,41,54.7,46.7,78.5  C60.2,71.6,76.4,67.2,93.9,66.2z"></path> <path id="XMLID_485_" style="fill:#19ABD6;" d="M93.9,66.2c2-0.1,4.1-0.1,6.1-0.2c-1.7-4.1-6.9-16.3-15.1-30.6  C74.7,17.8,68.3,6.6,68.3,6.6c-15.1,5.6-33.5,15.3-44.2,25.9C0.6,55.9-1.4,84.4,15.6,105.6C29,84,58.7,68.1,93.9,66.2z"></path> <path id="XMLID_483_" d="M314.1,38.8L282.3,122c-1,2.5-2.7,3.7-5.4,3.7h-13.7c-2.6,0-4.4-1.2-5.4-3.7  L226,38.8h16.2l21.4,60.9c1.2,3.3,2.9,8.4,5.2,15.2h2.3l5.4-15.2L298,38.8H314.1z"></path> <path id="XMLID_481_" d="M347.1,125.8h-15v-87h15V125.8z"></path> <path id="XMLID_479_" d="M415.3,90.6l-25-5.7c-7.1-1.7-12.2-4.3-15.2-8s-4.5-9.1-4.5-16.2  c0-9.6,2.6-15.4,7.7-18.7c5.1-3.3,13.9-3.1,26.4-3.1c15,0,36.5,0,36.5,0v11.2c0,0-30.3,0-34.3,0c-8.8-0.1-14.6,0.4-17.3,1.6  c-2.7,1.2-4.1,4-4.1,9.1c0,4.2,0.9,7,2.8,8.6c1.8,1.5,5.1,2.9,9.9,3.9l25.4,5.7c7.1,1.8,12.3,4.4,15.4,7.9c3.2,3.5,4.7,8.8,4.7,16  c0,10.1-2.5,15.4-8.1,18.7s-13.1,4.4-29,4.4c-12.1,0-33.1,0-33.1,0v-11.6c0,0,20.2,0,30.1,0c10.1,0,16.9-0.8,20.4-2.3  s5.2-4.1,5.2-9.1c0-3.9-1-6.6-3.1-8.1C423.8,93.1,420.3,91.8,415.3,90.6z"></path> <path id="XMLID_477_" d="M481.5,38.8V51c11.6-9.6,22.9-14.4,33.7-14.4c12.1,0,19.5,5.1,22,15.3  c11.8-10.2,23.4-15.3,35-15.3c7.5,0,13.2,2,17.2,6.1c4,4,6,10,6,17.8v65.2h-15V64.9c-0.1-5.4-1.2-9.3-3.3-11.7s-5.5-3.7-10.3-3.7  c-4.2,0-8.2,1-12.1,2.9c-3.9,1.9-9.4,5.5-16.5,10.7v62.7h-14.6V64.9c0-5.5-1.1-9.4-3.3-11.8c-2.2-2.4-5.6-3.6-10.3-3.6  c-4.2,0-8.2,1-12,2.9c-3.9,1.9-9.4,5.4-16.5,10.5v62.8h-15.2V38.8H481.5z"></path> <path id="XMLID_474_" d="M675,89.7h-40.5c0.8,10,3.3,16.7,7.3,20.2s10.8,4.2,20.2,4.2c9.9,0,30.2,0,30.2,0  v11.6c0,0-17.4,0-32.1,0c-15,0-25.7-1.3-32-8.3c-6.4-7-9.5-18.8-9.5-35.4c0-16.8,3.1-28.5,9.3-35.3c6.2-6.7,16.4-10.1,30.7-10.1  c13,0,22.4,2.4,28.4,7c5.9,4.7,8.9,11.8,8.9,21.3C696,81.5,689.1,89.7,675,89.7z M634.3,77.9h36.8c6.3,0,9.5-4.3,9.5-12.9  c-0.1-5.6-1.8-9.6-5-12s-8.7-3.6-16.4-3.6c-9.2,0-15.5,2-19.1,6C636.5,59.5,634.5,67,634.3,77.9z"></path> <path id="XMLID_330_" d="M119.4,96l-19.6,13.7l7.1-20.9c-2.3-0.6-4.6-0.9-7.1-0.9c-14,0-25.3,9.9-25.3,22  c0,12.2,11.3,22,25.3,22s25.3-9.9,25.3-22C125.1,104.7,122.9,99.8,119.4,96z"></path> </svg>`,
           description: `The all-in-one video maker to help ramp up your video production, create engaging video content in minutes and rock out your video marketing strategy.`,
           link: 'https://www.visme.co/video-maker',
@@ -367,25 +369,25 @@ const Editing = {
 }
 
 const DropshippingSourcing = {
-  id: nanoid(),
+  id: key + id++,
   name: 'Dropshipping Sourcing',
   list: [
     {
-      id: nanoid(),
+      id: key + id++,
       icon: 'https://mixshop.world/_nuxt/static/logo.png',
       description:
         'With 13 warehouses in the USA & UK, 3-7 Days FREE Shipping.',
       link: 'https://mixshop.world',
     },
     {
-      id: nanoid(),
+      id: key + id++,
       icon: 'https://fashionexpress.us/_nuxt/static/logo.png',
       iconProps: { style: { width: '192px' } },
       description: 'Worldwide Women Fashion Dropshipping & Customization.',
       link: 'https://fashionexpress.us',
     },
     {
-      id: nanoid(),
+      id: key + id++,
       icon: 'https://shop.goodmerchan.com/logo.png',
       iconProps: { style: { width: '182px' } },
       description:
@@ -393,21 +395,21 @@ const DropshippingSourcing = {
       link: 'https://shop.goodmerchan.com/',
     },
     {
-      id: nanoid(),
+      id: key + id++,
       icon: 'https://dropshipping.b2seller.com/logo.png',
       iconProps: { style: { width: '182px' } },
       description: 'Worldwide warehouses & Fast & Free Shipping.',
       link: 'https://dropshipping.b2seller.com/',
     },
     {
-      id: nanoid(),
+      id: key + id++,
       icon: 'https://app.vendorslink.net/_nuxt/img/logo.7bfc699.png',
       iconProps: { style: { width: '182px' } },
       description: 'Vendorslink - Accessories and Bag',
       link: 'https://app.vendorslink.net/',
     },
     {
-      id: nanoid(),
+      id: key + id++,
       icon: 'https://www.99diy.com/_nuxt/img/logo.74033dc.png',
       iconProps: { style: { width: '144px' } },
       description: 'Print On Demand- Starts from $9.9',
@@ -417,22 +419,22 @@ const DropshippingSourcing = {
 }
 
 const SocialMediaPlatform = {
-  id: nanoid(),
+  id: key + id++,
   name: 'Social Media Platform',
   children: [
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Selling Channels',
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           name: `Facebook Shop`,
           description: `A shop is your online storefront where people can browse, explore and purchase your products directly on Facebook and Instagram.`,
           link: 'https://www.facebook.com/business/shops',
         },
 
         {
-          id: nanoid(),
+          id: key + id++,
           name: 'Instagram Shop',
           // icon:
           //   'https://scontent-hkg4-2.xx.fbcdn.net/v/t39.2365-6/174850829_913187455924480_6064046574054155671_n.png?_nc_cat=109&ccb=1-5&_nc_sid=ad8a9d&_nc_ohc=ebE57Bk6PR0AX89CRDc&_nc_ht=scontent-hkg4-2.xx&oh=00_AT9QPs2dARE_Zm3naO-28ltdRHy1SDV1GqW01XANv5kfQA&oe=62173DDD',
@@ -441,7 +443,7 @@ const SocialMediaPlatform = {
           link: 'https://business.instagram.com/shopping',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           name: 'TikTok Seller',
           // icon:
           //   'https://cdn.shopify.com/app-store/listing_images/ca1f1238d808935b77771b399df6e9ab/icon/CLe6nrP0lu8CEAE=.png?height=60&width=60',
@@ -453,18 +455,18 @@ const SocialMediaPlatform = {
     },
 
     {
-      id: nanoid(),
+      id: key + id++,
       name: 'Social Media Management',
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg width="120"  viewBox="0 0 143 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.404053 8.24483L15.821 0.258789L31.4041 8.24483L15.821 16.2588L0.404053 8.24483ZM92.9582 12.1276V11.9375C92.9582 9.30306 94.5076 8.46113 97.1172 8.65125V3.84414C90.8651 3.46392 87.902 6.58718 87.902 11.9375V12.1276H85.075V16.9347H87.902V31.4918H92.9582V16.9347H95.948H97.1172H98.7751V31.4918H103.831V16.9347H107.99V12.1276H103.831V11.9375C103.831 9.30306 105.354 8.46113 107.99 8.65125V3.84414C101.738 3.46392 98.7751 6.58718 98.7751 11.9375V12.1276H97.1172H95.948H92.9582ZM57.6198 17.3959C59.2236 16.1194 60.2021 14.2998 60.2021 11.9641C60.2021 7.42862 56.5052 4.33252 51.8568 4.33252H41.0652V31.437H52.7267C57.4838 31.437 61.2894 28.2322 61.2894 23.5881C61.2351 20.7907 59.8216 18.6452 57.6198 17.3959ZM51.8841 9.35689C53.6238 9.35689 54.8199 10.6334 54.8199 12.3444C54.8199 14.0554 53.5694 15.3318 51.8841 15.3318H46.4746V9.35689H51.8841ZM52.6996 26.4669H46.4746V20.0846H52.6996C54.5481 20.0846 55.88 21.4426 55.88 23.2622C55.88 25.109 54.5481 26.4669 52.6996 26.4669ZM77.0557 12.0996V22.5557C77.0557 25.9234 75.2072 27.3628 72.7336 27.3628C70.4502 27.3628 68.8463 26.0049 68.8463 23.3705V12.0996H63.7903V23.9952C63.7903 29.1553 67.0251 32.007 71.2113 32.007C73.8481 32.007 75.8868 31.0293 77.0285 29.2911V31.4638H82.0846V12.0996H77.0557ZM128.949 23.8327H114.161C114.895 26.3856 117.015 27.472 119.652 27.472C121.636 27.472 123.213 26.6572 124.056 25.5437L128.133 27.8522C126.312 30.4866 123.376 32.0075 119.598 32.0075C113.019 32.0075 108.86 27.5535 108.86 21.7686C108.86 15.9838 113.046 11.5298 119.217 11.5298C125.007 11.5298 129.139 16.0653 129.139 21.7686C129.139 22.5291 129.057 23.1809 128.949 23.8327ZM119.217 16.0653C116.499 16.0653 114.65 17.5047 114.079 19.9762H124.083C123.458 17.1788 121.337 16.0653 119.217 16.0653ZM136.451 15.441V12.1004H131.395V31.4646H136.451V22.2035C136.451 18.1297 139.768 16.9619 142.405 17.2878V11.7202C139.931 11.7202 137.457 12.8066 136.451 15.441ZM15.821 29.9625L5.30312 24.2588L0.404053 26.9069L15.821 35.2588L31.4041 26.9069L26.4496 24.2588L15.821 29.9625ZM5.30312 15.2588L15.821 20.4312L26.4496 15.2588L31.4041 17.6726L15.821 25.2588L0.404053 17.6726L5.30312 15.2588Z" fill="black"></path></svg>`,
           link: 'https://buffer.com/',
           description:
             'Buffer is the most intuitive, affordable, and authentic way to reach more people on social media.',
         },
         {
-          id: nanoid(),
+          id: key + id++,
           link: 'https://www.hootsuite.com/',
           icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAuNSA4NyI+PHBhdGggZD0iTTg4LjE5IDE3Ljc1djE2LjcxaDE2LjE0VjE3Ljc1aDkuNzd2NDMuMzNoLTkuNzdWNDMuMDFIODguMTl2MTguMDdoLTkuNzdWMTcuNzVoOS43N3ptNDUuOTIgMzcuMDNjMy44NiAwIDYuMjQtMy44IDYuMjQtOS40NSAwLTQuNjMtMS44LTkuMzktNi4yNC05LjM5LTQuNjMgMC02LjQzIDQuNzYtNi40MyA5LjQ1IDAgNS4zMyAyLjI1IDkuMzkgNi4zNiA5LjM5em0tLjE5IDdjLTkuMTkgMC0xNi4yNy02LTE2LjI3LTE2LjJzNi42OS0xNi42NSAxNi44NC0xNi42NWM5LjU4IDAgMTYgNi42MiAxNiAxNi4xNCAwIDExLjQ0LTguMTYgMTYuNzEtMTYuNTIgMTYuNzF6bTM2LjMyLTdjMy44NiAwIDYuMjQtMy44IDYuMjQtOS40NSAwLTQuNjMtMS44LTkuMzktNi4yNC05LjM5LTQuNjMgMC02LjQzIDQuNzYtNi40MyA5LjQ1IDAgNS4zMyAyLjI1IDkuMzkgNi4zNyA5LjM5em0tLjE5IDdjLTkuMTkgMC0xNi4yNi02LTE2LjI2LTE2LjJzNi42OS0xNi42NSAxNi44NC0xNi42NWM5LjU4IDAgMTYgNi42MiAxNiAxNi4xNCAwIDExLjQ0LTguMTcgMTYuNzEtMTYuNTMgMTYuNzF6bTIwLjE1LTI0Ljk0djEyLjkyYzAgNC40NC45IDcuNDYgMi43IDkuMzJhMTAuNDEgMTAuNDEgMCAwMDcuMzkgMi43IDIwLjU4IDIwLjU4IDAgMDA2LjMtLjg0bC0uMDctNy4zOWExMS44NSAxMS44NSAwIDAxLTIuODkuMjZjLTIuODkgMC0zLjg2LTEuNzQtMy44Ni01LjUzVjM2Ljg0aDd2LTcuMmgtN3YtOS41M2E5LjUzIDkuNTMgMCAwMC05LjU0IDkuNTN6bTEwMC4xIDB2MTIuOTJjMCA0LjQ0LjkgNy40NiAyLjcgOS4zMmExMC40MiAxMC40MiAwIDAwNy4zOSAyLjcgMjAuNiAyMC42IDAgMDA2LjMtLjg0bC0uMDctNy4zOWExMS44OCAxMS44OCAwIDAxLTIuODkuMjZjLTIuODkgMC0zLjg2LTEuNzQtMy44Ni01LjUzVjM2Ljg0aDd2LTcuMmgtN3YtOS41M2E5LjUzIDkuNTMgMCAwMC05LjU0IDkuNTN6bS03OC4zNiAxNS43NWExOS4wOSAxOS4wOSAwIDAwOC40MiAyLjMxYzMgMCA0LjE4LTEgNC4xOC0yLjU3cy0xLTIuNDUtNC41Ny0zLjY3Yy02LjU2LTIuMTItOS4wNy01LjcyLTktOS4zOCAwLTUuOTIgNS0xMC4zNSAxMi43OS0xMC4zNWEyMC42NSAyMC42NSAwIDAxOC44MSAxLjg2bC0xLjY3IDYuNjlhMTYuNzIgMTYuNzIgMCAwMC02LjgyLTEuNzRjLTIuMzggMC0zLjcyIDEtMy43MiAyLjUxczEuMjIgMi4zMiA1LjA4IDMuNjdjNiAyIDguNDIgNS4wNyA4LjQ5IDkuNjQgMCA1LjkyLTQuNTYgMTAuMjItMTMuNTYgMTAuMjJhMjIuMjEgMjIuMjEgMCAwMS0xMC4xNi0yLjI1em01NS4zLTEuNTljMCA0LjExLjEzIDcuNDYuMjYgMTAuMDlIMjU5bC0uNDUtNC40NGgtLjE5YTExLjIxIDExLjIxIDAgMDEtOS44MyA1LjE0Yy02LjQzIDAtMTEuMDYtNC0xMS4wNi0xMy42OVYyOS42NGg5Ljc3djE2LjkxYzAgNC41NiAxLjQ4IDcuMzIgNSA3LjMyYTUuNDIgNS40MiAwIDAwNS4yNy01LjUzdi0xOC43aDkuNzd6bTYuNjgtMjEuMzZoOS43OHYzMS40NGgtOS43OHptNC44My00LjEyYTUuMTIgNS4xMiAwIDAxLTUuNC01LjIxYzAtMyAyLjE5LTUuMjEgNS41My01LjIxYTUuMjIgNS4yMiAwIDExLS4wNiAxMC40MnptNTEuOTYgMTYuMmMwLTIuMzEtMS02LjM3LTUuNDctNi4zNy00LjE4IDAtNS44NSAzLjc5LTYuMTEgNi4zN3ptLTExLjUxIDYuNjljLjMyIDQuMTIgNC4zMSA2IDguODcgNmEyNS45IDI1LjkgMCAwMDguNjgtMS4zNWwxLjI1IDYuNjdhMjkuNzcgMjkuNzcgMCAwMS0xMS4zOCAyYy0xMC42NyAwLTE2Ljc4LTYuMTctMTYuNzgtMTYuMDcgMC04IDUtMTYuNzggMTUuODgtMTYuNzggMTAuMTYgMCAxNCA3LjkxIDE0IDE1LjY5YTI1LjI0IDI1LjI0IDAgMDEtLjMyIDMuOTJ6TTQzLjkyIDguMzJhMjUuMjMgMjUuMjMgMCAwMC0yNS4zMyAwQTI1IDI1IDAgMDA2IDV2MjUuMjNhNTAuNTEgNTAuNTEgMCAwMDUwLjUxIDUwLjUyVjVhMjUgMjUgMCAwMC0xMi41OSAzLjMyeiIvPjxwYXRoIGQ9Ik00Mi4xMyAxNC4xMWExMC44MyAxMC44MyAwIDAwLTEwLjgxIDkuODR2LS4wNy4wN2ExMC44NSAxMC44NSAwIDEwLTUgMTAuMWw1IDUuMDYgNS4wNy01YTEwLjgzIDEwLjgzIDAgMTA1Ljg0LTIwem0tMjEuNzEgMThBNy4yMiA3LjIyIDAgMTEyMi41OSAxOGEzLjYxIDMuNjEgMCAxMDQuNzUgNC43OCA3LjIzIDcuMjMgMCAwMS02LjkzIDkuMzR6bTIxLjY2LjA2YTcuMjIgNy4yMiAwIDAxLTYuODctOS4zN0EzLjYxIDMuNjEgMCAxMDQwIDE4YTcuMjIgNy4yMiAwIDExMi4xIDE0LjEyeiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zNDQuMTggMzUuMTRhNS43IDUuNyAwIDAxLjc3LTIuODggNS42MiA1LjYyIDAgMDEyLjExLTIuMTIgNS43OCA1Ljc4IDAgMDE1Ljc3IDAgNS42MyA1LjYzIDAgMDEyLjEyIDIuMTEgNS43NyA1Ljc3IDAgMTEtMTAuNzYgMi44OXptLjgxIDBhNSA1IDAgMDA1IDUgNC44MiA0LjgyIDAgMDAyLjQ4LS42NyA1IDUgMCAwMDEuODEtMS44MSA0Ljk0IDQuOTQgMCAwMDAtNSA1IDUgMCAwMC0xLjgxLTEuODEgNC45NCA0Ljk0IDAgMDAtNSAwIDUgNSAwIDAwLTEuODEgMS44MSA0LjgxIDQuODEgMCAwMC0uNjYgMi40OHptNy4zLTEuNGExLjg2IDEuODYgMCAwMS0uMzMgMS4wOCAxLjkzIDEuOTMgMCAwMS0uOTIuN2wxLjgyIDNoLTEuMjlMMzUwIDM1Ljg1aC0xdjIuNzFoLTEuMTN2LTYuODNoMmEyLjg4IDIuODggMCAwMTEuODcuNSAxLjg3IDEuODcgMCAwMS41NCAxLjUxek0zNDkgMzQuOWguODNhMS40NiAxLjQ2IDAgMDAxLS4zMiAxIDEgMCAwMC4zNy0uODEgMSAxIDAgMDAtLjMzLS44MiAxLjc0IDEuNzQgMCAwMC0xLS4yNUgzNDl6Ii8+PC9zdmc+',
           iconProps: { style: { width: '144px' } },
@@ -477,23 +479,23 @@ const SocialMediaPlatform = {
 }
 
 const Othres = {
-  id: nanoid(),
+  id: key + id++,
   name: 'Others',
   description: undefined,
   children: [
     {
-      id: nanoid(),
+      id: key + id++,
       name: `Collaboration`,
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           icon: `https://www.twiddla.com/images/logo-corner2.png`,
           iconProps: { style: { width: `100px` } },
           link: `https://www.twiddla.com/`,
           description: `Twiddla is an Online Whiteboard for the Modern Classroom ... Mark up websites, graphics, and photos, or start drawing on a blank canvas.`,
         },
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg role="img" alt="Trello" aria-label="Trello" height="36" viewBox="0 0 312 64" width="126" class="d-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="trello-logo-default" x1="50.048061%" x2="50.048061%" y1="100%" y2="0%"><stop offset="0" stop-color="#0052cc"></stop><stop offset="1" stop-color="#2684ff"></stop></linearGradient><g fill="none" fill-rule="evenodd"><path d="m55.59.07h-47.59c-4.09405078 0-7.41448241 3.31595294-7.42006073 7.41v47.52c-.00791682 1.9730991.77030774 3.8681213 2.16269326 5.2661365 1.39238553 1.3980151 3.28425224 2.1838635 5.25736747 2.1838635h47.59c1.9713817-.0026407 3.8606757-.7896772 5.250897-2.1874031s2.1670753-3.2912295 2.1591638-5.2625969v-47.52c-.0055694-4.09014608-3.3199147-7.40449138-7.4100608-7.41zm-28.09 44.93c-.0026377.6594819-.2678382 1.2907542-.7369724 1.7542587-.4691341.4635046-1.1035619.721065-1.7630276.7158222h-10.4c-1.3602365-.005588-2.46-1.1098333-2.46-2.4700809v-30.95c0-1.3602476 1.0997635-2.4644929 2.46-2.47h10.4c1.3618668.0054804 2.4645196 1.1081332 2.47 2.47zm24-14.21c0 .6603158-.2642968 1.2931595-.7340204 1.7572465-.4697237.464087-1.1057125.7207735-1.7659796.7129359h-10.4c-1.3618668-.0056628-2.4645196-1.1083156-2.47-2.4701824v-16.74c.0054804-1.3618668 1.1081332-2.4645196 2.47-2.47h10.4c1.3602365.0055071 2.4600111 1.1097524 2.46 2.47z" fill="url(#trello-logo-default)"></path><g fill="#293856" fill-rule="nonzero" transform="translate(87)"><path d="m42.92 4.64v12.06h-14.29v45.75h-13.78v-45.75h-14.29v-12.06z"></path><path d="m60.46 62.45h-12.74v-45h12.74v8.62c2.42-6.07 6.29-9.68 13.18-9.24v13.33c-9-.7-13.18 1.5-13.18 8.71z"></path><path d="m143.24 62.8c-8.35 0-13.6-4-13.6-13.46v-49.27h12.83v47.51c0 2.73 1.8 3.7 4 3.7.634638.0128631 1.269419-.0172055 1.9-.09v11.09c-1.677893.4087549-3.404213.5837425-5.13.52z"></path><path d="m170 62.8c-8.35 0-13.61-4-13.61-13.46v-49.27h12.83v47.51c0 2.73 1.81 3.7 4.05 3.7.631315.0130885 1.262786-.0169816 1.89-.09v11.09c-1.687411.4126716-3.42418.5876949-5.16.52z"></path><path d="m181.31 39.93c0-13.9 8-23.41 21.78-23.41s21.61 9.48 21.61 23.41-7.92 23.58-21.61 23.58-21.78-9.77-21.78-23.58zm12.49 0c0 6.77 2.84 12.14 9.29 12.14s9.13-5.37 9.13-12.14-2.75-12-9.13-12-9.29 5.22-9.29 12z"></path><path d="m90.84 44c3.5670052.3919324 7.1516349.602204 10.74.63 9.76 0 18-2.62 18-12.07 0-9.17-8.47-16.06-18.66-16.06-13.72 0-22.51 9.95-22.51 23.85 0 14.43 7.58 23 24.71 23 5.081836.0413682 10.127233-.8605644 14.88-2.66v-10.78c-4.4 1.41-9.35 2.81-14.43 2.81-6.82 0-11.57-2.24-12.73-8.72zm9.82-17.68c3.61 0 6.51 2.45 6.51 5.8 0 4.31-4.55 5.66-9.79 5.66-2.2301144-.0102442-4.4563338-.1874058-6.66-.53.1664561-2.1013033.7692883-4.1448022 1.77-6 1.6348247-2.9938883 4.7590565-4.8714866 8.17-4.91z"></path></g></g></svg>`,
           link: `https://trello.com/`,
           description: `Trello cards are your portal to more organized work—where every single part of your task can be managed, tracked, and shared with teammates.`,
@@ -502,11 +504,11 @@ const Othres = {
     },
 
     // {
-    //   id: nanoid(),
+    //   id: key + id++,
     //   name: `Graphic AntiTheft`,
     //   list: [
     //     {
-    //       id: nanoid(),
+    //       id: key + id++,
     //       name: `Cozy AntiTheft`,
     //       link: `https://apps.shopify.com/cozy-antitheft-for-images-and-more`,
     //       description: `Cozy Anti-Theft restricts the download of images with drag and drop, as well as right click. Protect your hard-work & content in your store.`,
@@ -515,11 +517,11 @@ const Othres = {
     // },
 
     {
-      id: nanoid(),
+      id: key + id++,
       name: `Cloud`,
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           link: `https://www.terabox.com`,
           icon: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWAAAABACAMAAAATZF38AAAAsVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+3mHKcAAAAOnRSTlMA/EzlUjICyRn2Cu2vBgOHRvHDdPnOuyUTneC/DdVtXOnYtYFmrDcqIKOYQNxgG6cIOheSjHpYLg/SPdnJhQAACWtJREFUeNrs2elyqjAYBuAPsHIooqwudam4Y12qXbTv/V/YsWNAqBFyXDjTGZ9/7WiCL8lHEihTcdUPmr5l+c1l5aVMd9clN7qI0YPCPeMrMj0c8Qt0dx2bKrjsFd1dwdzFCZJDd5cqvyNFw6C7i7z2kMre0t0lAmTo3VcTl/hApne6O5sMAXO6O1OrCwHWmsRMGr6GNO5suKHcyD3fRZKmK+qw/2JQTvoQMiUhYw3ZJJNyEuAkvb+lPKw1CJFqJKIHETPKh4k0ukw5mELQkEToEFKnXJSQzqGbMywIkoRCUSCkRblo//9ntwlhz6JFL5tK+bCQQavRjU2Bq9aI9QzZumPKBzJV6cYUCJMqI8pmdAJbDXkItdWQvXRalBOEKvJe4XPQD3zEbOiGFoMq/okyHdG/+IPQA/0PCBUorvYu5bBHbTkqzjCs/f6AicwoYY9uw+h0cR5puv39AVMDjEs3Yc5wPr/2+wM2EdrSDTgSLqGbJGaREfBkEFS/lO5MbXQmdOSx0vQaY/q2HfTa6vJjcXQH59OS3e7qysxe9uWfWRVPBzxB6JF3WbtW/a9qUDENzulGuzkvUsKrY7eHq8OfAS4kza8wgl8dHzHe58+r9rBjjYjKjsb67W3ooN7/QoLbexANuA6mSz+0+j4OtNILJTj4FhQTI6GZ2CgYTaRzm35mwi+XBlwcKPjha0xxAxY81VVEpOfD/dE51/X+KBbwhrfn4bdafYhn6bJ1H8UM2cSO6ns6a0Iku0inTy4L+LHE6zmRg429jYoYl3W8boPLexUK2OGfEi68jNe+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`,
           iconProps: {
@@ -530,17 +532,17 @@ const Othres = {
       ],
     },
     {
-      id: nanoid(),
+      id: key + id++,
       name: `Tracking`,
       list: [
         {
-          id: nanoid(),
+          id: key + id++,
           link: `https://www.aftership.com/`,
           icon: `https://websites.am-static.com/assets/logos/logo/logo_aftership.svg`,
           description: `Make Post-Purchase the Best Part of the Customer Experience. Delight your customers with automated shipment tracking to increase brand loyalty and drive more sales.`,
         },
         {
-          id: nanoid(),
+          id: key + id++,
           name: `<svg width="156" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 48"><path d="m11.92 12h-11.92l5.55-12h18.29v48h-11.92z" fill="#ff8c00"/><path d="m55.62 0h-27.81v12h22.26l-16.68 36h11.92l22.23-48z" fill="#ff8c00"/><g fill="#003a9b"><path d="m155 16.86c0-4.87-1.47-8.68-4.35-11.5-3.34-3.36-8.52-5.36-16.02-5.36h-18.42a1 1 0 0 0 -1 1v46a1 1 0 0 0 1 1h9.93a1 1 0 0 0 1-1v-12.57h7.49a35.91 35.91 0 0 0 4.57-.28l3.57 12.85a1.39 1.39 0 0 0 1.23 1h10a.72.72 0 0 0 .73-1l-4.83-17.25c.24-.22.48-.44.71-.68 2.87-2.82 4.35-6.63 4.35-11.5v-.14c0-.07 0-.14 0-.21s0-.14 0-.21zm-27.74 7.21v-12.07h8.46c4.51 0 7.28 2 7.28 5.72v.68c0 3.49-2.66 5.68-7.29 5.68z"/><path d="m204.35 47-12.75-46a1.39 1.39 0 0 0 -1.26-1h-17.13a1.39 1.39 0 0 0 -1.26 1l-12.76 46a.72.72 0 0 0 .73 1h9.93a1.39 1.39 0 0 0 1.26-1l1.95-7h17.42l1.95 7a1.39 1.39 0 0 0 1.26 1h9.93a.72.72 0 0 0 .73-1zm-28-19 5.12-18.51c.15-.53.39-.53.53 0l5.16 18.51z"/><path d="m110.26 0h-35.54l-5.55 12h16.25v35a1 1 0 0 0 1 1h9.93a1 1 0 0 0 1-1v-35h12.91a1 1 0 0 0 1-1v-10a1 1 0 0 0 -1-1z"/><path d="m281.27 48h14.73l-17.33-24 17.33-24h-14.78l-15 20.81v-19.81a1 1 0 0 0 -1-1h-9.93a1 1 0 0 0 -1 1v46a1 1 0 0 0 1 1h9.93a1 1 0 0 0 1-1v-5.74l5.1-7.07z"/><path d="m52.47 48h11.1v-23.96z"/><path d="m236.4 0h-17.88c-6.91 0-11.92 3.78-11.92 9v10.49 9.09 10.42c0 5.21 5 9 11.92 9h17.88c6.91 0 11.92-3.79 11.92-9v-10a1 1 0 0 0 -1-1h-9.92a1 1 0 0 0 -1 1v7h-15.89a2 2 0 0 1 -2-2v-6.1-7.8-6.1a2 2 0 0 1 2-2h15.89v7.1a1 1 0 0 0 1 1h9.93a1 1 0 0 0 1-1v-10.1c-.01-5.22-5.02-9-11.93-9z"/><path d="m234.42 36h2v-2a2 2 0 0 1 -2 2z"/><path d="m236.4 12h-2a2 2 0 0 1 2 2z"/></g></svg>`,
           link: `https://www.17track.net/en`,
           description: `17TRACK is the most powerful and inclusive package tracking platform. It enables to track over 170+ postal carriers for registered mail, parcel, …`,
@@ -548,11 +550,11 @@ const Othres = {
       ],
     },
     // {
-    //   id: nanoid(),
+    //   id: key + id++,
     //   name: `Addons`,
     //   list: [
     //     {
-    //       id: nanoid(),
+    //       id: key + id++,
     //       link: `	https://www.whatruns.com/`,
     //       description: `A free browser extension that helps you identify technologies used on any website at the click of a button.`,
     //       icon: `https://www.whatruns.com/images/home/WhatRuns-logo.svg`,
@@ -564,7 +566,7 @@ const Othres = {
 }
 
 export const toolsData = {
-  id: nanoid(),
+  id: key + id++,
   title: 'Tools',
   description: undefined,
   children: [

@@ -1,5 +1,5 @@
 <template>
-  <AMenu v-bind="$attrs">
+  <AMenu v-bind="$attrs" v-on="$listeners">
     <template v-for="item in menu">
       <template v-if="item.children">
         <ASubMenu :key="item.id">
@@ -41,7 +41,9 @@
             </a>
           </template>
           <AMenuItem v-for="cItem in item.children" :key="cItem.id">
-            <a class="sub-title" :href="`#${cItem.id}`">{{ cItem.title }}</a>
+            <a class="sub-title" :href="cItem.href || `#${cItem.id}`">{{
+              cItem.title
+            }}</a>
           </AMenuItem>
         </ASubMenu>
       </template>
@@ -49,9 +51,9 @@
       <template v-else>
         <AMenuItem :key="item.id">
           <template v-if="item.location">
-            <RouterLink class="title" :to="item.location">
+            <NuxtLink class="title" :to="item.location">
               {{ item.title }}
-            </RouterLink>
+            </NuxtLink>
           </template>
           <template v-else>
             <a class="title" :href="item.href">{{ item.title }}</a>
@@ -78,16 +80,16 @@ interface Item {
 export default defineComponent({
   setup(props, { attrs }) {
     const menu = [
-      { title: 'Home', id: 'home', href: '/#home', as: 'RouterLink' },
+      { title: 'Home', id: 'home', href: '/#home' },
       toolsItem,
       { title: 'News', id: 'news', href: '/#news' },
-      {
-        title: 'Blog',
-        id: 'blog',
-        location: {
-          path: '/blog',
-        },
-      },
+      // {
+      //   title: 'Blog',
+      //   id: 'blog',
+      //   location: {
+      //     path: '/blog',
+      //   },
+      // },
     ] as Item[]
 
     const mode = computed(() => attrs.mode || 'vertical') as ComputedRef<

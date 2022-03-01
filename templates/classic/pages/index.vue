@@ -16,11 +16,11 @@
         </RespContainer>
       </PageContainer>
 
-      <!-- <PageContainer class="fs-w-full">
+      <PageContainer class="fs-w-full">
         <RespContainer>
           <FsNews />
         </RespContainer>
-      </PageContainer> -->
+      </PageContainer>
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ import FsBanner from '@/components/fs-banner.vue'
 import PageContainer from '@/components/container/page-container.vue'
 import RespContainer from '@/components/container/resp-container.vue'
 import { icons } from '@/assets/icons'
-// import FsNews from '@/components/list/fs-news.vue'
+import FsNews from '@/components/list/fs-news.vue'
 // import FsMenu from '@/components/fs-menu/fs-menu.vue'
 
 export default defineComponent({
@@ -41,6 +41,7 @@ export default defineComponent({
     RespContainer,
     FsBanner,
     FsTools,
+    FsNews,
   },
   setup() {
     const waveStyle = {

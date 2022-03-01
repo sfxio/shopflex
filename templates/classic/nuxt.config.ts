@@ -7,6 +7,7 @@ DotEnv.config()
 
 const config: Partial<NuxtConfig> = {
   // https://nuxtjs.org/guides/configuration-glossary/configuration-css
+  // target: 'static',
   css: ['~/assets/styles/main.scss'],
 
   buildModules: ['nuxt-typed-vuex'],
