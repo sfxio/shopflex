@@ -56,7 +56,7 @@
   </header>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import {
   computed,
   defineComponent,

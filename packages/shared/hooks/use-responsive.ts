@@ -47,7 +47,7 @@ function setResponsive(responsive: IResponsive, ua): typeof responsive {
   return responsive
 }
 
-export function useResponsive() {
+export function useResponsive(): { responsive: Ref<IResponsive> } {
   const responsive = ref({
     xm: false,
     sm: false,

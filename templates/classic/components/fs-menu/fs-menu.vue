@@ -62,7 +62,7 @@
   </AMenu>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import { computed, ComputedRef, defineComponent } from '@nuxtjs/composition-api'
 import { toolsItem } from '@/assets/data'
 
