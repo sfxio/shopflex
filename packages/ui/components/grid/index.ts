@@ -1,6 +1,9 @@
 import { ISize } from '@shopflex-site-ssr/tsconfig/@types'
 import { ElCol, ElRow } from '@shopflex-site-ssr/tsconfig/@types/element'
-import { IBaseProps, IProps } from '@shopflex-site-ssr/tsconfig/@types/components'
+import {
+  IBaseProps,
+  IProps,
+} from '@shopflex-site-ssr/tsconfig/@types/components'
 
 export interface FsRowProps extends Partial<ElRow>, IBaseProps, ISize {
   /**

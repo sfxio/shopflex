@@ -3,16 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
-    },
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    }
   },
-  "exclude": [
-    "tests",
-    "node_modules"
-  ]
+  "exclude": ["tests", "node_modules"]
 }

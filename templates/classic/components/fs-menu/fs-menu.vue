@@ -11,7 +11,7 @@
                   ? 'fs-flex fs-justify-center fs-gap-2'
                   : 'fs-flex-ic'
               "
-              style="min-width: 80px; line-height: 44px;"
+              style="min-width: 80px; line-height: 44px"
             >
               <!-- :href="`#${item.id}`" -->
               <span>

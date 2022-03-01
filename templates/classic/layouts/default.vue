@@ -2,7 +2,7 @@
   <div
     id="root"
     ref="rootRef"
-    style="height: 100vh;"
+    style="height: 100vh"
     class="root fs-relative fs-flex fs-flex-col fs-overflow-x-hidden"
   >
     <ABackTop :visibility-height="400" :target="target">
@@ -37,17 +37,21 @@
     <main class="fs-flex-1 fs-pt-16">
       <Nuxt />
     </main>
+
+    <FsFooter />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 import FsHeader from '@/components/fs-header.vue'
+import FsFooter from '@/components/fs-footer.vue'
 import { useScrollProvide } from '@/context'
 
 export default defineComponent({
   components: {
     FsHeader,
+    FsFooter,
   },
   setup() {
     const rootRef = ref<HTMLElement>()

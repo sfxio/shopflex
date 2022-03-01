@@ -8,10 +8,13 @@
     "postinstall": "yarn link"
   },
   "devDependencies": {
-    "@shopflex-site-ssr/tsconfig": "*",
     "@nuxtjs/composition-api": "^0.22.0",
+    "@shopflex-site-ssr/tsconfig": "*",
+    "@types/node": "^17.0.21",
     "ant-design-vue": "^1.7.8",
     "vue": "^2.6.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue-lazyload": "^1.3.3"
+  }
 }

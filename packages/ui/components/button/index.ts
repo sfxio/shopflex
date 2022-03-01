@@ -1,5 +1,9 @@
 import { IBaseProps } from '@shopflex-site-ssr/tsconfig/@types/components'
-import { TButtonModifier, TResponsive, TShape } from '@shopflex-site-ssr/tsconfig/@types'
+import {
+  TButtonModifier,
+  TResponsive,
+  TShape,
+} from '@shopflex-site-ssr/tsconfig/@types'
 
 export interface FsButtonProps extends IBaseProps {
   /**

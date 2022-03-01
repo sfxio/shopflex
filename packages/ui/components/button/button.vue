@@ -12,7 +12,11 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed } from '@nuxtjs/composition-api'
-import { TButtonModifier, TResponsive, TShape } from '@shopflex-site-ssr/tsconfig/@types'
+import {
+  TButtonModifier,
+  TResponsive,
+  TShape,
+} from '@shopflex-site-ssr/tsconfig/@types'
 
 export default defineComponent({
   name: 'FsButton',
