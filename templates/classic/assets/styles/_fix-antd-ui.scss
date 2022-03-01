@@ -1,0 +1,7 @@
+/* 由于 tailwindcss @base 会修复现代浏览器一些样式错误 */
+/* 会导致 antd 样式与原先不一致 */
+
+div.ant-message-custom-content {
+  display: flex;
+  align-items: center;
+}

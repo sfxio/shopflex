@@ -55,3 +55,40 @@ export function increaseWithUnit(
   if (Number.isNaN(result)) return target
   return result + unit
 }
+
+export function throttle(
+  func,
+  wait = 300,
+  options = { leading: true, trailing: false },
+) {
+  let timeout, context, args, result
+  let previous = 0
+
+  const later = function () {
+    previous = options.leading === false ? 0 : new Date().getTime()
+    timeout = null
+    result = func.apply(context, args)
+    if (!timeout) context = args = null
+    return result
+  }
+
+  const throttled = function () {
+    const now = new Date().getTime()
+    if (!previous && options.leading === false) previous = now
+    const remaining = wait - (now - previous)
+    context = this
+    args = arguments
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout)
+        timeout = null
+      }
+      previous = now
+      func.apply(context, args)
+      if (!timeout) context = args = null
+    } else if (!timeout && options.trailing !== false) {
+      timeout = setTimeout(later, remaining)
+    }
+  }
+  return throttled
+}

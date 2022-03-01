@@ -1,3 +1,4 @@
-/* purgecss start ignore  */
-// @import '~@shopflex-site-ssr/theme/element-ui/index.scss';
-// @import './reset';
+@import './reset';
+@import './utils';
+@import './fix-antd-ui';
+@import './global';
