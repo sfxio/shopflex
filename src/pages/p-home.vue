@@ -33,7 +33,7 @@ import PageContainer from '@/components/container/page-container.vue'
 import RespContainer from '@/components/container/resp-container.vue'
 import { icons } from '@/assets/icons'
 import FsTools from '../components/fs-tools/fs-tools.vue'
-import FsNews from '@/components/fs-news/fs-news.vue'
+import FsNews from '@/components/list/fs-news.vue'
 // import FsMenu from '@/components/fs-menu/fs-menu.vue'
 
 // const blocks = computed(() => blockStore.blocks)

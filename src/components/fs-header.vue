@@ -63,16 +63,19 @@ import PageContainer from './container/page-container.vue'
 import { computed, Ref, ref } from 'vue'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { useScrollContext } from '@/context'
+import { useRoute } from 'vue-router'
 
-const { isTop } = useScrollContext()
+const { isTop, y } = useScrollContext()
+const route = useRoute()
 const bps = useBreakpoints(breakpointsTailwind)
 const notPhone = bps.sm
 
 const headerStyle = computed(() => {
   const top = isTop.value
+  const isHome = route.path === '/'
   return {
-    'border-color': top ? 'transparent' : '#eee',
-    background: top ? 'var(--color-banner-bg)' : 'white',
+    'border-color': top && isHome ? 'transparent' : '#eee',
+    background: top && isHome ? 'var(--color-banner-bg)' : 'white',
   }
 })
 const extra = ref() as Ref<any>

@@ -5,13 +5,13 @@ interface ScrollContext extends ReturnType<typeof useScroll> {
   isTop: ComputedRef<boolean>
 }
 
-export const useScrollProvide = (ref) => {
+export const useScrollProvide = (ref, threshold = 64) => {
   const { y, ...rest } = useScroll(ref)
   provide('scroll', {
     y,
     ...rest,
     isTop: computed(() => {
-      return y.value === 0
+      return y.value <= threshold
     }),
   })
 }

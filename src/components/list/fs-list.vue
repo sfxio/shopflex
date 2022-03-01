@@ -49,11 +49,12 @@
 </template>
 
 <script setup lang="ts">
+import type { Item } from './index'
 import { PropType } from 'vue'
 import * as dayjs from 'dayjs'
 dayjs.locale('us')
 
-defineProps({ list: Array as PropType<any[]> })
+defineProps({ list: Array as PropType<Item[]> })
 </script>
 
 <style scoped></style>

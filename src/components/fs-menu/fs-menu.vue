@@ -48,7 +48,14 @@
 
       <template v-else>
         <AMenuItem :key="item.id">
-          <a class="title" :href="`#${item.id}`">{{ item.title }}</a>
+          <template v-if="item.location">
+            <RouterLink class="title" :to="item.location">
+              {{ item.title }}
+            </RouterLink>
+          </template>
+          <template v-else>
+            <a class="title" :href="item.href">{{ item.title }}</a>
+          </template>
         </AMenuItem>
       </template>
     </template>
@@ -63,13 +70,21 @@ interface Item {
   id: string
   href?: string
   as?: string
+  location?: any
   children?: Item[]
 }
 
 const menu = [
-  { title: 'Home', id: 'home', href: '/', as: 'RouterLink' },
+  { title: 'Home', id: 'home', href: '/#home', as: 'RouterLink' },
   toolsItem,
-  { title: 'News', id: 'news' },
+  { title: 'News', id: 'news', href: '/#news' },
+  {
+    title: 'Blog',
+    id: 'blog',
+    location: {
+      path: '/blog',
+    },
+  },
 ] as Item[]
 
 const attrs = useAttrs()
