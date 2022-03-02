@@ -1,0 +1,11 @@
+{
+  "extends": "@shopflex-site-ssr/tsconfig/nuxt.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    }
+  },
+  "exclude": ["tests", "node_modules"]
+}

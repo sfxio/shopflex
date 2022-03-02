@@ -1,0 +1,29 @@
+@layer components {
+  .fs-border-b-1-lightgray {
+    @apply fs-border-b-1 fs-border-solid fs-border-color-lightgray;
+  }
+
+  .fs-flex-jc-ic {
+    @apply fs-flex fs-justify-center fs-items-center;
+  }
+
+  .fs-flex-jb-ic {
+    @apply fs-flex fs-justify-between fs-items-center;
+  }
+
+  .fs-flex-je {
+    @apply fs-flex fs-justify-end;
+  }
+
+  .fs-flex-ic {
+    @apply fs-flex fs-items-center;
+  }
+
+  .fs-border-1-lightgray {
+    @apply fs-border fs-border-solid fs-border-color-lightgray;
+  }
+
+  .heading2 {
+    @apply fs-font-bold fs-text-3xl;
+  }
+}

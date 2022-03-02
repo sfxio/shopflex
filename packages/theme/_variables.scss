@@ -1,0 +1,64 @@
+:root {
+  // font size
+  --fs-fs-xs: 12px;
+  --fs-fs-sm: 14px;
+  --fs-fs-base: 16px;
+  --fs-fs-lg: 18px;
+  --fs-line-height: 1.5;
+
+  // extra light
+  --fs-fw-extralight: 200;
+  --fs-fw-light: 300;
+  --fs-fw-normal: 400;
+  --fs-fw-medium: 500;
+  --fs-fw-semibold: 600;
+  --fs-fw-bold: 700;
+  --fs-fw-extrabold: 800;
+
+  // color
+  // --fs-c-primary-base: #fc7234;
+  --fs-c-primary: hsla(var(--p) / var(--tw-bg-opacity, 1));
+  --fs-c-secondary: hsla(var(--s) / var(--tw-bg-opacity, 1));
+  --fs-c-accent: hsla(var(--c) / var(--tw-bg-opacity, 1));
+  --fs-c-neutral: hsla(var(--n) / var(--tw-bg-opacity, 1));
+  --fs-c-default: var(--fs-c-neutral);
+  --fs-c-info: hsla(var(--in) / var(--tw-bg-opacity, 1));
+  --fs-c-success: hsla(var(--su) / var(--tw-bg-opacity, 1));
+  --fs-c-warning: hsla(var(--wa) / var(--tw-bg-opacity, 1));
+  --fs-c-error: hsla(var(--er) / var(--tw-bg-opacity, 1));
+
+  --fs-c-primary-content: hsla(var(--pc) / var(--tw-bg-opacity, 1));
+  --fs-c-secondary-content: hsla(var(--sc) / var(--tw-bg-opacity, 1));
+  --fs-c-accent-content: hsla(var(--ac) / var(--tw-bg-opacity, 1));
+  --fs-c-neutral-content: hsla(var(--nc) / var(--tw-bg-opacity, 1));
+  --fs-c-default-content: var(--fs-c-neutral-content);
+  --fs-c-info-content: hsla(var(--b2) / var(--tw-bg-opacity, 1));
+  --fs-c-success-content: hsla(var(--b2) / var(--tw-bg-opacity, 1));
+  --fs-c-warning-content: hsla(var(--b2) / var(--tw-bg-opacity, 1));
+  --fs-c-error-content: hsla(var(--b2) / var(--tw-bg-opacity, 1));
+
+  // spacing
+  --fs-s-2xs: 4px;
+  --fs-s-xs: 8px;
+  --fs-s-sm: 16px;
+  --fs-s-base: 24px;
+  --fs-s-lg: 32px;
+  --fs-s-xl: 40px;
+  --fs-s-2xl: 80px;
+  --fs-s-3xl: 160px;
+
+  // font family
+  --fs-ff-primary: 'Roboto', serif, sans-serif, Arial, -apple-sysmtem;
+  --fs-ff-secondary: 'Raleway', sans-serif, -apple-system;
+
+  --fs-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --fs-ring-inset: var(--fs-empty, /*!*/ /*!*/);
+  --fs-ring-offset-width: 0px;
+  --fs-ring-offset-color: #fff;
+  --fs-ring-color: rgba(59, 130, 246, 0.5);
+  --fs-ring-offset-shadow: 0 0 #0000;
+  --fs-ring-shadow: 0 0 #0000;
+
+  // border
+  --fs-c-border-gray: #eeeeee;
+}

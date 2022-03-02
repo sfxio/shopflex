@@ -1,0 +1,19 @@
+{
+  "name": "@shopflex-site-ssr/theme",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "module": "commonjs",
+  "files": [
+    "classic.scss",
+    "variables.scss",
+    "index.js"
+  ],
+  "scripts": {
+    "postinstall": "yarn link"
+  },
+  "devDependencies": {
+    "element-ui": "^2.15.6"
+  }
+}

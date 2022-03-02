@@ -1,0 +1,39 @@
+{
+  "name": "@shopflex-site-ssr/config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "nuxt.base.config.ts",
+    "nuxt.pro.config.ts",
+    "eslint.base.js",
+    "tailwindcss.base.js",
+    "tailwindcss.pro.js"
+  ],
+  "scripts": {
+    "postinstall": "yarn link"
+  },
+  "devDependencies": {
+    "@shopflex-site-ssr/theme": "*",
+    "@shopflex-site-ssr/shared": "*",
+    "@shopflex-site-ssr/plugins": "*",
+    "@nuxt/types": "^2.15.8",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-config-typescript": "^6.0.0",
+    "daisyui": "^1.16.2",
+    "cookie-universal-nuxt": "^2.1.5",
+    "autoprefixer": "^10.4.0",
+    "babel-plugin-component": "^1.1.1",
+    "postcss-import": "^14.0.2",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.12.1",
+    "deepmerge": "^4.2.2"
+  },
+  "peerDependenciesMeta": {}
+}

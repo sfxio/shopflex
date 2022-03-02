@@ -1,0 +1,21 @@
+{
+  "name": "@shopflex-site-ssr/shared",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts",
+  "scripts": {
+    "postinstall": "yarn link"
+  },
+  "devDependencies": {
+    "@nuxtjs/composition-api": "^0.22.0",
+    "@shopflex-site-ssr/services": "*",
+    "@shopflex-site-ssr/tsconfig": "*",
+    "@shopflex-site-ssr/ui": "*",
+    "@types/color": "^3.0.3"
+  },
+  "dependencies": {
+    "color": "^3.2.1",
+    "deepmerge": "^4.2.2"
+  }
+}

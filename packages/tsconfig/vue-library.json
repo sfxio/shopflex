@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vue Library",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "module": "ESNext",
+    "target": "ES2018",
+    "types": [
+      "node",
+      "@nuxt/types",
+      "@nuxt/typescript-build"
+      // "@nuxt/http",
+      // "@nuxt/content"
+    ]
+  }
+}

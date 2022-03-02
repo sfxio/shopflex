@@ -1,0 +1,41 @@
+.decorator-link-hover {
+  &:hover {
+    background: #eff2f9;
+  }
+}
+
+.fs-border-1-lightgray {
+  border: 1px solid var(--fs-c-lightgray);
+}
+
+.fs-border-t-1-lightgray {
+  border-top: 1px solid var(--fs-c-lightgray);
+}
+
+.fs-border-b-1-lightgray {
+  border-bottom: 1px solid var(--fs-c-lightgray);
+}
+
+.fs-flex {
+  &-jc-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-jb-ic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-je {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-ic {
+    display: flex;
+    align-items: center;
+  }
+}
