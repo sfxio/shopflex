@@ -59,18 +59,6 @@ module.exports = {
         'c-success': 'var(--fs-c-success)',
         'c-success-light': 'var(--fs-c-success-light)',
 
-        'dodger-blue': {
-          50: '#eef6ff',
-          100: '#d9ebff',
-          200: '#bbdcff',
-          300: '#8cc7ff',
-          400: '#56a7ff',
-          500: '#2f83ff',
-          600: '#286df8',
-          700: '#114ce4',
-          800: '#153eb8',
-          900: '#173991',
-        },
         transparent: 'transparent',
         canvas: '#fffe6',
         black: colors.black,

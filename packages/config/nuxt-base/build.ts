@@ -22,20 +22,25 @@ export const buildConfig: Partial<NuxtConfig> = {
       less: {
         javascriptEnabled: true,
         modifyVars: {
-          'primary-color': '#286df8',
+          'primary-color': process.env.UI_PRIMARY_COLOR || '#286df8',
+          'success-color': process.env.UI_SUCCESS_COLOR || '#1890ff',
+          'warning-color': process.env.UI_WARNING_COLOR || '#faad14',
+          'error-color': process.env.UI_ERROR_COLOR || '#f5222d',
+          'link-color': process.env.UI_LINK_COLOR || '#1890ff',
+          'font-size-base': process.env.UI_FONT_SIZE_BASE || '16px',
         },
       },
     },
     babel: {
-      plugins: [
-        [
-          'component',
-          {
-            libraryName: 'element-ui',
-            styleLibraryName: 'theme-chalk',
-          },
-        ],
-      ],
+      // plugins: [
+      //   [
+      //     'component',
+      //     {
+      //       libraryName: 'element-ui',
+      //       styleLibraryName: 'theme-chalk',
+      //     },
+      //   ],
+      // ],
     },
     postcss: {
       plugins: {

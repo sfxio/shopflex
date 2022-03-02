@@ -1,10 +1,9 @@
 import type { NuxtConfig } from '@nuxt/types'
-import { elementUI, lazyload, responsive } from '@shopflex-site-ssr/plugins'
+import { ui, lazyload } from '@shopflex-site-ssr/plugins'
 
 export const pluginsConfigPlus: Partial<NuxtConfig> = {
   plugins: [
-    { src: elementUI, mode: 'all' },
-    { src: responsive, mode: 'all' },
-    { src: lazyload, mode: 'all' },
+    { src: ui, mode: 'all' },
+    { src: lazyload, mode: 'client' },
   ],
 }

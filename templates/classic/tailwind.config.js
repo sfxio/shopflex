@@ -1,5 +1,6 @@
 const baseConfig = require('@shopflex-site-ssr/config/tailwindcss.pro')
-const deepmerge = require('deepmerge')
+const merge = require('@shopflex-site-ssr/config/helper/tailwind-merge')
+
 const config = {
   daisyui: {
     styled: true,
@@ -18,31 +19,6 @@ const config = {
           accent: '#ffc0c0',
           'accent-focus': '#ffc0c0',
           'accent-content': '#ffffff',
-
-          neutral: '#2A2E37',
-          'neutral-focus': '#2A2E37',
-          'neutral-content': '#ffffff',
-
-          'base-100': '#ffffff',
-          'base-content': '#000000',
-          'base-200': '#ffffff',
-          'base-300': '#ffffff',
-
-          info: '#3ABFF8',
-          'info-focus': '#3ABFF8',
-          'info-content': '#000000',
-
-          success: '#36D399',
-          'success-focus': '#36D399',
-          'success-content': '#000000',
-
-          warning: '#FBBD23',
-          'warning-focus': '#FBBD23',
-          'warning-content': '#000000',
-
-          error: '#ff0000',
-          'error-focus': '#ff0000',
-          'error-content': '#000000',
         },
       },
       // 'dark', // and some pre-defined theme
@@ -50,4 +26,5 @@ const config = {
   },
   ...baseConfig,
 }
-module.exports = deepmerge(baseConfig, config)
+
+module.exports = merge(baseConfig, config)

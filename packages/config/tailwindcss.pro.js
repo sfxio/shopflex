@@ -10,20 +10,20 @@ const config = {
     themes: [
       {
         mytheme: {
-          primary: '#286df8',
-          'primary-focus': '#56a7ff',
+          primary: process.env.UI_PRIMARY_COLOR || '#286df8',
+          'primary-focus': process.env.UI_SECONDARY_COLOR || '#56a7ff',
           'primary-content': '#ffffff',
 
-          secondary: '#56a7ff',
-          'secondary-focus': '#ff5757',
+          secondary: process.env.UI_SECONDARY_COLOR || '#56a7ff',
+          'secondary-focus': process.env.UI_SECONDARY_COLOR || '#ff5757',
           'secondary-content': '#ffffff',
 
-          accent: '#ffc0c0',
-          'accent-focus': '#ffc0c0',
+          accent: process.env.UI_ACCENT_COLOR || '#ffc0c0',
+          'accent-focus': process.env.UI_ACCENT_COLOR || '#ffc0c0',
           'accent-content': '#ffffff',
 
-          neutral: '#2A2E37',
-          'neutral-focus': '#2A2E37',
+          neutral: process.env.UI_NEUTRAL_COLOR || '#2A2E37',
+          'neutral-focus': process.env.UI_ACCENT_COLOR || '#2A2E37',
           'neutral-content': '#ffffff',
 
           'base-100': '#ffffff',
@@ -31,20 +31,20 @@ const config = {
           'base-200': '#ffffff',
           'base-300': '#ffffff',
 
-          info: '#3ABFF8',
-          'info-focus': '#3ABFF8',
+          info: process.env.UI_INFO_COLOR || '#3ABFF8',
+          'info-focus': process.env.UI_INFO_COLOR || '#3ABFF8',
           'info-content': '#000000',
 
-          success: '#36D399',
-          'success-focus': '#36D399',
+          success: process.env.UI_SUCCESS_COLOR || '#1890ff',
+          'success-focus': process.env.UI_SUCCESS_COLOR || '#1890ff',
           'success-content': '#000000',
 
-          warning: '#FBBD23',
-          'warning-focus': '#FBBD23',
+          warning: process.env.UI_WARNING_COLOR || '#faad14',
+          'warning-focus': process.env.UI_WARNING_COLOR || '#faad14',
           'warning-content': '#000000',
 
-          error: '#ff0000',
-          'error-focus': '#ff0000',
+          error: process.env.UI_ERROR_COLOR || '#f5222d',
+          'error-focus': process.env.UI_ERROR_COLOR || '#f5222d',
           'error-content': '#000000',
         },
       },
