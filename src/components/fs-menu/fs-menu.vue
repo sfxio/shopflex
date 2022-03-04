@@ -78,13 +78,13 @@ const menu = [
   { title: 'Home', id: 'home', href: '/#home', as: 'RouterLink' },
   toolsItem,
   { title: 'News', id: 'news', href: '/#news' },
-  {
-    title: 'Blog',
-    id: 'blog',
-    location: {
-      path: '/blog',
-    },
-  },
+  // {
+  //   title: 'Blog',
+  //   id: 'blog',
+  //   location: {
+  //     path: '/blog',
+  //   },
+  // },
 ] as Item[]
 
 const attrs = useAttrs()
