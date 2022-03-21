@@ -14,7 +14,7 @@
 
       <section class="benifit">
         <h2 class="fs-font-semibold fs-text-xl fs-mb-5">
-          You will benefits from ShopFlex:
+          You will benefit from ShopFlex:
         </h2>
 
         <a-row class="fs-px-4" :gutter="notPhone ? [8, 8] : [16, 16]" wrap>
