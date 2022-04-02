@@ -1,57 +1,26 @@
 <template>
   <header
+    id="header"
     class="fs-fixed fs-z-fixed fs-top-0 fs-left-0 fs-right-0 fs-border-b-1 fs-px-4 fs-transition-all"
     :style="{ ...headerStyle, ...extra }"
   >
     <PageContainer class="fs-flex-ic fs-h-16">
-      <FsLogo />
-      <span class="fs-flex-1"></span>
-      <div v-if="notPhone" class="wrapper fs-h-full">
-        <div class="inner-wrapper fs-w-full fs-h-full fs-justify-end fs-flex">
-          <FsMenu
-            mode="horizontal"
-            style="
-              width: 100%;
-              background: transparent;
-              display: flex;
-              align-items: center;
-              border-bottom: none;
-            "
-          />
-        </div>
-      </div>
+      <ARow type="flex" style="width: 100%; height: 100%;" align="middle">
+        <ACol>
+          <FsLogo />
+        </ACol>
 
-      <div v-else @click="handleOpenMenu">
-        <ADrawer
-          class="menu-drawer"
-          :bodyStyle="{ padding: 0 }"
-          :zIndex="999"
-          :title="null"
-          :placement="'left'"
-          :visible="isVisible"
+        <ACol
+          flex="1 1 400px"
+          style="display: flex; justify-content: end; height: 100%;"
         >
-          <FsMenu class="fs-mt-20" mode="inline" @select="handleSelect" />
-        </ADrawer>
-        <svg
-          class="icon"
-          style="
-            width: 1.5em;
-            height: 1.5em;
-            vertical-align: middle;
-            fill: currentColor;
-            overflow: hidden;
-          "
-          viewBox="0 0 1024 1024"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          p-id="1453"
-        >
-          <path
-            d="M963.764706 180.705882v120.470589H60.235294V180.705882h903.529412zM60.235294 602.352941h903.529412V481.882353H60.235294v120.470588z m0 301.176471h903.529412v-120.470588H60.235294v120.470588z"
-            p-id="1454"
-          ></path>
-        </svg>
-      </div>
+          <FsMenu
+            :menu="menu"
+            mode="horizontal"
+            :style="{ background: 'transparent', border: 'none' }"
+          />
+        </ACol>
+      </ARow>
     </PageContainer>
   </header>
 </template>
@@ -64,11 +33,14 @@ import { computed, Ref, ref } from 'vue'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { useScrollContext } from '@/context'
 import { useRoute } from 'vue-router'
+import { useConfigStore } from '@/store'
 
 const { isTop, y } = useScrollContext()
 const route = useRoute()
 const bps = useBreakpoints(breakpointsTailwind)
-const notPhone = bps.sm
+// const notPhone = bps.sm
+const configStore = useConfigStore()
+const menu = computed(() => configStore.$state.menu)
 
 const headerStyle = computed(() => {
   const top = isTop.value

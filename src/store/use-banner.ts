@@ -7,7 +7,7 @@ export const useBanner = defineStore(useBannerId, {
       title: {
         // 'B2B and Multichannel Selling SaaS',
         value:
-          '<span style="color: var(--color-primary);">B2B</span> and <span style="color: var(--color-primary);">Multichannel</span> Selling SaaS',
+          '<span style="color: var(--color-primary);">B2B</span> and <span style="color: var(--color-primary);">Omni-Channel</span> Selling SaaS',
         props: {
           // style: 'text-align: center',
         },
