@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid'
 import { toolsIcons } from '../icons'
 
 const Statistics = {
-  id: nanoid(),
+  id: 'statistics',
   name: 'Statistics',
   list: [
     {
@@ -71,7 +71,7 @@ const Statistics = {
 }
 
 const ProductSearch = {
-  id: nanoid(),
+  id: 'product-search',
   name: 'Product Research',
   list: [
     {
@@ -116,7 +116,7 @@ const ProductSearch = {
 }
 
 const CustomerService = {
-  id: nanoid(),
+  id: 'customers-service',
   name: 'Customer Service',
   children: [
     {
@@ -241,7 +241,7 @@ const CustomerService = {
 }
 
 const Editing = {
-  id: nanoid(),
+  id: 'editing',
   name: 'Product Image/Video Editing',
   children: [
     {
@@ -372,7 +372,7 @@ const Editing = {
 }
 
 const DropshippingSourcing = {
-  id: nanoid(),
+  id: 'dropshipping-sourcing',
   name: 'Dropshipping Sourcing',
   list: [
     {
@@ -422,7 +422,7 @@ const DropshippingSourcing = {
 }
 
 const SocialMediaPlatform = {
-  id: nanoid(),
+  id: 'social-media-platform',
   name: 'Social Media Platform',
   children: [
     {
@@ -482,8 +482,8 @@ const SocialMediaPlatform = {
   ],
 }
 
-const Othres = {
-  id: nanoid(),
+const Others = {
+  id: 'others',
   name: 'Others',
   description: undefined,
   children: [
@@ -580,7 +580,7 @@ export const toolsData = {
     Editing,
     DropshippingSourcing,
     SocialMediaPlatform,
-    Othres,
+    Others,
   ],
 }
 

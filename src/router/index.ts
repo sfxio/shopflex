@@ -17,6 +17,12 @@ const routes = [
     },
   },
   {
+    path: '/tools',
+    component: () => import('@/pages/p-tools.vue'),
+    name: 'tools',
+    meta: { title: 'Tools' },
+  },
+  {
     path: '/blog',
     component: import('../pages/p-blog.vue'),
     name: 'blog',

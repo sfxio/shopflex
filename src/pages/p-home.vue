@@ -1,6 +1,5 @@
 <template>
   <LDefault>
-    <div id="home" class="anchor"></div>
     <div class="wrapper" :style="{ background: 'var(--color-banner-bg)' }">
       <PageContainer class="fs-pt-32">
         <RespContainer>
@@ -11,11 +10,11 @@
     </div>
 
     <div class="wrapper fs-mb-10 fs-flex fs-flex-col fs-gap-20">
-      <PageContainer class="fs-w-full">
+      <!-- <PageContainer class="fs-w-full">
         <RespContainer>
           <FsTools />
         </RespContainer>
-      </PageContainer>
+      </PageContainer> -->
 
       <PageContainer class="fs-w-full">
         <RespContainer>

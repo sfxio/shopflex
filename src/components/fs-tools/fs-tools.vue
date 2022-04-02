@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tools">
     <header v-if="data.title" class="fs-py-2 fs-mb-8">
       <h2
         :id="data.id"

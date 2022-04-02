@@ -39,6 +39,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
             id: 'N9KU9R44ukOvwpuwi03RB',
             location: { path: '/tools' },
             title: 'Statistics',
+            queryTo: '#statistics',
           },
           {
             id: 'EVXg6G1BEOazI3aJO7b2R',
@@ -62,6 +63,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
           },
           {
             id: 'enuxqtw1DzrPH-zKNk2Ep',
+            queryTo: '#social-media-platform',
             location: { path: '/tools' },
             title: 'Social Media Platform',
           },
