@@ -1,9 +1,9 @@
 <template>
-  <LDefault>
-    <div class="container fs-flex-jc-ic fs-h-full">
-      <RouterLink class="fs-btn-primary fs-btn hover:fs-text-white" to="/">Back Home</RouterLink>
-    </div>
-  </LDefault>
+  <div class="container fs-flex-jc-ic fs-h-full">
+    <RouterLink class="fs-btn-primary fs-btn hover:fs-text-white" to="/">
+      Back Home
+    </RouterLink>
+  </div>
 </template>
 
 <script setup lang="ts">

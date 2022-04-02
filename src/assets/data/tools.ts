@@ -371,27 +371,27 @@ const Editing = {
   ],
 }
 
-const DropshippingSourcing = {
+export const DropshippingSourcing = {
   id: 'dropshipping-sourcing',
   name: 'Dropshipping Sourcing',
   list: [
     {
       id: nanoid(),
-      icon: 'https://mixshop.world/_nuxt/static/logo.png',
+      icon: 'https://buk.shopflex.io/image%2F20220321%2F00696.png?alt=media',
       description:
         'With 13 warehouses in the USA & UK, 3-7 Days FREE Shipping.',
       link: 'https://mixshop.world',
     },
     {
       id: nanoid(),
-      icon: 'https://fashionexpress.us/_nuxt/static/logo.png',
+      icon: 'https://buk.shopflex.io/image%2F20220322%2F89899.png?alt=media',
       iconProps: { style: { width: '192px' } },
       description: 'Worldwide Women Fashion Dropshipping & Customization.',
       link: 'https://fashionexpress.us',
     },
     {
       id: nanoid(),
-      icon: 'https://shop.goodmerchan.com/logo.png',
+      icon: 'https://buk.shopflex.io/image%2F20220322%2F43113.png?alt=media',
       iconProps: { style: { width: '182px' } },
       description:
         'Connects with over 100K Amazon Sellers. USA Fast & Free Shipping.',
@@ -399,14 +399,14 @@ const DropshippingSourcing = {
     },
     {
       id: nanoid(),
-      icon: 'https://dropshipping.b2seller.com/logo.png',
+      icon: 'https://buk.shopflex.io/image%2F20220322%2F68723.png?alt=media',
       iconProps: { style: { width: '182px' } },
       description: 'Worldwide warehouses & Fast & Free Shipping.',
       link: 'https://dropshipping.b2seller.com/',
     },
     {
       id: nanoid(),
-      icon: 'https://app.vendorslink.net/_nuxt/img/logo.7bfc699.png',
+      icon: 'https://buk.shopflex.io/image%2F20220322%2F15292.png?alt=media ',
       iconProps: { style: { width: '182px' } },
       description: 'Vendorslink - Accessories and Bag',
       link: 'https://app.vendorslink.net/',

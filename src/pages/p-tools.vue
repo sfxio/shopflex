@@ -1,17 +1,12 @@
 <template>
-  <LDefault>
-    <!-- 锚点 -->
-    <!-- <div class="__tools __anchor"></div> -->
-    <PageContainer class="fs-w-full fs-py-12">
-      <RespContainer>
-        <FsTools />
-      </RespContainer>
-    </PageContainer>
-  </LDefault>
+  <PageContainer class="fs-w-full fs-py-12">
+    <RespContainer>
+      <FsTools />
+    </RespContainer>
+  </PageContainer>
 </template>
 
 <script setup lang="ts">
-import LDefault from '@/layouts/l-default.vue'
 import PageContainer from '@/components/container/page-container.vue'
 import RespContainer from '@/components/container/resp-container.vue'
 import FsTools from '../components/fs-tools/fs-tools.vue'

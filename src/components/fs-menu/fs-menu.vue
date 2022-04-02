@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import { MenuItem } from '@/types'
 import { PropType, ref } from 'vue'
-import FsSubmenu from './fs-submenu.vue'
+import { useRouter } from 'vue-router'
 import Item from './item.vue'
 
 const props = defineProps({
@@ -47,7 +47,7 @@ const props = defineProps({
   },
 })
 const selectedKeys = ref<any>()
-
+// const _selectedKeys = ref()
 const onClick = (payload: { keyPath: string[] }) => {
   const { keyPath } = payload
   const currentItem = keyPath.reduce((prev, key, index) => {
@@ -57,9 +57,10 @@ const onClick = (payload: { keyPath: string[] }) => {
     // @ts-ignore
     return index === keyPath.length - 1 ? res : res.children
   }, props.menu) as MenuItem
-  setTimeout(() => {
-    selectedKeys.value = [...keyPath]
-  }, 200)
+  if (keyPath && keyPath.length) {
+    window.localStorage.setItem('shopflex_menu_keys', JSON.stringify(keyPath))
+    selectedKeys.value = keyPath
+  }
 
   if (!currentItem) return
   console.log('menu select: currentItem = ', currentItem)

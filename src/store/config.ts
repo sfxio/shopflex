@@ -20,6 +20,41 @@ export const useConfigStore = defineStore(useConfigStoreId, {
         location: {
           path: '/solutions',
         },
+        queryTo: '#solutions',
+        children: [
+          {
+            id: nanoid(),
+            title: 'Website Builder',
+            location: {
+              path: '/solutions',
+            },
+            queryTo: '.solution1',
+          },
+          {
+            id: nanoid(),
+            title: 'Seamless Storefront Integration',
+            location: {
+              path: '/solutions',
+            },
+            queryTo: '.solution2',
+          },
+          {
+            id: nanoid(),
+            title: 'Livestream Shopping',
+            location: {
+              path: '/solutions',
+            },
+            queryTo: '.solution3',
+          },
+          {
+            id: nanoid(),
+            title: 'ShopAI Product Recommendation',
+            location: {
+              path: '/solutions',
+            },
+            queryTo: '.solution4',
+          },
+        ],
       },
       {
         id: nanoid(),
@@ -27,6 +62,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
         location: {
           path: '/dropshipping',
         },
+        queryTo: '#dropshipping',
       },
       {
         id: nanoid(),
@@ -86,6 +122,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
         location: {
           path: '/news',
         },
+        queryTo: '#news',
       },
     ]
 

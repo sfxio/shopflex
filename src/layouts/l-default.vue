@@ -34,7 +34,7 @@
       </ABackTop>
       <FsHeader />
       <main class="fs-flex-1 fs-pt-16">
-        <slot />
+        <RouterView />
       </main>
       <FsFooter />
     </div>

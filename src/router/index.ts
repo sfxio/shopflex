@@ -29,13 +29,26 @@ const routes = [
     meta: { title: 'Tools' },
   },
   {
-    path: '/blog',
-    component: import('../pages/p-blog.vue'),
-    name: 'blog',
-    meta: {
-      title: 'Blog',
-    },
+    path: '/solutions',
+    component: () => import('@/pages/p-solutions.vue'),
+    name: 'solutions',
+    meta: { title: 'Solutions' },
   },
+
+  {
+    path: '/dropshipping',
+    component: () => import('@/pages/p-dropshipping.vue'),
+    name: 'dropshipping',
+    meta: { title: 'Dropshipping' },
+  },
+  // {
+  //   path: '/blog',
+  //   component: import('../pages/p-blog.vue'),
+  //   name: 'blog',
+  //   meta: {
+  //     title: 'Blog',
+  //   },
+  // },
   // {
   //   path: '/integration/:name',
   //   component: Integration,

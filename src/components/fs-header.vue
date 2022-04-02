@@ -84,13 +84,13 @@ const route = useRoute()
 // const notPhone = bps.sm
 const configStore = useConfigStore()
 const menu = computed(() => configStore.$state.menu)
-const { notPhone, lg } = useResponsiveInject()
+const { lg } = useResponsiveInject()
 
 const headerStyle = computed(() => {
   const top = isTop.value
   const isHome = route.path === '/'
   return {
-    'border-color': top && isHome ? 'transparent' : '#eee',
+    'border-color': top ? 'transparent' : '#eee',
     background: top && isHome ? 'var(--color-banner-bg)' : 'white',
   }
 })
