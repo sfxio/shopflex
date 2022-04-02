@@ -96,12 +96,12 @@ export const useConfigStore = defineStore(useConfigStoreId, {
             title: 'Product Image/Video Editing',
             queryTo: '#editing',
           },
-          {
-            id: 'b1brzJMeQVAYG_j1KcX_D',
-            location: { path: '/tools' },
-            title: 'Dropshipping Sourcing',
-            queryTo: '#dropshipping-sourcing',
-          },
+          // {
+          //   id: 'b1brzJMeQVAYG_j1KcX_D',
+          //   location: { path: '/tools' },
+          //   title: 'Dropshipping Sourcing',
+          //   queryTo: '#dropshipping-sourcing',
+          // },
           {
             id: 'enuxqtw1DzrPH-zKNk2Ep',
             queryTo: '#social-media-platform',

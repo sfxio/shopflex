@@ -3,9 +3,6 @@
     <div class="solution1">
       <header>
         <h2>
-          <span>
-            Intelligent
-          </span>
           <span class="strong">
             B2B/Dropshipping
           </span>

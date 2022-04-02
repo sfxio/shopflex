@@ -578,7 +578,7 @@ export const toolsData = {
     ProductSearch,
     CustomerService,
     Editing,
-    DropshippingSourcing,
+    // DropshippingSourcing,
     SocialMediaPlatform,
     Others,
   ],

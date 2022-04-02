@@ -14,10 +14,10 @@
       <RespContainer>
         <FsSolutions style="margin-top: -24px;" />
 
-        <h2 class="fs-text-3xl fs-font-bold fs-text-center fs-mb-8">
+        <!-- <h2 class="fs-text-3xl fs-font-bold fs-text-center fs-mb-8">
           Dropshipping
         </h2>
-        <FsDropship :show-title="false" />
+        <FsDropship :show-title="false" /> -->
       </RespContainer>
     </PageContainer>
 
