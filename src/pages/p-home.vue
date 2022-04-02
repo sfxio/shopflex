@@ -12,11 +12,11 @@
     </div>
 
     <div class="wrapper fs-mb-10 fs-flex fs-flex-col fs-gap-20">
-      <!-- <PageContainer class="fs-w-full">
+      <PageContainer class="fs-w-full">
         <RespContainer>
-          <FsTools />
+          <FsSolutions style="margin-top: -24px;" />
         </RespContainer>
-      </PageContainer> -->
+      </PageContainer>
 
       <!-- <PageContainer class="fs-w-full">
         <RespContainer>
@@ -33,8 +33,10 @@ import FsBanner from '@/components/fs-banner.vue'
 import PageContainer from '@/components/container/page-container.vue'
 import RespContainer from '@/components/container/resp-container.vue'
 import { icons } from '@/assets/icons'
-import FsTools from '../components/fs-tools/fs-tools.vue'
-import FsNews from '@/components/list/fs-news.vue'
+import FsSolutions from '@/components/fs-solutions.vue'
+import {} from '@/assets/images'
+// import FsTools from '../components/fs-tools/fs-tools.vue'
+// import FsNews from '@/components/list/fs-news.vue'
 // import FsMenu from '@/components/fs-menu/fs-menu.vue'
 
 // const blocks = computed(() => blockStore.blocks)

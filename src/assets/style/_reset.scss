@@ -92,6 +92,17 @@ input::selection {
   color: #ffffff;
 }
 
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin-bottom: 0;
+  }
+}
+
 html,
 body,
 section,

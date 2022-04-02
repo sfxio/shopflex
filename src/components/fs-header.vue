@@ -11,13 +11,18 @@
         </ACol>
 
         <ACol
-          flex="1 1 400px"
+          flex="1 0 800px"
           style="display: flex; justify-content: end; height: 100%;"
         >
           <FsMenu
             :menu="menu"
             mode="horizontal"
-            :style="{ background: 'transparent', border: 'none' }"
+            :style="{
+              background: 'transparent',
+              border: 'none',
+              width: '100%',
+              justifyContent: 'end',
+            }"
           />
         </ACol>
       </ARow>
