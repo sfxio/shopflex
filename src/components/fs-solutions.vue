@@ -30,7 +30,7 @@
     </li>
 
     <ARow class="fs-flex" :wrap="true">
-      <ACol :span="12" v-for="(solution, index) in solution2" :key="index">
+      <ACol :span="24" :lg="12" v-for="(solution, index) in solution2" :key="index">
         <div class="title">
           <h2
             v-if="solution.title && solution.title.length"

@@ -1,6 +1,10 @@
 <template>
-  <div class="item">
-    <RouterLink :to="item.location">
+  <div class="item fs-w-full">
+    <RouterLink
+      :to="item.location"
+      style="max-width: 100%;"
+      class="fs-text-ellipsis fs-overflow-hidden"
+    >
       {{ item.title }}
     </RouterLink>
     <svg
@@ -38,7 +42,6 @@ defineProps({
   },
   showIcon: {
     type: Boolean,
-    default: true,
   },
 })
 </script>

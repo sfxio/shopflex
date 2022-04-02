@@ -11,19 +11,19 @@
         <!-- <FsSubmenu :key="item.id" :item="item" /> -->
         <ASubMenu :key="item.id">
           <template #title>
-            <Item :item="item" />
+            <Item :showIcon="showIcon" :item="item" />
             <!-- {{ item.children }} -->
           </template>
           <template #default>
             <AMenuItem v-for="cItem in item.children" :key="cItem.id">
-              <Item :item="cItem" />
+              <Item :showIcon="showIcon" :item="cItem" />
             </AMenuItem>
           </template>
         </ASubMenu>
       </template>
       <template v-else>
         <AMenuItem :key="item.id">
-          <Item :item="item" />
+          <Item :showIcon="showIcon" :item="item" />
         </AMenuItem>
       </template>
     </template>
@@ -40,6 +40,10 @@ const props = defineProps({
   menu: {
     type: Object as PropType<MenuItem[]>,
     required: true,
+  },
+  showIcon: {
+    type: Boolean,
+    default: false,
   },
 })
 const selectedKeys = ref<any>()
