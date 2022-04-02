@@ -2,8 +2,9 @@
   <AMenu
     v-if="menu && menu.length"
     v-bind="$attrs"
+    v-model:selectedKeys="selectedKeys"
     class="__fs-menu"
-    @select="onSelect"
+    @click="onClick"
   >
     <template v-for="item in menu" :key="item.id">
       <template v-if="item.children && item.children.length">
@@ -31,7 +32,7 @@
 
 <script setup lang="ts">
 import { MenuItem } from '@/types'
-import { PropType } from 'vue'
+import { PropType, ref } from 'vue'
 import FsSubmenu from './fs-submenu.vue'
 import Item from './item.vue'
 
@@ -41,7 +42,9 @@ const props = defineProps({
     required: true,
   },
 })
-const onSelect = (payload: { keyPath: string[] }) => {
+const selectedKeys = ref<any>()
+
+const onClick = (payload: { keyPath: string[] }) => {
   const { keyPath } = payload
   const currentItem = keyPath.reduce((prev, key, index) => {
     const res = prev.find((item) => item.id === key)
@@ -50,6 +53,9 @@ const onSelect = (payload: { keyPath: string[] }) => {
     // @ts-ignore
     return index === keyPath.length - 1 ? res : res.children
   }, props.menu) as MenuItem
+  setTimeout(() => {
+    selectedKeys.value = [...keyPath]
+  }, 200)
 
   if (!currentItem) return
   console.log('menu select: currentItem = ', currentItem)

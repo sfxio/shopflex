@@ -1,5 +1,7 @@
 <template>
   <LDefault>
+    <!-- 锚点 -->
+    <div class="__home __anchor"></div>
     <div class="wrapper" :style="{ background: 'var(--color-banner-bg)' }">
       <PageContainer class="fs-pt-32">
         <RespContainer>
@@ -16,11 +18,11 @@
         </RespContainer>
       </PageContainer> -->
 
-      <PageContainer class="fs-w-full">
+      <!-- <PageContainer class="fs-w-full">
         <RespContainer>
           <FsNews />
         </RespContainer>
-      </PageContainer>
+      </PageContainer> -->
     </div>
   </LDefault>
 </template>

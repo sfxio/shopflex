@@ -116,7 +116,7 @@ const ProductSearch = {
 }
 
 const CustomerService = {
-  id: 'customers-service',
+  id: 'customer-service',
   name: 'Customer Service',
   children: [
     {
