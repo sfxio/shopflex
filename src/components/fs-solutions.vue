@@ -35,7 +35,7 @@
       </ARow>
 
       <ARow class="section" type="flex" align="middle">
-        <ACol flex="3">
+        <ACol :span="24" :lg="6">
           <h3>
             E-commerce Sales Platform
           </h3>
@@ -44,23 +44,21 @@
             channels and offline stores
           </p>
         </ACol>
-        <ACol flex="7">
+        <ACol :span="24" :lg="18">
           <img v-lazy="solutions.solution22" />
         </ACol>
       </ARow>
 
       <ARow class="section" type="flex" align="middle">
-        <ACol :order="1" flex="4">
-          <div class="fs-pr-28">
-            <h3>Dropshippers</h3>
-            <p>
-              Connect with more than 10K active sellers on different e-commerce
-              platform like Shopify, Wix, Woocommerc, Tiktok and Facebook, etc.
-              No need to rely on Ads only.
-            </p>
-          </div>
+        <ACol :order="lg ? 1 : 0" :span="24" :lg="6">
+          <h3>Dropshippers</h3>
+          <p>
+            Connect with more than 10K active sellers on different e-commerce
+            platform like Shopify, Wix, WooCommerce, Tiktok and Facebook, etc.
+            No need to rely on Ads only.
+          </p>
         </ACol>
-        <ACol flex="6">
+        <ACol :span="24" :lg="18">
           <img style="max-width: 400px;" v-lazy="solutions.solution23" />
         </ACol>
       </ARow>
@@ -81,11 +79,7 @@
         </p>
       </header>
       <ARow class="section" type="flex" align="middle">
-        <img
-          class="fs-mt-24 fs-m-auto"
-          style="max-width: 960px;"
-          v-lazy="solutions.solution31"
-        />
+        <img class="fs-mt-24 fs-m-auto" v-lazy="solutions.solution31" />
         <img class="fs-mt-24" v-lazy="solutions.solution32" />
         <!-- <ARow class="section fs-w-full" type="flex" align="middle">
           <ACol flex="3">
@@ -140,6 +134,8 @@
 import { solutions } from '@/assets/images'
 import SvgShopify from './icon/svg-shopify.vue'
 import { shoplazza } from '@/assets/icons'
+import { useResponsiveInject } from '@/hooks'
+const { lg } = useResponsiveInject()
 </script>
 
 <style scoped lang="scss">
@@ -168,6 +164,8 @@ import { shoplazza } from '@/assets/icons'
 
   h3 {
     @apply fs-text-xl fs-font-semibold;
+    @apply fs-text-center;
+    @apply lg:fs-text-left;
     .strong {
       @apply fs-text-primary;
     }
@@ -175,6 +173,8 @@ import { shoplazza } from '@/assets/icons'
   p {
     @apply fs-mt-2;
     @apply fs-text-gray-400;
+    @apply fs-text-center;
+    @apply lg:fs-text-left;
   }
 
   .section {

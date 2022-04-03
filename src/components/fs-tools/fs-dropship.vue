@@ -9,7 +9,7 @@
       </header>
 
       <ARow class="fs-mt-8 fs-w-full" type="flex" align="middle">
-        <ACol flex="4">
+        <ACol :span="24" :md="16">
           <a
             href="https://fashionexpress.us/"
             target="_blank"
@@ -19,7 +19,7 @@
           </a>
         </ACol>
 
-        <ACol flex="2">
+        <ACol :span="24" :md="8">
           <div class="links">
             <a
               class="link-item"
@@ -45,7 +45,7 @@
         <p>US Warehouse, Free Shipping, Furniture & Large Goods Suppliers</p>
       </header>
       <ARow class="fs-mt-8 fs-w-full" type="flex" align="middle">
-        <ACol :order="1" flex="4">
+        <ACol :span="24" :md="8" :order="md ? 1 : 0">
           <a
             href="https://dropship.shopflex.io/"
             target="_blank"
@@ -55,7 +55,7 @@
           </a>
         </ACol>
 
-        <ACol flex="2">
+        <ACol :span="24" :md="8">
           <div class="links">
             <a
               class="link-item"
@@ -104,12 +104,15 @@ import SvgWix from '../icon/svg-wix.vue'
 import FsList from '@/components/fs-tools/fs-list.vue'
 import SvgWoocommerce from '../icon/svg-woocommerce.vue'
 import SvgSquare from '../icon/svg-square.vue'
+import { useResponsiveInject } from '@/hooks'
 defineProps({
   showTitle: {
     type: Boolean,
     default: true,
   },
 })
+
+const { md } = useResponsiveInject()
 
 const list = [
   {
@@ -171,6 +174,7 @@ section {
     @apply fs-grid fs-grid-cols-2;
 
     .link-item {
+      margin: auto;
       // @apply fs-rounded-md hover:fs-bg-secondary fs-transition-all;
       padding: 8px;
     }
