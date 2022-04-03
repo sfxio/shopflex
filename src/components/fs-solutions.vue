@@ -111,6 +111,23 @@
           Maximize your Revenue and Customer Satisfaction with Product
           Recommendations
         </p>
+        <div class="fs-flex fs-gap-4 fs-mt-8">
+          <a
+            href="https://apps.shopify.com/shopai-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SvgShopify />
+          </a>
+          <a
+            href="https://shoplazza.app/detail/39731/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img v-lazy="shoplazza" style="width: 84px;" />
+          </a>
+          <!-- <AButton type="link">Install from Shoplazza</AButton> -->
+        </div>
       </header>
       <ARow class="section" type="flex" align="middle">
         <img class="fs-mt-24 fs-m-auto" v-lazy="solutions.solution41" />
@@ -121,6 +138,8 @@
 
 <script setup lang="ts">
 import { solutions } from '@/assets/images'
+import SvgShopify from './icon/svg-shopify.vue'
+import { shoplazza } from '@/assets/icons'
 </script>
 
 <style scoped lang="scss">

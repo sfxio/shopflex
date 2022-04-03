@@ -19,6 +19,7 @@ import w3counter from './tools-state-w3counter.png'
 import ddd from './tools-products-ddd.svg'
 import dropshippingspy from './tools-products-dropshipspy.svg'
 
+export { default as shoplazza } from './shoplazza.png'
 export const platformIcons = {
   shopify,
   wix,

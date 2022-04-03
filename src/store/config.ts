@@ -18,15 +18,15 @@ export const useConfigStore = defineStore(useConfigStoreId, {
         id: nanoid(),
         title: 'Solutions',
         location: {
-          path: '/solutions',
+          path: '/',
         },
-        queryTo: '#solutions',
+        queryTo: '#',
         children: [
           {
             id: nanoid(),
             title: 'Website Builder',
             location: {
-              path: '/solutions',
+              path: '/',
             },
             queryTo: '.solution1',
           },
@@ -34,7 +34,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
             id: nanoid(),
             title: 'Seamless Storefront Integration',
             location: {
-              path: '/solutions',
+              path: '/',
             },
             queryTo: '.solution2',
           },
@@ -42,7 +42,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
             id: nanoid(),
             title: 'Livestream Shopping',
             location: {
-              path: '/solutions',
+              path: '/',
             },
             queryTo: '.solution3',
           },
@@ -50,7 +50,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
             id: nanoid(),
             title: 'ShopAI Product Recommendation',
             location: {
-              path: '/solutions',
+              path: '/',
             },
             queryTo: '.solution4',
           },
