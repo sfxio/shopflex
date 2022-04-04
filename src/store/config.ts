@@ -24,7 +24,7 @@ export const useConfigStore = defineStore(useConfigStoreId, {
         children: [
           {
             id: nanoid(),
-            title: 'Website Builder',
+            title: 'B2B & Dropshipping Website Builder',
             location: {
               path: '/',
             },

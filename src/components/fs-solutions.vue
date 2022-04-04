@@ -3,11 +3,9 @@
     <div class="solution1">
       <header>
         <h2>
-          <span class="strong">
-            B2B/Dropshipping
-          </span>
+          <span class="strong">Zero Code</span>
           <span>
-            Website Builder
+            B2B/Dropshipping Website Builder
           </span>
         </h2>
         <p>
@@ -59,7 +57,7 @@
           </p>
         </ACol>
         <ACol :span="24" :lg="18">
-          <img style="max-width: 400px;" v-lazy="solutions.solution23" />
+          <img class="lg:fs-max-w-md" v-lazy="solutions.solution23" />
         </ACol>
       </ARow>
     </div>
@@ -124,7 +122,14 @@
         </div>
       </header>
       <ARow class="section" type="flex" align="middle">
-        <img class="fs-mt-24 fs-m-auto" v-lazy="solutions.solution41" />
+        <a
+          style="width: 100%;"
+          href="https://ai.shopflex.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img class="fs-mt-24 fs-m-auto" v-lazy="solutions.solution41" />
+        </a>
       </ARow>
     </div>
   </div>

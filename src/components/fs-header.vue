@@ -6,14 +6,14 @@
   >
     <PageContainer class="fs-flex-ic fs-h-16">
       <ARow type="flex" style="width: 100%; height: 100%;" align="middle">
-        <ACol :span="lg ? undefined : 12">
+        <ACol :span="lg ? undefined : 22">
           <FsLogo />
         </ACol>
 
         <ACol
           flex="1 0 800px"
           style="display: flex; justify-content: end; height: 100%;"
-          :span="lg ? undefined : 12"
+          :span="lg ? undefined : 2"
         >
           <template v-if="lg">
             <FsMenu
@@ -24,13 +24,14 @@
                 background: 'transparent',
                 border: 'none',
                 width: '100%',
-                justifyContent: 'end',
+                'justify-content': 'end',
               }"
+              @select="onSelect"
             />
           </template>
 
           <template v-else>
-            <div @click="handleOpenMenu" class="fs-flex-ic">
+            <div @click="toggle" class="fs-flex-ic">
               <ADrawer
                 class="menu-drawer"
                 :bodyStyle="{ padding: 0 }"
@@ -38,9 +39,15 @@
                 :title="null"
                 :placement="'left'"
                 :visible="isVisible"
-                width="320px"
+                width="300px"
+                @close="() => (isVisible = false)"
               >
-                <FsMenu class="fs-mt-20" mode="inline" :menu="menu" />
+                <FsMenu
+                  class="fs-mt-20"
+                  mode="inline"
+                  :menu="menu"
+                  @select="onSelect"
+                />
               </ADrawer>
               <svg
                 class="icon"
@@ -50,6 +57,7 @@
                   vertical-align: middle;
                   fill: currentColor;
                   overflow: hidden;
+                  float: right;
                 "
                 viewBox="0 0 1024 1024"
                 version="1.1"
@@ -73,7 +81,7 @@
 import FsLogo from './fs-logo.vue'
 import FsMenu from './fs-menu/fs-menu.vue'
 import PageContainer from './container/page-container.vue'
-import { computed, Ref, ref } from 'vue'
+import { computed, Ref, ref, watch } from 'vue'
 import { useScrollContext } from '@/context'
 import { useRoute } from 'vue-router'
 import { useConfigStore } from '@/store'
@@ -98,21 +106,20 @@ const extra = ref() as Ref<any>
 
 const isVisible = ref(false)
 
-const handleOpenMenu = () => {
+const toggle = () => {
   isVisible.value = !isVisible.value
+}
+const onSelect = () => setTimeout(() => (isVisible.value = false), 400)
 
-  if (isVisible.value) {
+watch(isVisible, (newVal) => {
+  if (newVal) {
     extra.value = {
       background: 'white',
     }
   } else {
     extra.value = {}
   }
-}
-
-const handleSelect = () => {
-  isVisible.value = false
-}
+})
 </script>
 
 <style lang="scss" scoped>

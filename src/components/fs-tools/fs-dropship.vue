@@ -3,7 +3,7 @@
     <section>
       <header v-if="showTitle">
         <h2>
-          Free & Fast Dropshipping (US, UK)
+          Customizable Fashion Dropshipping
         </h2>
         <p>Affordable Women Clothing,Accessory,Jewelry,Apparel,Dress,Yoga</p>
       </header>
@@ -40,7 +40,7 @@
     <section>
       <header v-if="showTitle">
         <h2>
-          Customizable Fashion Dropshipping
+          Free & Fast Dropshipping (US, UK)
         </h2>
         <p>US Warehouse, Free Shipping, Furniture & Large Goods Suppliers</p>
       </header>
