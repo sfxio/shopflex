@@ -45,13 +45,18 @@
         <p>US Warehouse, Free Shipping, Furniture & Large Goods Suppliers</p>
       </header>
       <ARow class="fs-mt-8 fs-w-full" type="flex" align="middle">
-        <ACol :span="24" :md="8" :order="md ? 1 : 0">
+        <ACol :span="24" :md="16" :order="md ? 1 : 0">
           <a
             href="https://dropship.shopflex.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img class="img" v-lazy="dropship.dropship21" />
+            <img
+              class="img"
+              style="margin-left: auto;"
+              :style="{ width: md ? `800px` : 'auto' }"
+              v-lazy="dropship.dropship21"
+            />
           </a>
         </ACol>
 
@@ -59,7 +64,7 @@
           <div class="links">
             <a
               class="link-item"
-              href="https://apps.shopify.com/fashionexpress-dropshipping"
+              href="https://apps.shopify.com/MixShop"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -67,18 +72,24 @@
             </a>
             <a
               class="link-item"
-              href="https://apps.shopify.com/fashionexpress-dropshipping"
+              href="https://www.wix.com/app-market/mixshop"
               target="_blank"
               rel="noopener noreferrer"
             >
               <SvgWix />
             </a>
 
+            <a
+              class="link-item"
+              href="https://squareup.com/us/en/app-marketplace/app/shopflex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SvgSquare />
+            </a>
+
             <a class="link-item fs-cursor-default">
               <SvgWoocommerce />
-            </a>
-            <a class="link-item fs-cursor-default">
-              <SvgSquare />
             </a>
           </div>
         </ACol>
