@@ -51,7 +51,7 @@
         <ACol :order="lg ? 1 : 0" :span="24" :lg="6">
           <h3>Dropshippers</h3>
           <p>
-            Connect with more than 10K active sellers on different e-commerce
+            Connect with more than 10M active sellers on different e-commerce
             platform like Shopify, Wix, WooCommerce, Tiktok and Facebook, etc.
             No need to rely on Ads only.
           </p>
