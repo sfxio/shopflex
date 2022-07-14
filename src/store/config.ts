@@ -54,6 +54,14 @@ export const useConfigStore = defineStore(useConfigStoreId, {
             },
             queryTo: '.solution4',
           },
+          {
+            id: nanoid(),
+            title: 'Google Product Feed',
+            location: {
+              path: '/google_product_feed',
+            },
+            // queryTo: '.solution4',
+          },
         ],
       },
       {
