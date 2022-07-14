@@ -45,6 +45,12 @@ const routes = [
     name: 'dropshipping',
     meta: { title: 'Dropshipping' },
   },
+  {
+    path: '/google_product_feed',
+    component: () => import('@/pages/p-feedback.vue'),
+    name: 'google_product_feed',
+    meta: { title: 'google_product_feed' },
+  },
   // {
   //   path: '/blog',
   //   component: import('../pages/p-blog.vue'),
