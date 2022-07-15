@@ -7,12 +7,8 @@
         <p class="gray">Contact Us: support@shopflex.io</p>
         <p class="gray">
           ShopFlex @2021.
-          <a class="gray link" href="https://shopflex.io/privacy">
-            Privacy
-          </a>
-          &
-          <a class="gray link" href="https://shopflex.io/terms">
-            Terms
+          <a class="gray link" href="https://www.shopflex.io/privacy_policy">
+            Privacy Police
           </a>
         </p>
       </div>
