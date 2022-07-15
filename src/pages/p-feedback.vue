@@ -5,7 +5,13 @@
         
          <div style="display:flex;justify-content:center;margin-top:100px;">
             <p style="width:600px;font-size:20px">Shopflex for Google Shopping Feed is a seamless channel between Google Programs & Shopline, that enables Shopline sellers to easily list & manage their products on various Google Programs such as Google Shopping & Google Ads. With our advanced techniques, we also allow sellers to display their products across google through Google Shopping Ads. Gain popularity and see an appreciable change in your ROI.</p>
+            
          </div>
+         <div style="display:flex;justify-content:center;margin-top:100px;">
+          <a-button type="primary" size="large">
+              <a href="https://booking.shopflex.io/">Shopflex Feed</a>
+            </a-button>
+          </div>
          <div style="display:flex;justify-content:center;margin-top:100px;">
              <a-image
             :width="500"
@@ -59,9 +65,12 @@
 <script>
 import FsBanner from '@/components/fs-banner.vue'
 import FsSolutions from '@/components/fs-solutions.vue'
-    export default {
-        
+    
+    const goToIndex = ()=>{
+        this.$router.push("https://booking.shopflex.io/")
     }
+        
+    
 </script>
 
 <style lang="scss" scoped>
