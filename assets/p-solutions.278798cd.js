@@ -1,0 +1,1 @@
+import{_ as a,R as o,F as t}from"./index.0427bc8f.js";import{d as n,f as l,g as e,w as s,F as r,e as c,o as f}from"./vendor.e8f941e9.js";const i=c("div",{id:"solutions",class:"anchor"},null,-1),h=n({setup(_){return(d,u)=>(f(),l(r,null,[i,e(a,{class:"fs-w-full fs-py-12"},{default:s(()=>[e(o,null,{default:s(()=>[e(t)]),_:1})]),_:1})],64))}});export{h as default};
