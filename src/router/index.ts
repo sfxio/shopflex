@@ -1,4 +1,8 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import {
+  createRouter,
+  createWebHashHistory,
+  createWebHistory,
+} from 'vue-router'
 import Home from '../pages/p-home.vue'
 // import Integration from '../pages/p-integration.vue'
 // import NotFound from '../pages/p-not-found.vue'
