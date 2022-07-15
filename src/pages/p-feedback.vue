@@ -63,14 +63,7 @@
 </template>
 
 <script>
-import FsBanner from '@/components/fs-banner.vue'
-import FsSolutions from '@/components/fs-solutions.vue'
-    
-    const goToIndex = ()=>{
-        this.$router.push("https://booking.shopflex.io/")
-    }
-        
-    
+
 </script>
 
 <style lang="scss" scoped>
